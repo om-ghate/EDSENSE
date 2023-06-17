@@ -104,7 +104,7 @@ const Test = () => {
     }
   };
 
-  // Function to check the answer
+  // ---------- Function to check the answer ----------------------------------------------------------------------
   const checkAnswer = () => {
     console.log(pointer);
 
@@ -131,6 +131,8 @@ const Test = () => {
       console.log("W_ans: ", W_ans);
     }
   };
+
+  // ---------- Function to check the answer End -------------------------------------------------------------------
 
   const handleLevelChange = () => {
     setLevel(level + 1);
