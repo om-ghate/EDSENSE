@@ -24,6 +24,8 @@ const SpW_ans = []; //Array to store Specific wrong ans
 const Timer = [] // Array to store Timer 
 // 
 
+
+
 // ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
 
 const payload = JSON.parse(localStorage.getItem("payload"));
@@ -51,6 +53,11 @@ const Test = () => {
   const [minutes,setMinutes] = useState(0);
 
   // Use States End ----------------------------------------------------------------------------------------------------------------------
+
+
+  // Result Stored 
+// const [Result,setResult] = useState("");
+//
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -286,9 +293,11 @@ const Test = () => {
       const { data: res } = await axios.post(url, {
         email: payload.email,
         Q_arr: Q_arr,
+        Timer:Timer,
         R_ans: R_ans,
         SpW_ans: SpW_ans,
         W_ans: W_ans,
+        // Result: Result,
       });
     } catch (error) {
       if (
@@ -350,16 +359,23 @@ const Test = () => {
                 </div>
               ) : (
                 <div>
+                  {/* setResult("Pass") */}
                   <ThankYouPage />
                 </div>
               )}
             </div>
           ) : (
+            <div>
+            {/* setResult("Pass") */}
             <ThankYouPage />
+            </div>
           )}
         </div>
       ) : (
+        <div>
+        {/* setResult("Fail") */}
         <ExhaustPage />
+        </div>
       )}
     </div>
   );
