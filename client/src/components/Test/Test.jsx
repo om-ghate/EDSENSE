@@ -12,10 +12,19 @@ const arr_c = [
 const array = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
+
+// ---------- Array Creation to store the answer ------------------------------------------------------------------------------
+
 const Q_arr = []; //Array to store the path which system takes
 const R_ans = []; //Array to store right ans
 const W_ans = []; //Array to store wrong ans
 const SpW_ans = []; //Array to store Specific wrong ans
+
+//
+const Timer = [] // Array to store Timer 
+// 
+
+// ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
 
 const payload = JSON.parse(localStorage.getItem("payload"));
 console.log(payload);
@@ -35,6 +44,13 @@ const Test = () => {
   //     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   //   ]; //The array on which almost all the basic operation will be done
   // Function to handle input change
+
+  // Use States for Response Time module -------------------------------------------------------------------------------------------------
+
+  const [seconds,setSeconds] = useState(0);
+  const [minutes,setMinutes] = useState(0);
+
+  // Use States End ----------------------------------------------------------------------------------------------------------------------
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -205,6 +221,36 @@ const Test = () => {
     }
   }, [pointer]);
 
+  // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
+
+  var timer;
+    useEffect(()=>{
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        timer = setInterval(()=>{
+
+            setSeconds(seconds+1);
+            
+            if(seconds === 59)
+            {
+                setMinutes(minutes+1);
+                setSeconds(0);
+            }
+        },1000)
+        return () => clearInterval(timer);
+    });
+    
+    const restart = () =>{
+        let str = minutes.toString().concat(":",seconds.toString())
+        Timer.push(str)
+        // console.log("Timer - "+Timer)
+        console.log("Timer : ", Timer);
+        setSeconds(0);
+        setMinutes(0);
+    }
+
+  // Restart Func and Use Effect End ----------------------------------------------------------------------------------------------------------
+
   // Function to start the quiz
   const startQuiz = () => {
     setStarted(true);
@@ -215,6 +261,7 @@ const Test = () => {
   const handleNextButtonClick = () => {
     generateQuestion();
   };
+
 
   // Render start screen if quiz has not started
   if (!started) {
@@ -253,10 +300,17 @@ const Test = () => {
       }
     }
   };
+
+  
   const handleCombinedClick = () => {
     if (answer) {
+
+      // Restart fuction added for response time module -------------------------------------------------------------------------
+      restart();
+      // Reponse time function end -----------------------------------------------------------------------------------------------
+      
       checkAnswer();
-      handleNextButtonClick();
+      handleNextButtonClick(); 
       setError("");
     } else {
       setError("Please fill in this field.");
