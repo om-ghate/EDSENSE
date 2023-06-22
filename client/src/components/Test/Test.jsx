@@ -97,16 +97,18 @@ const Test = () => {
 
 //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
 
-      let str2 = filteredData[0].num1
-        .toString()
-        .concat(
-          " ",
-          filteredData[0].sign.toString().concat(" ", filteredData[0].num2.toString().concat(" = "))
-        );
+let str2 = filteredData[0].num1
+.toString()
+.concat(
+  " ",
+  filteredData[0].sign.toString().concat(" ", filteredData[0].num2.toString().concat(" = to "))
+);
 
-      console.log(str2)
+// Convert str2 into speech
+const speech = new SpeechSynthesisUtterance(str2);
+window.speechSynthesis.speak(speech);
 
-//! -------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------
       
       // if(randomIndex == arr.includes(randomIndex))
       // if (array.includes(randomNumber)) {
