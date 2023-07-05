@@ -5,6 +5,9 @@ import data from "./data.json"; // Assuming that the data.json file is in the sa
 import axios from "axios";
 import ExhaustPage from "./ExhaustPage";
 import ThankYouPage from "./ThankYouPage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // const ansQues = [];
 const arr_c = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -105,7 +108,7 @@ let str2 = filteredData[0].num1
 );
 
 // Convert str2 into speech
-const speech = new SpeechSynthesisUtterance(str2);
+let speech = new SpeechSynthesisUtterance(str2);
 window.speechSynthesis.speak(speech);
 
 // -------------------------------------------------------------------------------------------------------------------
@@ -324,25 +327,25 @@ window.speechSynthesis.speak(speech);
       handleNextButtonClick(); 
       setError("");
     } else {
-      setError("Please fill in this field.");
+      toast.info("Please fill in this field");
       return;
     }
   };
 
-  // ------------------------ Main Display Page ---------------------------------------------------------------------
+  // !------------------------ Main Display Page ---------------------------------------------------------------------
 
   return (
     <div className="Test">
       {!exhaust ? (
         <div>
           {!gameover ? (
-            <div>
+            <div className="new">
               {currentQuestion ? (
                 <div>
                   <div className="errorTextbox">
                     <p className={error ? "errorText" : ""}>{error}</p>
                   </div>
-                  <div className="obox">
+                  <div className="obox" >
                     <div className="Mbox"> {currentQuestion.num1}</div>
                     <div className="Sign">{currentQuestion.sign}</div>
                     <div className="Mbox1"> {currentQuestion.num2}</div>
@@ -354,10 +357,10 @@ window.speechSynthesis.speak(speech);
                       value={answer}
                       required
                     />
+                  </div>
                     <button className="button1" onClick={handleCombinedClick}>
                       Next Question
                     </button>
-                  </div>
                 </div>
               ) : (
                 <div>
@@ -379,6 +382,20 @@ window.speechSynthesis.speak(speech);
         <ExhaustPage />
         </div>
       )}
+
+      {/* Toast Container */}
+      <ToastContainer
+      position="top-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"/>
+      {/* Toast Container END */}
     </div>
   );
 
