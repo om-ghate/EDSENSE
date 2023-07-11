@@ -5,8 +5,8 @@ import data from "./data.json"; // Assuming that the data.json file is in the sa
 import axios from "axios";
 import ExhaustPage from "./ExhaustPage";
 import ThankYouPage from "./ThankYouPage";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // const ansQues = [];
 const arr_c = [
@@ -24,10 +24,8 @@ const W_ans = []; //Array to store wrong ans
 const SpW_ans = []; //Array to store Specific wrong ans
 
 //
-const Timer = [] // Array to store Timer 
-// 
-
-
+const Timer = []; // Array to store Timer
+//
 
 // ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
 
@@ -52,15 +50,14 @@ const Test = () => {
 
   // Use States for Response Time module -------------------------------------------------------------------------------------------------
 
-  const [seconds,setSeconds] = useState(0);
-  const [minutes,setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
 
   // Use States End ----------------------------------------------------------------------------------------------------------------------
 
-
-  // Result Stored 
-// const [Result,setResult] = useState("");
-//
+  // Result Stored
+  // const [Result,setResult] = useState("");
+  //
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -71,7 +68,7 @@ const Test = () => {
   // Function to generate a random question
 
   const generateQuestion = () => {
-    if (array.length > 0 && pointer < 11 && stage === 1) {
+    if (array.length > 0 && pointer <= 3 && stage < 4) {
       const randomIndex = Math.floor(Math.random() * array.length);
       console.log(randomIndex);
       const Q_no = array[randomIndex];
@@ -98,21 +95,23 @@ const Test = () => {
       // const randomNumber = array[randomIndex];
       setCurrentQuestion(filteredData[0]);
 
-//! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
+      //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
 
-let str2 = filteredData[0].num1
-.toString()
-.concat(
-  " ",
-  filteredData[0].sign.toString().concat(" ", filteredData[0].num2.toString().concat(" = to "))
-);
+      let str2 = filteredData[0].num1
+        .toString()
+        .concat(
+          " ",
+          filteredData[0].sign
+            .toString()
+            .concat(" ", filteredData[0].num2.toString().concat(" = to "))
+        );
 
-// Convert str2 into speech
-let speech = new SpeechSynthesisUtterance(str2);
-window.speechSynthesis.speak(speech);
+      // Convert str2 into speech
+      let speech = new SpeechSynthesisUtterance(str2);
+      window.speechSynthesis.speak(speech);
 
-// -------------------------------------------------------------------------------------------------------------------
-      
+      // -------------------------------------------------------------------------------------------------------------------
+
       // if(randomIndex == arr.includes(randomIndex))
       // if (array.includes(randomNumber)) {
       //   console.log(randomNumber);
@@ -125,7 +124,8 @@ window.speechSynthesis.speak(speech);
       // setResult("");
       // ansQues.push(filteredData[randomIndex].Q_no);
       console.log(array);
-    } else {
+    } 
+    else {
       console.log("Exhausted Array");
       setExhaust(true);
       sendUserResult();
@@ -141,6 +141,7 @@ window.speechSynthesis.speak(speech);
       console.log("R_ans: ", R_ans);
       // setResult("Correct!");
       setPointer(pointer + 1);
+      console.log("Pointer - "+pointer);
     } else if (
       currentQuestion &&
       (parseInt(answer) === currentQuestion.swa1 ||
@@ -162,104 +163,162 @@ window.speechSynthesis.speak(speech);
 
   // * ---------- Function to check the answer End -------------------------------------------------------------------
 
-  const handleLevelChange = () => {
-    setLevel(level + 1);
+  // List of this required for the code to work
+
+  /*
+1. Handle Level Change which will handle the level change after solving 3 questions of each level
+2. Handle Stage Change which will handle the stage change after giving 3 level of each stage
+3. Handle Test Complete which will set setGameover(true) after 3 stages
+*/
+
+  /*
+Starting Point -
+
+Pointer - 0
+Level - 0
+Stage - 0
+array - 5
+
+Successful Case
+Pointer - 3 
+Level - 3
+Stage - 3
+
+Unsuccessful case
+Pointer < 3
+Array - 0
+*/
+
+  // ! Handle Level Change function and useState
+
+  useEffect(() => {
+    if (pointer === 3 && level < 3) {
+      handleLevelChange();
+    }
+  }, [pointer]);
+
+  const handleLevelChange = () => 
+  {
+    
     setPointer(0);
     setDec(1);
-    for (let i = 0; i < arr_c.length; i++) {
+    setLevel(level + 1);
+
+    for (let i = 0; i < arr_c.length; i++) 
+    {
+      array[i] = arr_c[i];
+    }
+  
+  };
+
+  // ! Handle Level Change function and useState END
+
+  // ! Handle Stage Change function and useState
+
+
+  useEffect(() => {
+    if (pointer === 3 && level === 3 && stage < 3) {
+      handleStageChange();
+    }
+  }, [pointer]);
+
+  const handleStageChange = () => 
+  {
+    setPointer(0);
+    setDec(1);
+    setLevel(1);
+    setStage(stage + 1);
+
+    for (let i = 0; i < arr_c.length; i++) 
+    {
       array[i] = arr_c[i];
     }
   };
-  // Function to handle level change
 
-  //function to handle stage change
-  // const handleStageChange = () => {
+  
 
-  //   R_ans.push(Q_arr[Q_arr.length-1])
-  //   setGameover(true)
-  //   sendUserResult();
+  // ! Handle Stage Change function and useState END
 
-  //   setStage(1);
-  //   // setLevel(1);
-  //   // setPointer(0);
-  //   // setDec(1);
-  //   // for (let i = 0; i < arr_c.length; i++) {
-  //   //   array[i] = arr_c[i];
-  //   // }
+  // Code by Om - 5th July
+  // ! Handle Test Complete function and useState
+  useEffect(() => {
+    if (pointer === 4 && level === 3 && stage === 3) {
+      handleTestComplete();
+    }
+  }, [pointer]);
 
-  // };
+  const handleTestComplete = () => {
+
+    R_ans.push(Q_arr[Q_arr.length - 1]);
+
+    let str = minutes.toString().concat(":", seconds.toString());
+    Timer.push(str);
+
+    setGameover(true);
+    sendUserResult();
+  };
+
+  // ! Handle Test Complete function and useState END
+  // Code by Om - 5th July END
 
   // Effect to handle level change when pointer reaches 12
 
+  //! Repeated Code - I Think
+  // useEffect(() => {
+  //   // else{
+  //   //   setGameover(true)
+  //   // }
+  //   const handleLevelChange = () => {
+  //     setLevel(level + 1);
+  //     setPointer(0);
+  //     setDec(1);
+  //     for (let i = 0; i < arr_c.length; i++) {
+  //       array[i] = arr_c[i];
+  //     }
+  //   };
+  //   if (pointer >= 4 && level < 2) {
+  //     // for(int)
+  //     handleLevelChange();
+  //   }
+  // }, [pointer, level]);
 
+  // ! Repeated Code End
+
+  //! Array Exhausted
+  
   useEffect(() => {
-    // else{
-    //   setGameover(true)
-    // }
-    const handleLevelChange = () => {
-      setLevel(level + 1);
-      setPointer(0);
-      setDec(1);
-      for (let i = 0; i < arr_c.length; i++) {
-        array[i] = arr_c[i];
-      }
-    };
-    if (pointer >= 4 && level < 2) {
-      // for(int)
-      handleLevelChange();
-    }
-  }, [pointer, level]);
-
-
-
-  //Effect to handle level change when all questions are exhausted
-  useEffect(() => {
-    if (array.length === 0 && pointer <= 5) {
-      // for(int)
-      // DisplayExhaustPage();
+    if (array.length === 0 && pointer < 3) {
       setExhaust(true);
     }
   }, [pointer]);
 
-  const DisplayExhaustPage = () => {
-    return <ThankYouPage />;
-  };
+  // ! Array Exhausted End
 
-  // Effect to handle level change the the stage
-
-  useEffect(() => {
-    if (pointer >= 4 && level === 2 && stage < 12) {
-      handleLevelChange();
-    }
-  }, [pointer]);
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
 
   var timer;
-    useEffect(()=>{
-        
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        timer = setInterval(()=>{
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    timer = setInterval(() => {
+      setSeconds(seconds + 1);
 
-            setSeconds(seconds+1);
-            
-            if(seconds === 59)
-            {
-                setMinutes(minutes+1);
-                setSeconds(0);
-            }
-        },1000)
-        return () => clearInterval(timer);
-    });
-    
-    const restart = () =>{
-        let str = minutes.toString().concat(":",seconds.toString())
-        Timer.push(str)
-        // console.log("Timer - "+Timer)
-        console.log("Timer : ", Timer);
+      if (seconds === 59) {
+        setMinutes(minutes + 1);
         setSeconds(0);
-        setMinutes(0);
-    }
+      }
+    }, 1000);
+    return () => clearInterval(timer);
+  });
+
+  const restart = () => {
+    let str = minutes.toString().concat(":", seconds.toString());
+    Timer.push(str);
+    // console.log("Timer - "+Timer)
+    console.log("Timer : ", Timer);
+    setSeconds(0);
+    setMinutes(0);
+  };
 
   // Restart Func and Use Effect End ----------------------------------------------------------------------------------------------------------
 
@@ -273,7 +332,6 @@ window.speechSynthesis.speak(speech);
   const handleNextButtonClick = () => {
     generateQuestion();
   };
-
 
   // Render start screen if quiz has not started
   if (!started) {
@@ -298,7 +356,7 @@ window.speechSynthesis.speak(speech);
       const { data: res } = await axios.post(url, {
         email: payload.email,
         Q_arr: Q_arr,
-        Timer:Timer,
+        Timer: Timer,
         R_ans: R_ans,
         SpW_ans: SpW_ans,
         W_ans: W_ans,
@@ -315,16 +373,14 @@ window.speechSynthesis.speak(speech);
     }
   };
 
-  
   const handleCombinedClick = () => {
     if (answer) {
-
       // Restart fuction added for response time module -------------------------------------------------------------------------
       restart();
       // Reponse time function end -----------------------------------------------------------------------------------------------
-      
+
       checkAnswer();
-      handleNextButtonClick(); 
+      handleNextButtonClick();
       setError("");
     } else {
       toast.info("Please fill in this field");
@@ -345,7 +401,7 @@ window.speechSynthesis.speak(speech);
                   <div className="errorTextbox">
                     <p className={error ? "errorText" : ""}>{error}</p>
                   </div>
-                  <div className="obox" >
+                  <div className="obox">
                     <div className="Mbox"> {currentQuestion.num1}</div>
                     <div className="Sign">{currentQuestion.sign}</div>
                     <div className="Mbox1"> {currentQuestion.num2}</div>
@@ -358,9 +414,9 @@ window.speechSynthesis.speak(speech);
                       required
                     />
                   </div>
-                    <button className="button1" onClick={handleCombinedClick}>
-                      Next Question
-                    </button>
+                  <button className="button1" onClick={handleCombinedClick}>
+                    Next Question
+                  </button>
                 </div>
               ) : (
                 <div>
@@ -371,36 +427,36 @@ window.speechSynthesis.speak(speech);
             </div>
           ) : (
             <div>
-            {/* setResult("Pass") */}
-            <ThankYouPage />
+              {/* setResult("Pass") */}
+              <ThankYouPage />
             </div>
           )}
         </div>
       ) : (
         <div>
-        {/* setResult("Fail") */}
-        <ExhaustPage />
+          {/* setResult("Fail") */}
+          <ExhaustPage />
         </div>
       )}
 
       {/* Toast Container */}
       <ToastContainer
-      position="top-center"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="colored"/>
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       {/* Toast Container END */}
     </div>
   );
 
   // ------------------------------------------------------------------------------------------------------------------
-
 };
 
 export default Test;
