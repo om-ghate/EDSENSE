@@ -124,8 +124,7 @@ const Test = () => {
       // setResult("");
       // ansQues.push(filteredData[randomIndex].Q_no);
       console.log(array);
-    } 
-    else {
+    } else {
       console.log("Exhausted Array");
       setExhaust(true);
       sendUserResult();
@@ -141,7 +140,7 @@ const Test = () => {
       console.log("R_ans: ", R_ans);
       // setResult("Correct!");
       setPointer(pointer + 1);
-      console.log("Pointer - "+pointer);
+      console.log("Pointer - " + pointer);
     } else if (
       currentQuestion &&
       (parseInt(answer) === currentQuestion.swa1 ||
@@ -197,24 +196,19 @@ Array - 0
     }
   }, [pointer]);
 
-  const handleLevelChange = () => 
-  {
-    
+  const handleLevelChange = () => {
     setPointer(0);
     setDec(1);
     setLevel(level + 1);
 
-    for (let i = 0; i < arr_c.length; i++) 
-    {
+    for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
     }
-  
   };
 
   // ! Handle Level Change function and useState END
 
   // ! Handle Stage Change function and useState
-
 
   useEffect(() => {
     if (pointer === 3 && level === 3 && stage < 3) {
@@ -222,20 +216,16 @@ Array - 0
     }
   }, [pointer]);
 
-  const handleStageChange = () => 
-  {
+  const handleStageChange = () => {
     setPointer(0);
     setDec(1);
     setLevel(1);
     setStage(stage + 1);
 
-    for (let i = 0; i < arr_c.length; i++) 
-    {
+    for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
     }
   };
-
-  
 
   // ! Handle Stage Change function and useState END
 
@@ -248,7 +238,6 @@ Array - 0
   }, [pointer]);
 
   const handleTestComplete = () => {
-
     R_ans.push(Q_arr[Q_arr.length - 1]);
 
     let str = minutes.toString().concat(":", seconds.toString());
@@ -260,6 +249,19 @@ Array - 0
 
   // ! Handle Test Complete function and useState END
   // Code by Om - 5th July END
+
+  // Code by Om - 11th July
+
+  //! This function works on adding autoFocus everytime the page reloads and a new question is generated
+
+  useEffect(() => {
+    const inputElement = document.querySelector('input[type="number"]');
+    if (inputElement) {
+      inputElement.focus();
+    }
+  }, [pointer]);
+
+  // Code by Om - 11th July
 
   // Effect to handle level change when pointer reaches 12
 
@@ -285,7 +287,7 @@ Array - 0
   // ! Repeated Code End
 
   //! Array Exhausted
-  
+
   useEffect(() => {
     if (array.length === 0 && pointer < 3) {
       setExhaust(true);
@@ -293,7 +295,6 @@ Array - 0
   }, [pointer]);
 
   // ! Array Exhausted End
-
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
 
@@ -388,6 +389,16 @@ Array - 0
     }
   };
 
+  // Code by Om - 11th July
+
+  //!  This function works on functionality that a student enters his answers and instead of clicking on the next question, he/she can simply click "Enter" and proceed to the next question
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleCombinedClick();
+    }
+  };
+  // Code by Om - 11th July
   // !------------------------ Main Display Page ---------------------------------------------------------------------
 
   return (
@@ -411,6 +422,8 @@ Array - 0
                       type="number"
                       onChange={handleInputChange}
                       value={answer}
+                      autoFocus
+                      onKeyDown={handleKeyDown}
                       required
                     />
                   </div>
