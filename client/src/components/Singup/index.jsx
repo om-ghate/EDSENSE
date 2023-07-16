@@ -24,7 +24,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://edsense-backend.onrender.com/api/users";
+			const url = "https://edsensebackend.onrender.com/api/users";
 			
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
