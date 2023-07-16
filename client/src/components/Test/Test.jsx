@@ -58,6 +58,9 @@ const Test = () => {
   // Result Stored
   // const [Result,setResult] = useState("");
   //
+  // Global variable to display stage + level  
+  const [strDisplay, setStrDisplay] = useState("");
+  // 
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -67,6 +70,8 @@ const Test = () => {
   //   );
   // Function to generate a random question
 
+
+  
   const generateQuestion = () => {
     if (array.length > 0 && pointer <= 3 && stage < 4) {
       const randomIndex = Math.floor(Math.random() * array.length);
@@ -78,6 +83,10 @@ const Test = () => {
           ".",
           level.toString().concat(".", array[randomIndex].toString())
         );
+
+      setStrDisplay(stage.toString().concat(".",level.toString()));
+
+      console.log(strDisplay)
 
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
@@ -430,6 +439,9 @@ Array - 0
                   <button className="button1" onClick={handleCombinedClick}>
                     Next Question
                   </button>
+                  <div className="levelDisplay">
+                    {strDisplay}
+                  </div>
                 </div>
               ) : (
                 <div>

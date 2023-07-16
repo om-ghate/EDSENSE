@@ -278,5 +278,21 @@
   transition: background-color 0.3s ease;
 }
 
+
   }
+
+.levelDisplay{
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: darkblue;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+}
   
