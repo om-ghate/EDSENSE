@@ -248,7 +248,7 @@ Array - 0
 
 // Array for storing the level counts of stages
 
-const arr =  [0,1,1,6];
+const arr =  [0,17,17,6];
 
 // 
 
