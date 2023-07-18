@@ -172,7 +172,7 @@ const Test = () => {
   // * ---------- Function to check the answer End -------------------------------------------------------------------
 
   // List of this required for the code to work
-
+// ! Test Condition Start
   /*
 1. Handle Level Change which will handle the level change after solving 3 questions of each level
 2. Handle Stage Change which will handle the stage change after giving 3 level of each stage
@@ -196,11 +196,52 @@ Unsuccessful case
 Pointer < 3
 Array - 0
 */
+// ! Test Condition End
+
+// ! Real Condition 
+/*
+Pointer - 0
+Level - 0
+Stage - 0
+array - 20
+
+Successful Case -
+
+Stage - 1
+level - 17
+
+Stage - 2
+level - 17
+
+Stage - 3
+level - 6
+
+Pointer - 3
+
+level change - 3 / >17
+stage change
+test complete
+
+
+Unsuccessful case
+Pointer < 3
+Array - 0
+*/
+// ! Real Condition END
+
+
 
   // ! Handle Level Change function and useState
 
+// Array for storing the level counts of stages
+
+const arr =  [0,17,17,6];
+
+// 
+
   useEffect(() => {
-    if (pointer === 3 && level < 3) {
+    if (pointer === 3 && level <= arr[stage]) {
+      
       handleLevelChange();
     }
   }, [pointer]);
@@ -220,7 +261,7 @@ Array - 0
   // ! Handle Stage Change function and useState
 
   useEffect(() => {
-    if (pointer === 3 && level === 3 && stage < 3) {
+    if (pointer === 3 && level === arr[stage] && stage < 3) {
       handleStageChange();
     }
   }, [pointer]);
@@ -241,7 +282,7 @@ Array - 0
   // Code by Om - 5th July
   // ! Handle Test Complete function and useState
   useEffect(() => {
-    if (pointer === 4 && level === 3 && stage === 3) {
+    if (pointer === 3 && level === arr[stage] && stage === 3) {
       handleTestComplete();
     }
   }, [pointer]);
@@ -340,7 +381,11 @@ Array - 0
 
   // Function to handle "Next" button click
   const handleNextButtonClick = () => {
-    generateQuestion();
+
+      generateQuestion();
+      
+
+
   };
 
   // Render start screen if quiz has not started
@@ -362,7 +407,7 @@ Array - 0
 
   const sendUserResult = async (e) => {
     try {
-      const url = "http://localhost:8080/api/usersResult";
+      const url = "https://edsensebackend.onrender.com/api/usersResult";
       const { data: res } = await axios.post(url, {
         email: payload.email,
         Q_arr: Q_arr,
