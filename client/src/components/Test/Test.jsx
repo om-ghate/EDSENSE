@@ -71,7 +71,7 @@ const Test = () => {
   // Function to generate a random question
 
 
-  
+  let str2 = "";
   const generateQuestion = () => {
     if (array.length > 0 && pointer <= 3 && stage < 4) {
       const randomIndex = Math.floor(Math.random() * array.length);
@@ -105,8 +105,19 @@ const Test = () => {
       setCurrentQuestion(filteredData[0]);
 
       //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
-
-      let str2 = filteredData[0].num1
+      if(filteredData[0].sign === "-")
+      {
+        str2 = filteredData[0].num1.toString().concat(" minus ", filteredData[0].num2.toString().concat(" = to "))
+        
+      }
+      else if(filteredData[0].sign === "*")
+      {
+        str2 = filteredData[0].num1.toString().concat(" multiply by ", filteredData[0].num2.toString().concat(" = to "))
+        
+      }
+      else
+      {
+        str2 = filteredData[0].num1
         .toString()
         .concat(
           " ",
@@ -114,6 +125,8 @@ const Test = () => {
             .toString()
             .concat(" ", filteredData[0].num2.toString().concat(" = to "))
         );
+      }
+      
 
       // Convert str2 into speech
       let speech = new SpeechSynthesisUtterance(str2);
@@ -235,7 +248,7 @@ Array - 0
 
 // Array for storing the level counts of stages
 
-const arr =  [0,17,17,6];
+const arr =  [0,1,1,6];
 
 // 
 
