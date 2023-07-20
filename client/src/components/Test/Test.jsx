@@ -58,9 +58,9 @@ const Test = () => {
   // Result Stored
   // const [Result,setResult] = useState("");
   //
-  // Global variable to display stage + level  
+  // Global variable to display stage + level
   const [strDisplay, setStrDisplay] = useState("");
-  // 
+  //
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -70,10 +70,11 @@ const Test = () => {
   //   );
   // Function to generate a random question
 
-
   let str2 = "";
   const generateQuestion = () => {
+    
     if (array.length > 0 && pointer <= 3 && stage < 4) {
+      
       const randomIndex = Math.floor(Math.random() * array.length);
       console.log(randomIndex);
       const Q_no = array[randomIndex];
@@ -84,9 +85,9 @@ const Test = () => {
           level.toString().concat(".", array[randomIndex].toString())
         );
 
-      setStrDisplay(stage.toString().concat(".",level.toString()));
+      setStrDisplay(stage.toString().concat(".", level.toString()));
 
-      console.log(strDisplay)
+      console.log(strDisplay);
 
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
@@ -105,21 +106,27 @@ const Test = () => {
       setCurrentQuestion(filteredData[0]);
 
       //! ---------------- Text To Speech :  ------------------------------------------------
-      if(filteredData[0].sign === "-")
-      {
-        str2 = filteredData[0].num1.toString().concat(" minus ", filteredData[0].num2.toString().concat(" = to "));
-        
+      if (filteredData[0].sign === "-") {
+        str2 = filteredData[0].num1
+          .toString()
+          .concat(" minus ", filteredData[0].num2.toString().concat(" = to "));
+      } else if (filteredData[0].sign === "*") {
+        str2 = filteredData[0].num1
+          .toString()
+          .concat(
+            " multiply by ",
+            filteredData[0].num2.toString().concat(" = to ")
+          );
+      } else {
+        str2 = filteredData[0].num1
+          .toString()
+          .concat(
+            " ",
+            filteredData[0].sign
+              .toString()
+              .concat(" ", filteredData[0].num2.toString().concat(" = to "))
+          );
       }
-      else if(filteredData[0].sign === "*")
-      {
-        str2 = filteredData[0].num1.toString().concat(" multiply by ", filteredData[0].num2.toString().concat(" = to "));
-        
-      }
-      else
-      {
-        str2 = filteredData[0].num1.toString().concat(" ",filteredData[0].sign.toString().concat(" ", filteredData[0].num2.toString().concat(" = to ")));
-      }
-      
 
       // Convert str2 into speech
       let speech = new SpeechSynthesisUtterance(str2);
@@ -139,7 +146,14 @@ const Test = () => {
       // setResult("");
       // ansQues.push(filteredData[randomIndex].Q_no);
       console.log(array);
-    } else {
+      console.log("Length of the array - "+array.length);
+    }
+     else if(array.length === 0 && pointer < 3 && stage < 3)
+     {
+      console.log("Qarr ",Q_arr);
+      handleStageChange();
+     }
+    else if(array.length === 0 && pointer < 3 && stage === 3){
       console.log("Exhausted Array");
       setExhaust(true);
       sendUserResult();
@@ -169,7 +183,7 @@ const Test = () => {
       setDec(dec + 2);
       console.log("Points", pointer);
       console.log("SpW_ans: ", SpW_ans);
-    } else {
+    } else if (currentQuestion && parseInt(answer) !== currentQuestion.ans) {
       W_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("W_ans: ", W_ans);
     }
@@ -178,7 +192,7 @@ const Test = () => {
   // * ---------- Function to check the answer End -------------------------------------------------------------------
 
   // List of this required for the code to work
-// ! Test Condition Start
+  // ! Test Condition Start
   /*
 1. Handle Level Change which will handle the level change after solving 3 questions of each level
 2. Handle Stage Change which will handle the stage change after giving 3 level of each stage
@@ -202,10 +216,10 @@ Unsuccessful case
 Pointer < 3
 Array - 0
 */
-// ! Test Condition End
+  // ! Test Condition End
 
-// ! Real Condition 
-/*
+  // ! Real Condition
+  /*
 Pointer - 0
 Level - 0
 Stage - 0
@@ -233,21 +247,18 @@ Unsuccessful case
 Pointer < 3
 Array - 0
 */
-// ! Real Condition END
-
-
+  // ! Real Condition END
 
   // ! Handle Level Change function and useState
 
-// Array for storing the level counts of stages
+  // Array for storing the level counts of stages
 
-const arr =  [0,17,17,6];
+  const arr = [0, 17, 17, 6];
 
-// 
+  //
 
   useEffect(() => {
     if (pointer === 3 && level <= arr[stage]) {
-      
       handleLevelChange();
     }
   }, [pointer]);
@@ -262,10 +273,18 @@ const arr =  [0,17,17,6];
     }
   };
 
+  useEffect(()=>{
+    if(array.length === 0 && pointer < 3 && stage < 3)
+    {
+      handleStageChange();
+    }
+  }, [pointer]);
+
   // ! Handle Level Change function and useState END
 
   // ! Handle Stage Change function and useState
 
+  
   useEffect(() => {
     if (pointer === 3 && level === arr[stage] && stage < 3) {
       handleStageChange();
@@ -281,6 +300,7 @@ const arr =  [0,17,17,6];
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
     }
+
   };
 
   // ! Handle Stage Change function and useState END
@@ -344,13 +364,14 @@ const arr =  [0,17,17,6];
 
   //! Array Exhausted
 
-  useEffect(() => {
-
-    
-    if (array.length === 0 && pointer < 3) {
-      setExhaust(true);
-    }
-  }, [pointer]);
+  // useEffect(() => {
+  //   if (array.length === 0 && pointer < 3 && stage === 3) {
+  //     setExhaust(true);
+  //   }
+  //   else if(array.length === 0 && pointer < 3 && stage < 3){
+  //     handleStageChange();
+  //   }
+  // }, [pointer]);
 
   // ! Array Exhausted End
 
@@ -389,11 +410,7 @@ const arr =  [0,17,17,6];
 
   // Function to handle "Next" button click
   const handleNextButtonClick = () => {
-
-      generateQuestion();
-      
-
-
+    generateQuestion();
   };
 
   // Render start screen if quiz has not started
@@ -492,9 +509,7 @@ const arr =  [0,17,17,6];
                   <button className="button1" onClick={handleCombinedClick}>
                     Next Question
                   </button>
-                  <div className="levelDisplay">
-                    {strDisplay}
-                  </div>
+                  <div className="levelDisplay">{strDisplay}</div>
                 </div>
               ) : (
                 <div>
