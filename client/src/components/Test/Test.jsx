@@ -278,7 +278,7 @@ Array - 0
     {
       handleStageChange();
     }
-  }, [pointer]);
+  }, [pointer,level,stage]);
 
   // ! Handle Level Change function and useState END
 
