@@ -48,12 +48,12 @@ const Test = () => {
   //   ]; //The array on which almost all the basic operation will be done
   // Function to handle input change
 
-  // Use States for Response Time module -------------------------------------------------------------------------------------------------
+  //! Use States for Response Time module -------------------------------------------------------------------------------------------------
 
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
-  // Use States End ----------------------------------------------------------------------------------------------------------------------
+  //! Use States End ----------------------------------------------------------------------------------------------------------------------
 
   // Result Stored
   // const [Result,setResult] = useState("");
@@ -104,27 +104,20 @@ const Test = () => {
       // const randomNumber = array[randomIndex];
       setCurrentQuestion(filteredData[0]);
 
-      //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
+      //! ---------------- Text To Speech :  ------------------------------------------------
       if(filteredData[0].sign === "-")
       {
-        str2 = filteredData[0].num1.toString().concat(" minus ", filteredData[0].num2.toString().concat(" = to "))
+        str2 = filteredData[0].num1.toString().concat(" minus ", filteredData[0].num2.toString().concat(" = to "));
         
       }
       else if(filteredData[0].sign === "*")
       {
-        str2 = filteredData[0].num1.toString().concat(" multiply by ", filteredData[0].num2.toString().concat(" = to "))
+        str2 = filteredData[0].num1.toString().concat(" multiply by ", filteredData[0].num2.toString().concat(" = to "));
         
       }
       else
       {
-        str2 = filteredData[0].num1
-        .toString()
-        .concat(
-          " ",
-          filteredData[0].sign
-            .toString()
-            .concat(" ", filteredData[0].num2.toString().concat(" = to "))
-        );
+        str2 = filteredData[0].num1.toString().concat(" ",filteredData[0].sign.toString().concat(" ", filteredData[0].num2.toString().concat(" = to ")));
       }
       
 
@@ -132,7 +125,7 @@ const Test = () => {
       let speech = new SpeechSynthesisUtterance(str2);
       window.speechSynthesis.speak(speech);
 
-      // -------------------------------------------------------------------------------------------------------------------
+      //! ---------------- Text To Speech END ------------------------------------------------
 
       // if(randomIndex == arr.includes(randomIndex))
       // if (array.includes(randomNumber)) {
