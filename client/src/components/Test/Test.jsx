@@ -352,6 +352,8 @@ const arr =  [0,17,17,6];
   //! Array Exhausted
 
   useEffect(() => {
+
+    
     if (array.length === 0 && pointer < 3) {
       setExhaust(true);
     }
