@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Test.css"; // chal rha hai part 1
-import data from "./data.json"; // Assuming that the data.json file is in the same directory as this component
+import data from "./data10.json"; // Assuming that the data.json file is in the same directory as this component
 // import Header from "./Header";
 import axios from "axios";
 import ExhaustPage from "./ExhaustPage";
@@ -10,10 +10,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 // const ansQues = [];
 const arr_c = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 ]; //This is the array which will have numbers from 1 to 20
 const array = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 ];
 
 // ---------- Array Creation to store the answer ------------------------------------------------------------------------------
@@ -176,7 +176,7 @@ const Test = () => {
         parseInt(answer) === currentQuestion.swa4 ||
         parseInt(answer) === currentQuestion.swa5)
     ) {
-      SpW_ans.push(Q_arr[Q_arr.length - 1]);
+      SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
       setPointer(pointer - dec);
       setDec(dec + 2);
       console.log("Points", pointer);
