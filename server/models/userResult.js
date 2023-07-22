@@ -14,6 +14,6 @@ const userResultSchema = new mongoose.Schema({
     // Result: {type: String, required: true}
 
 });
-const userResult = mongoose.model("userResult", userResultSchema);
+const userResult = mongoose.model("userResult1", userResultSchema);
 
 module.exports = userResult;
