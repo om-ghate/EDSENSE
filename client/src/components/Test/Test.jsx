@@ -21,7 +21,11 @@ const array = [
 const Q_arr = []; //Array to store the path which system takes
 const R_ans = []; //Array to store right ans
 const W_ans = []; //Array to store wrong ans
-const SpW_ans = []; //Array to store Specific wrong ans
+const SpW1_ans = []; //Array to store Specific wrong ans
+const SpW2_ans = []; //Array to store Specific wrong ans
+const SpW3_ans = []; //Array to store Specific wrong ans
+const SpW4_ans = []; //Array to store Specific wrong ans
+const SpW5_ans = []; //Array to store Specific wrong ans
 
 //
 const Timer = []; // Array to store Timer
@@ -176,11 +180,35 @@ const Test = () => {
         parseInt(answer) === currentQuestion.swa4 ||
         parseInt(answer) === currentQuestion.swa5)
     ) {
-      SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+      if(parseInt(answer) === currentQuestion.swa1){
+        console.log("Special Case 1");
+        SpW1_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+        console.log("SpW1_ans : ",SpW1_ans);
+      }
+      else if(parseInt(answer) === currentQuestion.swa2){
+        console.log("Special Case 2");
+        SpW2_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+        console.log("SpW2_ans : ",SpW2_ans);
+      }
+      else if(parseInt(answer) === currentQuestion.swa3){
+        console.log("Special Case 3");
+        SpW3_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+        console.log("SpW3_ans : ",SpW3_ans);
+      }
+      else if(parseInt(answer) === currentQuestion.swa4){
+        console.log("Special Case 4");
+        SpW4_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+        console.log("SpW4_ans : ",SpW4_ans);
+      }
+      else if(parseInt(answer) === currentQuestion.swa5){
+        console.log("Special Case 5");
+        SpW5_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+        console.log("SpW5_ans : ",SpW5_ans);
+      }
       setPointer(pointer - dec);
       setDec(dec + 2);
       console.log("Points", pointer);
-      console.log("SpW_ans: ", SpW_ans);
+      // console.log("SpW_ans: ", SpW_ans);
     } else {
       W_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("W_ans: ", W_ans);
@@ -438,7 +466,11 @@ const arr =  [0,17,17,6];
         Q_arr: Q_arr,
         Timer: Timer,
         R_ans: R_ans,
-        SpW_ans: SpW_ans,
+        SpW1_ans: SpW1_ans,
+        SpW2_ans: SpW2_ans,
+        SpW3_ans: SpW3_ans,
+        SpW4_ans: SpW4_ans,
+        SpW5_ans: SpW5_ans,
         W_ans: W_ans,
         // Result: Result,
       });
