@@ -146,8 +146,13 @@ const Test = () => {
       // setResult("");
       // ansQues.push(filteredData[randomIndex].Q_no);
       console.log(array);
-    } else {
-      console.log("Exhausted Array");
+    } 
+    // else if (array.length === 0 && pointer < 3 && stage < 3){
+    //   console.log("Exhausted Array for Stage 1 or 2");
+    //   handleStageChange();
+    // }
+    else if (array.length === 0 && pointer < 3 && stage === 3) {
+      console.log("Exhausted Array for Stage 3");
       setExhaust(true);
       sendUserResult();
     }
@@ -254,7 +259,7 @@ const arr =  [0,17,17,6];
 
   useEffect(() => {
     if (pointer === 3 && level <= arr[stage]) {
-      
+      console.log("Handle Level Change Executed");
       handleLevelChange();
     }
   }, [pointer]);
@@ -271,26 +276,36 @@ const arr =  [0,17,17,6];
 
   // ! Handle Level Change function and useState END
 
-  // ! Handle Stage Change function and useState
+  // * Handle Stage Change function and useState
 
+// ! 1.1 Handle Stage Change for Successful condition 
   useEffect(() => {
     if (pointer === 3 && level === arr[stage] && stage < 3) {
       handleStageChange();
     }
   }, [pointer]);
+// ! 1.1 Handle Stage Change for Successful condition END
+
+// ! 1.2 Handle Stage Change for Unsuccessful condition
+  useEffect(() => {
+    if (array.length === 0 && pointer < 3 && stage < 3) {
+      handleStageChange();
+    }
+  }, [array.length]);
+// ! 1.2 Handle Stage Change for Unsuccessful condition END
 
   const handleStageChange = () => {
     setPointer(0);
     setDec(1);
-    setLevel(1);
     setStage(stage + 1);
+    setLevel(1);
 
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
     }
   };
 
-  // ! Handle Stage Change function and useState END
+  // * Handle Stage Change function and useState END
 
   // Code by Om - 5th July
   // ! Handle Test Complete function and useState
@@ -352,7 +367,7 @@ const arr =  [0,17,17,6];
   //! Array Exhausted
 
   useEffect(() => {
-    if (array.length === 0 && pointer < 3) {
+    if (array.length === 0 && pointer < 3 && stage === 3) {
       setExhaust(true);
     }
   }, [pointer]);
@@ -396,9 +411,6 @@ const arr =  [0,17,17,6];
   const handleNextButtonClick = () => {
 
       generateQuestion();
-      
-
-
   };
 
   // Render start screen if quiz has not started
@@ -448,7 +460,8 @@ const arr =  [0,17,17,6];
       // Reponse time function end -----------------------------------------------------------------------------------------------
 
       checkAnswer();
-      handleNextButtonClick();
+      // handleNextButtonClick();
+      generateQuestion();
       setError("");
     } else {
       toast.info("Please fill in this field");
