@@ -176,7 +176,26 @@ const Test = () => {
         parseInt(answer) === currentQuestion.swa4 ||
         parseInt(answer) === currentQuestion.swa5)
     ) {
-      SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : ",answer.toString()));
+      if(parseInt(answer) === currentQuestion.swa1){
+        console.log("Special Case 1");
+        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 1"));
+      }
+      else if(parseInt(answer) === currentQuestion.swa2){
+        console.log("Special Case 2");
+        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 2"));
+      }
+      else if(parseInt(answer) === currentQuestion.swa3){
+        console.log("Special Case 3");
+        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 3"));
+      }
+      else if(parseInt(answer) === currentQuestion.swa4){
+        console.log("Special Case 4");
+        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 4"));
+      }
+      else if(parseInt(answer) === currentQuestion.swa5){
+        console.log("Special Case 5");
+        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 5"));
+      }
       setPointer(pointer - dec);
       setDec(dec + 2);
       console.log("Points", pointer);
