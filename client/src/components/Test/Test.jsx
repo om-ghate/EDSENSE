@@ -409,6 +409,13 @@ const arr =  [0,17,17,6];
     return () => clearInterval(timer);
   });
 
+  useEffect(()=>{
+    if(seconds === 5 && stage <= 2){
+      handleStageChange();
+      // generateQuestion();
+    } 
+  },[seconds]);
+
   const restart = () => {
     let str = minutes.toString().concat(":", seconds.toString());
     Timer.push(str);
