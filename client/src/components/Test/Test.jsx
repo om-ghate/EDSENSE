@@ -31,6 +31,7 @@ const Timer = []; // Array to store Timer
 
 const payload = JSON.parse(localStorage.getItem("payload"));
 console.log(payload);
+
 const Test = () => {
   const [exhaust, setExhaust] = useState(false);
   const [gameover, setGameover] = useState(false);
@@ -409,12 +410,26 @@ const arr =  [0,17,17,6];
     return () => clearInterval(timer);
   });
 
-  useEffect(()=>{
-    if(seconds === 5 && stage <= 2){
+  useEffect(() => {
+    // Function to handle button click and next stage
+    const handleNextStage = () => {
+      const button = document.querySelector(".button1");
+      if (button) {
+        button.click();
+      }
+      
+
       handleStageChange();
       // generateQuestion();
-    } 
-  },[seconds]);
+    };
+
+    if (seconds === 5 && stage <= 2) {
+      setAnswer(10000001);
+      setError("");
+      restart();
+      handleNextStage();
+    }
+  }, );
 
   const restart = () => {
     let str = minutes.toString().concat(":", seconds.toString());
