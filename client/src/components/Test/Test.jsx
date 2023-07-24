@@ -388,6 +388,7 @@ const arr =  [0,17,17,6];
   useEffect(() => {
     if (array.length === 0 && pointer < 3 && stage === 3) {
       setExhaust(true);
+      sendUserResult();
     }
   }, [pointer]);
 
@@ -402,12 +403,30 @@ const arr =  [0,17,17,6];
       setSeconds(seconds + 1);
 
       if (seconds === 59) {
-        setMinutes(minutes + 1);
         setSeconds(0);
+        setMinutes(minutes + 1);
       }
     }, 1000);
     return () => clearInterval(timer);
   });
+
+  useEffect(()=>{
+    if(minutes === 5 && stage <=2 && started && !exhaust){
+      console.log('Time is up!');
+      // restart();
+      // W_ans.push(Q_arr[Q_arr.length - 1]);
+      // console.log("W_ans: ", W_ans);
+      handleStageChange();
+    }
+    if(minutes === 5 && stage === 3 && started && !exhaust){
+      console.log('Time is up!');
+      restart();
+      W_ans.push(Q_arr[Q_arr.length - 1]);
+      console.log("W_ans: ", W_ans);
+      setExhaust(true);
+      sendUserResult();
+    }
+  },[started,minutes]);
 
   const restart = () => {
     let str = minutes.toString().concat(":", seconds.toString());
@@ -422,14 +441,10 @@ const arr =  [0,17,17,6];
 
   // Function to start the quiz
   const startQuiz = () => {
+    setSeconds(0);
+    setMinutes(0);
     setStarted(true);
     generateQuestion();
-  };
-
-  // Function to handle "Next" button click
-  const handleNextButtonClick = () => {
-
-      generateQuestion();
   };
 
   // Render start screen if quiz has not started
@@ -479,7 +494,6 @@ const arr =  [0,17,17,6];
       // Reponse time function end -----------------------------------------------------------------------------------------------
 
       checkAnswer();
-      // handleNextButtonClick();
       generateQuestion();
       setError("");
     } else {
