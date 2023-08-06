@@ -358,30 +358,7 @@ const arr =  [0,17,17,6];
     }
   }, [pointer]);
 
-  // Code by Om - 11th July
-
-  // Effect to handle level change when pointer reaches 12
-
-  //! Repeated Code - I Think
-  // useEffect(() => {
-  //   // else{
-  //   //   setGameover(true)
-  //   // }
-  //   const handleLevelChange = () => {
-  //     setLevel(level + 1);
-  //     setPointer(0);
-  //     setDec(1);
-  //     for (let i = 0; i < arr_c.length; i++) {
-  //       array[i] = arr_c[i];
-  //     }
-  //   };
-  //   if (pointer >= 4 && level < 2) {
-  //     // for(int)
-  //     handleLevelChange();
-  //   }
-  // }, [pointer, level]);
-
-  // ! Repeated Code End
+  // Code by Om - 11th July END
 
   //! Array Exhausted
 
