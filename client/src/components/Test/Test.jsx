@@ -266,8 +266,6 @@ Array - 0
 */
 // ! Real Condition END
 
-
-
   // ! Handle Level Change function and useState
 
 // Array for storing the level counts of stages
