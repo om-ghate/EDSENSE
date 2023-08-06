@@ -266,18 +266,25 @@ Array - 0
 */
 // ! Real Condition END
 
-  // ! Handle Level Change function and useState
+  // ! Handle Level Change function and useEffect
 
 // Array for storing the level counts of stages
 
-const arr =  [0,17,17,6];
+const arr =  [0,3,3,3];
 
 // 
 
   useEffect(() => {
-    if (pointer === 3 && level <= arr[stage]) {
-      console.log("Handle Level Change Executed");
+    if (pointer === 3 && level < arr[stage]) {
       handleLevelChange();
+    }
+
+    else if(pointer === 3 && level === arr[stage] && stage < 3) {
+      handleStageChange();
+    }
+
+    else if (pointer === 3 && level === arr[stage] && stage === 3) {
+      handleTestComplete();
     }
   }, [pointer]);
 
@@ -291,26 +298,19 @@ const arr =  [0,17,17,6];
     }
   };
 
-  // ! Handle Level Change function and useState END
+  // ! Handle Level Change function and useEffect END
 
-  // * Handle Stage Change function and useState
 
-// ! 1.1 Handle Stage Change for Successful condition 
-  useEffect(() => {
-    if (pointer === 3 && level === arr[stage] && stage < 3) {
-      handleStageChange();
-    }
-  }, [pointer]);
-// ! 1.1 Handle Stage Change for Successful condition END
 
-// ! 1.2 Handle Stage Change for Unsuccessful condition
+// ! 1.2 Handle Stage Change useEffect for Unsuccessful condition
   useEffect(() => {
     if (array.length === 0 && pointer < 3 && stage < 3) {
       handleStageChange();
     }
   }, [array.length]);
-// ! 1.2 Handle Stage Change for Unsuccessful condition END
+// ! 1.2 Handle Stage Change useEffect for Unsuccessful condition END
 
+  // * Handle Stage Change function 
   const handleStageChange = () => {
     setPointer(0);
     setDec(1);
@@ -321,55 +321,46 @@ const arr =  [0,17,17,6];
       array[i] = arr_c[i];
     }
   };
-
-  // * Handle Stage Change function and useState END
+  // * Handle Stage Change function END
 
   // Code by Om - 5th July
-  // ! Handle Test Complete function and useState
-  useEffect(() => {
-    if (pointer === 3 && level === arr[stage] && stage === 3) {
-      handleTestComplete();
-    }
-  }, [pointer]);
 
+  // ! Handle Test Complete function
   const handleTestComplete = () => {
     R_ans.push(Q_arr[Q_arr.length - 1]);
-
     let str = minutes.toString().concat(":", seconds.toString());
     Timer.push(str);
-
     setGameover(true);
     sendUserResult();
   };
+  // ! Handle Test Complete function END
 
-  // ! Handle Test Complete function and useState END
   // Code by Om - 5th July END
 
   // Code by Om - 11th July
-
   //! This function works on adding autoFocus everytime the page reloads and a new question is generated
-
   useEffect(() => {
     const inputElement = document.querySelector('input[type="number"]');
     if (inputElement) {
       inputElement.focus();
     }
   }, [pointer]);
-
   // Code by Om - 11th July END
 
-  //! Array Exhausted
 
+  //! useEffect to handle Array Exhausted
   useEffect(() => {
     if (array.length === 0 && pointer < 3 && stage === 3) {
       setExhaust(true);
       sendUserResult();
     }
   }, [pointer]);
-
-  // ! Array Exhausted End
+  // ! useEffect to handle Array Exhausted End
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
+  /*
+  These functions are coded to track and store time required by an individual for solving a particular question
+  */
 
   var timer;
   useEffect(() => {
@@ -385,15 +376,15 @@ const arr =  [0,17,17,6];
     return () => clearInterval(timer);
   });
 
+// ! Use Effect to handle minimum time utilization while a student gives the test
   useEffect(()=>{
+    // Function to skip to next stage when student takes more than 5mins to solve a question
     if(minutes === 5 && stage <=2 && started && !exhaust){
       console.log('Time is up!');
-      // restart();
-      // W_ans.push(Q_arr[Q_arr.length - 1]);
-      // console.log("W_ans: ", W_ans);
       handleStageChange();
     }
-    if(minutes === 5 && stage === 3 && started && !exhaust){
+    // Function to end test when student takes more than 5mins on stage 3 to solve a question
+    else if(minutes === 5 && stage === 3 && started && !exhaust){
       console.log('Time is up!');
       restart();
       W_ans.push(Q_arr[Q_arr.length - 1]);
@@ -402,7 +393,9 @@ const arr =  [0,17,17,6];
       sendUserResult();
     }
   },[started,minutes]);
+// ! Use Effect to handle minimum time utilization while a student gives the test END
 
+  // ! Stores the time required per question and then restarts the timer for next question
   const restart = () => {
     let str = minutes.toString().concat(":", seconds.toString());
     Timer.push(str);
@@ -411,6 +404,7 @@ const arr =  [0,17,17,6];
     setSeconds(0);
     setMinutes(0);
   };
+  // ! Stores the time required per question and then restarts the timer for next question END
 
   // Restart Func and Use Effect End ----------------------------------------------------------------------------------------------------------
 
@@ -467,7 +461,6 @@ const arr =  [0,17,17,6];
       // Restart fuction added for response time module -------------------------------------------------------------------------
       restart();
       // Reponse time function end -----------------------------------------------------------------------------------------------
-
       checkAnswer();
       generateQuestion();
       setError("");
@@ -560,7 +553,7 @@ const arr =  [0,17,17,6];
     </div>
   );
 
-  // ------------------------------------------------------------------------------------------------------------------
+  // ! ------------------------------------------------------------------------------------------------------------------
 };
 
 export default Test;
