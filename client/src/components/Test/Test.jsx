@@ -30,6 +30,7 @@ const Timer = []; // Array to store Timer
 //! Arrays for New Algorithm Start
 
 const arrayLevel = [];
+const arrayStage = [];
 
 //* Arrays for New Algorithm End
 
@@ -43,7 +44,7 @@ const ans_spw = -1;
 
 
 let score = 0;
-let levelScore = 1.2;
+let levelScore = 0;
 let stageScore = 0;
 
 //* Variables for New Algorithm End
@@ -62,7 +63,7 @@ const Test = () => {
   // const [result, setResult] = useState("");
   const [error, setError] = useState("");
   const [level, setLevel] = useState(1);
-  const [pointer, setPointer] = useState(1);
+  // const [pointer, setPointer] = useState(1);
   const [started, setStarted] = useState(false); // Added state for tracking quiz start
   //   const arr = [
   //     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -75,6 +76,12 @@ const Test = () => {
   const [minutes, setMinutes] = useState(0);
 
   // Use States End ----------------------------------------------------------------------------------------------------------------------
+
+  //! useState for Level Score Start
+  
+  // let [levelScore, setLevelScore] = useState(0);
+
+  //* useState for Level Score End
 
   // Result Stored
   // const [Result,setResult] = useState("");
@@ -94,7 +101,7 @@ const Test = () => {
 
   let str2 = "";
   const generateQuestion = () => {
-    if (array.length > 0 && pointer <= 3 && stage < 4) {
+    if (array.length > 0 && levelScore < 3.3 && stage < 4) {
       const randomIndex = Math.floor(Math.random() * array.length);
       console.log(randomIndex);
       const Q_no = array[randomIndex];
@@ -172,7 +179,7 @@ const Test = () => {
     //   console.log("Exhausted Array for Stage 1 or 2");
     //   handleStageChange();
     // }
-    else if (array.length === 0 && pointer < 3 && stage === 3) {
+    else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
       console.log("Exhausted Array for Stage 3");
       setExhaust(true);
       sendUserResult();
@@ -181,7 +188,7 @@ const Test = () => {
 
   // * ---------- Function to check the answer ----------------------------------------------------------------------
   const checkAnswer = () => {
-    console.log(pointer);
+    // console.log(pointer);
 
     //! Correct Answer
     if (currentQuestion && parseInt(answer) === currentQuestion.ans) {
@@ -201,8 +208,9 @@ const Test = () => {
 
       R_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("R_ans: ", R_ans);
-      setPointer(pointer + 1);
-      console.log("Pointer - " + pointer);
+      
+      // setPointer(pointer + 1);
+      // console.log("Pointer - " + pointer);
     } 
     
     else if (
@@ -233,9 +241,9 @@ const Test = () => {
         console.log("Special Case 5");
         SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 5"));
       }
-      setPointer(pointer - dec);
+      // setPointer(pointer - dec);
       setDec(dec + 2);
-      console.log("Points", pointer);
+      // console.log("Points", pointer);
       console.log("SpW_ans: ", SpW_ans);
 
       score = ans_spw;
@@ -336,36 +344,97 @@ const arr =  [0,17,16,6];
 
 // 
 
+  // useEffect(() => {
+  //   if (levelScore >= 3.3 && level < arr[stage]) {
+  //     stageScore = stageScore + levelScore + 3;
+  //     console.log("Stage Score - ", stageScore)
+  //     arrayLevel.push(levelScore);
+  //     arrayLevel.push(3);
+  //     console.log("ArrayLevel - ",arrayLevel)
+  //     setLevelScore(0);
+  //     handleLevelChange(2);
+  //   }
+  //   else if(levelScore >= 2.5 && level < arr[stage]){
+  //     stageScore = stageScore + levelScore;
+  //     console.log("Stage Score - ", stageScore);
+  //     arrayLevel.push(levelScore);
+  //     console.log("ArrayLevel - ",arrayLevel)
+  //     setLevelScore(0)
+  //     handleLevelChange(1);
+  //   }
+
+  //   else if(pointer === 3 && level >= arr[stage] && stage < 3) {
+  //     handleStageChange();
+  //   }
+
+  //   else if (pointer === 3 && level === arr[stage] && stage === 3) {
+  //     handleTestComplete();
+  //   }
+  // }, [levelScore]);
+
   useEffect(() => {
-    if (levelScore >= 3.3 && level < arr[stage]) {
-      stageScore = stageScore + levelScore + 3;
-      console.log("Stage Score - ", stageScore)
+    
+    if(levelScore >= 3.3 && level+1 === arr[stage] ){
+      // handleStageChange();
+      console.log("Exception Case 1")
+      arrayLevel.push(levelScore);
+      stageScore = stageScore + levelScore;
+      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      arrayStage.push(stageScore);
+      levelScore = 0;
+      stageScore = 0;
+      if(stage < 3){
+        handleStageChange();
+      }
+      else{
+        handleTestComplete();
+      }
+    }
+
+    else if (levelScore >= 3.3 && level < arr[stage]) {
+      console.log("Best Case - Level change x2")
       arrayLevel.push(levelScore);
       arrayLevel.push(3);
-      console.log("ArrayLevel - ",arrayLevel)
+      stageScore = stageScore + levelScore + 3;
+      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       levelScore = 0;
+
       handleLevelChange(2);
+
     }
-    else if(levelScore >= 2.5 && array.length === 0 && level < arr[stage]){
-      stageScore = stageScore + levelScore;
-      console.log("Stage Score - ", stageScore);
+    else if(levelScore >=2.5 && level < arr[stage]){
+      console.log("Average Case - Level change x1")
       arrayLevel.push(levelScore);
-      console.log("ArrayLevel - ",arrayLevel)
-      levelScore = 0;
+      stageScore = stageScore + levelScore;
+      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       handleLevelChange(1);
     }
 
-    else if(pointer === 3 && level >= arr[stage] && stage < 3) {
+    else if(levelScore >= 2.5 && level === arr[stage] && stage < 3) {
+      console.log("Average Case - Stage change ")
+      arrayLevel.push(levelScore);
+      stageScore = stageScore + levelScore;
+      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      arrayStage.push(stageScore);
+      levelScore = 0;
+      stageScore = 0;
       handleStageChange();
     }
 
-    else if (pointer === 3 && level === arr[stage] && stage === 3) {
+    else if (levelScore >= 2.5 && level === arr[stage] && stage === 3) {
+      console.log("Average Case - Test Complete")
+      arrayLevel.push(levelScore);
+      stageScore = stageScore + levelScore;
+      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      arrayStage.push(stageScore);
+      levelScore = 0;
+      stageScore = 0;
       handleTestComplete();
     }
-  }, [pointer,levelScore]);
+  }, [levelScore]);
 
   const handleLevelChange = (val) => {
-    setPointer(0);
+    // setPointer(0);
     setDec(1);
     setLevel(level + val);
 
@@ -380,7 +449,7 @@ const arr =  [0,17,16,6];
 
 // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition
   useEffect(() => {
-    if (array.length === 0 && pointer < 3 && stage < 3) {
+    if (array.length === 0 && levelScore < 2.5 && stage < 3) {
       handleStageChange();
     }
   }, [array.length]);
@@ -388,7 +457,7 @@ const arr =  [0,17,16,6];
 
   // * Handle Stage Change function 
   const handleStageChange = () => {
-    setPointer(0);
+    // setPointer(0);
     setDec(1);
     setStage(stage + 1);
     setLevel(1);
@@ -420,17 +489,17 @@ const arr =  [0,17,16,6];
     if (inputElement) {
       inputElement.focus();
     }
-  }, [pointer]);
+  }, [levelScore]);
   // Code by Om - 11th July END
 
 
   //! useEffect to handle Array Exhausted
   useEffect(() => {
-    if (array.length === 0 && pointer < 3 && stage === 3) {
+    if (array.length === 0 && levelScore < 2.5 && stage === 3) {
       setExhaust(true);
       sendUserResult();
     }
-  }, [pointer]);
+  }, [levelScore]);
   // ! useEffect to handle Array Exhausted End
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
