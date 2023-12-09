@@ -27,6 +27,27 @@ const SpW_ans = []; //Array to store Specific wrong ans
 const Timer = []; // Array to store Timer
 //
 
+//! Arrays for New Algorithm Start
+
+const arrayLevel = [];
+
+//* Arrays for New Algorithm End
+
+//! Variables for New Algorithm Start
+
+const fast = 1.2;
+const slow = 0.9;
+const ans_r = 1;
+const ans_w = -0.7;
+const ans_spw = -1;
+
+
+let score = 0;
+let levelScore = 1.2;
+let stageScore = 0;
+
+//* Variables for New Algorithm End
+
 // ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
 
 const payload = JSON.parse(localStorage.getItem("payload"));
@@ -162,13 +183,29 @@ const Test = () => {
   const checkAnswer = () => {
     console.log(pointer);
 
+    //! Correct Answer
     if (currentQuestion && parseInt(answer) === currentQuestion.ans) {
+      if(currentQuestion.response >= seconds){
+        console.log("fast");
+        score = fast * ans_r;
+        console.log("score - ", score)
+      }
+      else{
+        console.log("slow")
+        score = slow * ans_r;
+        console.log("score - ", score)
+      }
+      levelScore = levelScore + score;
+      levelScore = parseFloat(levelScore.toFixed(2));
+      console.log("Level Score - ", levelScore)
+
       R_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("R_ans: ", R_ans);
-      // setResult("Correct!");
       setPointer(pointer + 1);
       console.log("Pointer - " + pointer);
-    } else if (
+    } 
+    
+    else if (
       currentQuestion &&
       (parseInt(answer) === currentQuestion.swa1 ||
         parseInt(answer) === currentQuestion.swa2 ||
@@ -200,7 +237,32 @@ const Test = () => {
       setDec(dec + 2);
       console.log("Points", pointer);
       console.log("SpW_ans: ", SpW_ans);
-    } else {
+
+      score = ans_spw;
+      console.log("score - ", score);
+
+
+
+      levelScore = levelScore + score;
+      levelScore = parseFloat(levelScore.toFixed(2));
+      console.log("Level Score - ", levelScore)
+    } 
+    
+    else {
+      if(currentQuestion.response >= seconds){
+        console.log("fast");
+        score = fast * ans_w;
+        console.log("score - ", score)
+      }
+      else{
+        console.log("slow");
+        score = slow * ans_w;
+        console.log("score - ", score)
+      }
+      levelScore = levelScore + score;
+      levelScore = parseFloat(levelScore.toFixed(2));
+      console.log("Level Score - ", levelScore)
+
       W_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("W_ans: ", W_ans);
     }
@@ -275,23 +337,37 @@ const arr =  [0,17,16,6];
 // 
 
   useEffect(() => {
-    if (pointer === 3 && level < arr[stage]) {
-      handleLevelChange();
+    if (levelScore >= 3.3 && level < arr[stage]) {
+      stageScore = stageScore + levelScore + 3;
+      console.log("Stage Score - ", stageScore)
+      arrayLevel.push(levelScore);
+      arrayLevel.push(3);
+      console.log("ArrayLevel - ",arrayLevel)
+      levelScore = 0;
+      handleLevelChange(2);
+    }
+    else if(levelScore >= 2.5 && array.length === 0 && level < arr[stage]){
+      stageScore = stageScore + levelScore;
+      console.log("Stage Score - ", stageScore);
+      arrayLevel.push(levelScore);
+      console.log("ArrayLevel - ",arrayLevel)
+      levelScore = 0;
+      handleLevelChange(1);
     }
 
-    else if(pointer === 3 && level === arr[stage] && stage < 3) {
+    else if(pointer === 3 && level >= arr[stage] && stage < 3) {
       handleStageChange();
     }
 
     else if (pointer === 3 && level === arr[stage] && stage === 3) {
       handleTestComplete();
     }
-  }, [pointer]);
+  }, [pointer,levelScore]);
 
-  const handleLevelChange = () => {
+  const handleLevelChange = (val) => {
     setPointer(0);
     setDec(1);
-    setLevel(level + 1);
+    setLevel(level + val);
 
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
@@ -368,10 +444,10 @@ const arr =  [0,17,16,6];
     timer = setInterval(() => {
       setSeconds(seconds + 1);
 
-      if (seconds === 59) {
-        setSeconds(0);
-        setMinutes(minutes + 1);
-      }
+      // if (seconds === 59) {
+      //   setSeconds(0);
+      //   setMinutes(minutes + 1);
+      // }
     }, 1000);
     return () => clearInterval(timer);
   });
@@ -379,12 +455,13 @@ const arr =  [0,17,16,6];
 // ! Use Effect to handle minimum time utilization while a student gives the test
   useEffect(()=>{
     // Function to skip to next stage when student takes more than 5mins to solve a question
-    if(minutes === 5 && stage <=2 && started && !exhaust){
+
+    if(seconds === 300 && stage <=2 && started && !exhaust){
       console.log('Time is up!');
       handleStageChange();
     }
     // Function to end test when student takes more than 5mins on stage 3 to solve a question
-    else if(minutes === 5 && stage === 3 && started && !exhaust){
+    else if(seconds === 300 && stage === 3 && started && !exhaust){
       console.log('Time is up!');
       restart();
       W_ans.push(Q_arr[Q_arr.length - 1]);
@@ -392,13 +469,13 @@ const arr =  [0,17,16,6];
       setExhaust(true);
       sendUserResult();
     }
-  },[started,minutes]);
+  },[started, seconds]);
 // ! Use Effect to handle minimum time utilization while a student gives the test END
 
   // ! Stores the time required per question and then restarts the timer for next question
   const restart = () => {
-    let str = minutes.toString().concat(":", seconds.toString());
-    Timer.push(str);
+    // let str = minutes.toString().concat(":", seconds.toString());
+    Timer.push(seconds);
     // console.log("Timer - "+Timer)
     console.log("Timer : ", Timer);
     setSeconds(0);

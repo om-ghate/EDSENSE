@@ -7,11 +7,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 8,
+     "response": 26,
      "swa1": 15,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -21,11 +22,12 @@
      "sign": "+",
      "num2": 2,
      "ans": 8,
+     "response": 26,
      "swa1": 12,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -35,11 +37,12 @@
      "sign": "+",
      "num2": 4,
      "ans": 6,
+     "response": 26,
      "swa1": 8,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -49,11 +52,12 @@
      "sign": "+",
      "num2": 8,
      "ans": 9,
+     "response": 26,
      "swa1": 8,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -63,11 +67,12 @@
      "sign": "+",
      "num2": 2,
      "ans": 9,
+     "response": 26,
      "swa1": 14,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -77,11 +82,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 5,
+     "response": 26,
      "swa1": 6,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -91,11 +97,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 9,
+     "response": 26,
      "swa1": 20,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -105,11 +112,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 8,
+     "response": 26,
      "swa1": 12,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -119,11 +127,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 7,
+     "response": 26,
      "swa1": 0,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -133,11 +142,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 7,
+     "response": 26,
      "swa1": 12,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -147,11 +157,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 11,
+     "response": 27,
      "swa1": 30,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -161,11 +172,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 13,
+     "response": 27,
      "swa1": 40,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -175,11 +187,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 13,
+     "response": 27,
      "swa1": 42,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -189,11 +202,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 11,
+     "response": 27,
      "swa1": 24,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -203,11 +217,12 @@
      "sign": "+",
      "num2": 8,
      "ans": 17,
+     "response": 27,
      "swa1": 72,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -217,11 +232,12 @@
      "sign": "+",
      "num2": 4,
      "ans": 10,
+     "response": 27,
      "swa1": 24,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -231,11 +247,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 15,
+     "response": 27,
      "swa1": 56,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -245,11 +262,12 @@
      "sign": "+",
      "num2": 4,
      "ans": 13,
+     "response": 27,
      "swa1": 36,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -259,11 +277,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 12,
+     "response": 27,
      "swa1": 35,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -273,11 +292,12 @@
      "sign": "+",
      "num2": 9,
      "ans": 13,
+     "response": 27,
      "swa1": 36,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -287,11 +307,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 13,
+     "response": 30,
      "swa1": 30,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 4,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -301,11 +322,12 @@
      "sign": "+",
      "num2": 2,
      "ans": 14,
+     "response": 30,
      "swa1": 24,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 5,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -315,11 +337,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 25,
+     "response": 30,
      "swa1": 100,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 7,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -329,11 +352,12 @@
      "sign": "+",
      "num2": 4,
      "ans": 35,
+     "response": 30,
      "swa1": 124,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 8,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -343,11 +367,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 59,
+     "response": 30,
      "swa1": 168,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -357,11 +382,12 @@
      "sign": "+",
      "num2": 1,
      "ans": 62,
+     "response": 30,
      "swa1": 61,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 8,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -371,11 +397,12 @@
      "sign": "+",
      "num2": 8,
      "ans": 68,
+     "response": 30,
      "swa1": 480,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -385,11 +412,12 @@
      "sign": "+",
      "num2": 4,
      "ans": 95,
+     "response": 30,
      "swa1": 364,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -399,11 +427,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 17,
+     "response": 30,
      "swa1": 42,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 8,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -413,11 +442,12 @@
      "sign": "+",
      "num2": 2,
      "ans": 27,
+     "response": 30,
      "swa1": 50,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 9,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -427,11 +457,12 @@
      "sign": "+",
      "num2": 9,
      "ans": 82,
+     "response": 40,
      "swa1": 657,
      "swa2": 712,
      "swa3": 72,
      "swa4": 19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -441,11 +472,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 40,
+     "response": 40,
      "swa1": 175,
      "swa2": 310,
      "swa3": 30,
      "swa4": 13,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -455,11 +487,12 @@
      "sign": "+",
      "num2": 9,
      "ans": 63,
+     "response": 40,
      "swa1": 486,
      "swa2": 513,
      "swa3": 53,
      "swa4": 18,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -469,11 +502,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 43,
+     "response": 40,
      "swa1": 252,
      "swa2": 313,
      "swa3": 33,
      "swa4": 16,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -483,11 +517,12 @@
      "sign": "+",
      "num2": 9,
      "ans": 83,
+     "response": 40,
      "swa1": 666,
      "swa2": 713,
      "swa3": 73,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -497,11 +532,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 62,
+     "response": 40,
      "swa1": 336,
      "swa2": 512,
      "swa3": 53,
      "swa4": 17,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -511,11 +547,12 @@
      "sign": "+",
      "num2": 2,
      "ans": 70,
+     "response": 40,
      "swa1": 136,
      "swa2": 610,
      "swa3": 60,
      "swa4": 16,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -525,11 +562,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 92,
+     "response": 40,
      "swa1": 595,
      "swa2": 812,
      "swa3": 82,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -539,11 +577,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 23,
+     "response": 40,
      "swa1": 102,
      "swa2": 113,
      "swa3": 13,
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -553,11 +592,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 52,
+     "response": 40,
      "swa1": 240,
      "swa2": 413,
      "swa3": 43,
      "swa4": 17,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -567,11 +607,12 @@
      "sign": "+",
      "num2": 32,
      "ans": 77,
+     "response": 50,
      "swa1": 1440,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -581,9 +622,10 @@
      "sign": "+",
      "num2": 30,
      "ans": 55,
+     "response": 50,
      "swa1": 750,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 10,
      "swa5": 50
     },
@@ -595,11 +637,12 @@
      "sign": "+",
      "num2": 53,
      "ans": 86,
+     "response": 50,
      "swa1": 1749,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -609,11 +652,12 @@
      "sign": "+",
      "num2": 47,
      "ans": 88,
+     "response": 50,
      "swa1": 1927,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 16,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -623,11 +667,12 @@
      "sign": "+",
      "num2": 31,
      "ans": 82,
+     "response": 50,
      "swa1": 1581,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 10,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -637,9 +682,10 @@
      "sign": "+",
      "num2": 30,
      "ans": 55,
+     "response": 50,
      "swa1": 750,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 10,
      "swa5": 50
     },
@@ -651,9 +697,10 @@
      "sign": "+",
      "num2": 30,
      "ans": 93,
+     "response": 50,
      "swa1": 1890,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 12,
      "swa5": 90
     },
@@ -665,11 +712,12 @@
      "sign": "+",
      "num2": 16,
      "ans": 40,
+     "response": 50,
      "swa1": 384,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 13,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -679,11 +727,12 @@
      "sign": "+",
      "num2": 23,
      "ans": 39,
+     "response": 50,
      "swa1": 368,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 12,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -693,11 +742,12 @@
      "sign": "+",
      "num2": 18,
      "ans": 39,
+     "response": 50,
      "swa1": 378,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 12,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -707,11 +757,12 @@
      "sign": "+",
      "num2": 26,
      "ans": 81,
+     "response": 65,
      "swa1": 1430,
      "swa2": 711,
      "swa3": 71,
      "swa4": 18,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -721,11 +772,12 @@
      "sign": "+",
      "num2": 23,
      "ans": 92,
+     "response": 65,
      "swa1": 1587,
      "swa2": 812,
      "swa3": 82,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -735,11 +787,12 @@
      "sign": "+",
      "num2": 46,
      "ans": 100,
+     "response": 65,
      "swa1": 2484,
      "swa2": 910,
      "swa3": 90,
      "swa4": 19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -749,11 +802,12 @@
      "sign": "+",
      "num2": 13,
      "ans": 91,
+     "response": 65,
      "swa1": 1014,
      "swa2": 811,
      "swa3": 81,
      "swa4": 19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -763,11 +817,12 @@
      "sign": "+",
      "num2": 56,
      "ans": 81,
+     "response": 65,
      "swa1": 1400,
      "swa2": 711,
      "swa3": 71,
      "swa4": 18,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -777,11 +832,12 @@
      "sign": "+",
      "num2": 84,
      "ans": 140,
+     "response": 65,
      "swa1": 4704,
      "swa2": 1310,
      "swa3": 130,
      "swa4": 23,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -791,11 +847,12 @@
      "sign": "+",
      "num2": 27,
      "ans": 81,
+     "response": 65,
      "swa1": 1458,
      "swa2": 711,
      "swa3": 71,
      "swa4": 23,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -805,11 +862,12 @@
      "sign": "+",
      "num2": 29,
      "ans": 94,
+     "response": 65,
      "swa1": 1885,
      "swa2": 814,
      "swa3": 84,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -819,11 +877,12 @@
      "sign": "+",
      "num2": 36,
      "ans": 103,
+     "response": 65,
      "swa1": 2412,
      "swa2": 913,
      "swa3": 93,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -833,11 +892,12 @@
      "sign": "+",
      "num2": 49,
      "ans": 74,
+     "response": 65,
      "swa1": 1225,
      "swa2": 614,
      "swa3": 64,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -847,11 +907,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 104,
+     "response": 65,
      "swa1": 303,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 5,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -861,11 +922,12 @@
      "sign": "+",
      "num2": 4,
      "ans": 207,
+     "response": 65,
      "swa1": 812,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 9,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -875,11 +937,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 149,
+     "response": 65,
      "swa1": 720,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -889,11 +952,12 @@
      "sign": "+",
      "num2": 1,
      "ans": 259,
+     "response": 65,
      "swa1": 258,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 16,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -903,11 +967,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 362,
+     "response": 65,
      "swa1": 2136,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -917,11 +982,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 349,
+     "response": 65,
      "swa1": 1038,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 16,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -931,11 +997,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 518,
+     "response": 65,
      "swa1": 3072,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -945,11 +1012,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 548,
+     "response": 65,
      "swa1": 2715,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 17,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -959,11 +1027,12 @@
      "sign": "+",
      "num2": 2,
      "ans": 518,
+     "response": 65,
      "swa1": 1032,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 14,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -973,11 +1042,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 619,
+     "response": 65,
      "swa1": 4284,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 16,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -987,11 +1057,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 120,
+     "response": 66,
      "swa1": 791,
      "swa2": 1110,
      "swa3": 110,
      "swa4": 12,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1001,11 +1072,12 @@
      "sign": "+",
      "num2": 8,
      "ans": 121,
+     "response": 66,
      "swa1": 904,
      "swa2": 1111,
      "swa3": 111,
      "swa4": 13,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1015,11 +1087,12 @@
      "sign": "+",
      "num2": 9,
      "ans": 650,
+     "response": 66,
      "swa1": 5769,
      "swa2": 6410,
      "swa3": 640,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1029,11 +1102,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 263,
+     "response": 66,
      "swa1": 1792,
      "swa2": 2513,
      "swa3": 253,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1043,11 +1117,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 863,
+     "response": 66,
      "swa1": 5992,
      "swa2": 8513,
      "swa3": 853,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1057,11 +1132,12 @@
      "sign": "+",
      "num2": 8,
      "ans": 753,
+     "response": 66,
      "swa1": 5960,
      "swa2": 7413,
      "swa3": 743,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1071,11 +1147,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 971,
+     "response": 66,
      "swa1": 5790,
      "swa2": 9611,
      "swa3": 961,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1085,11 +1162,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 263,
+     "response": 66,
      "swa1": 1792,
      "swa2": 2513,
      "swa3": 253,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1099,11 +1177,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 592,
+     "response": 66,
      "swa1": 1767,
      "swa2": 5812,
      "swa3": 582,
      "swa4": 25,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1113,11 +1192,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 751,
+     "response": 66,
      "swa1": 4470,
      "swa2": 7411,
      "swa3": 741,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1127,11 +1207,12 @@
      "sign": "+",
      "num2": 7,
      "ans": 303,
+     "response": 68,
      "swa1": 2072,
      "swa2": 2913,
      "swa3": 293,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1141,11 +1222,12 @@
      "sign": "+",
      "num2": 6,
      "ans": 605,
+     "response": 68,
      "swa1": 3594,
      "swa2": 5915,
      "swa3": 595,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1155,11 +1237,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 800,
+     "response": 68,
      "swa1": 3975,
      "swa2": 7910,
      "swa3": 790,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1169,11 +1252,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 701,
+     "response": 68,
      "swa1": 3480,
      "swa2": 6911,
      "swa3": 691,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1183,11 +1267,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 201,
+     "response": 68,
      "swa1": 594,
      "swa2": 1911,
      "swa3": 191,
      "swa4": 21,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1197,11 +1282,12 @@
      "sign": "+",
      "num2": 9,
      "ans": 600,
+     "response": 68,
      "swa1": 5319,
      "swa2": 5910,
      "swa3": 590,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1211,11 +1297,12 @@
      "sign": "+",
      "num2": 8,
      "ans": 301,
+     "response": 68,
      "swa1": 2344,
      "swa2": 2911,
      "swa3": 291,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1225,11 +1312,12 @@
      "sign": "+",
      "num2": 3,
      "ans": 502,
+     "response": 68,
      "swa1": 1497,
      "swa2": 4912,
      "swa3": 492,
      "swa4": 25,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1239,11 +1327,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 303,
+     "response": 68,
      "swa1": 1490,
      "swa2": 2913,
      "swa3": 293,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1253,11 +1342,12 @@
      "sign": "+",
      "num2": 5,
      "ans": 201,
+     "response": 68,
      "swa1": 980,
      "swa2": 1911,
      "swa3": 191,
      "swa4": 21,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1267,11 +1357,12 @@
      "sign": "+",
      "num2": 23,
      "ans": 512,
+     "response": 70,
      "swa1": 11247,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1281,11 +1372,12 @@
      "sign": "+",
      "num2": 42,
      "ans": 300,
+     "response": 70,
      "swa1": 10836,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 21,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1295,11 +1387,12 @@
      "sign": "+",
      "num2": 34,
      "ans": 370,
+     "response": 70,
      "swa1": 11424,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1309,11 +1402,12 @@
      "sign": "+",
      "num2": 14,
      "ans": 270,
+     "response": 70,
      "swa1": 3584,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 18,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1323,11 +1417,12 @@
      "sign": "+",
      "num2": 54,
      "ans": 308,
+     "response": 70,
      "swa1": 13716,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1337,11 +1432,12 @@
      "sign": "+",
      "num2": 12,
      "ans": 595,
+     "response": 70,
      "swa1": 6996,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1351,11 +1447,12 @@
      "sign": "+",
      "num2": 31,
      "ans": 876,
+     "response": 70,
      "swa1": 26195,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 21,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1365,11 +1462,12 @@
      "sign": "+",
      "num2": 34,
      "ans": 779,
+     "response": 70,
      "swa1": 25330,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 23,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1379,11 +1477,12 @@
      "sign": "+",
      "num2": 26,
      "ans": 991,
+     "response": 70,
      "swa1": 25090,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1393,11 +1492,12 @@
      "sign": "+",
      "num2": 34,
      "ans": 598,
+     "response": 70,
      "swa1": 19176,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1407,11 +1507,12 @@
      "sign": "+",
      "num2": 58,
      "ans": 710,
+     "response": 72,
      "swa1": 37816,
      "swa2": 7010,
      "swa3": 600,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1421,11 +1522,12 @@
      "sign": "+",
      "num2": 67,
      "ans": 432,
+     "response": 72,
      "swa1": 24455,
      "swa2": 4212,
      "swa3": 322,
      "swa4": 27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1435,11 +1537,12 @@
      "sign": "+",
      "num2": 59,
      "ans": 804,
+     "response": 72,
      "swa1": 43955,
      "swa2": 7914,
      "swa3": 714,
      "swa4": 30,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1449,11 +1552,12 @@
      "sign": "+",
      "num2": 28,
      "ans": 1014,
+     "response": 72,
      "swa1": 27608,
      "swa2": 10014,
      "swa3": 904,
      "swa4": 33,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1463,11 +1567,12 @@
      "sign": "+",
      "num2": 27,
      "ans": 185,
+     "response": 72,
      "swa1": 4266,
      "swa2": 1715,
      "swa3": 175,
      "swa4": 23,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1477,11 +1582,12 @@
      "sign": "+",
      "num2": 59,
      "ans": 530,
+     "response": 72,
      "swa1": 27789,
      "swa2": 5210,
      "swa3": 420,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1491,11 +1597,12 @@
      "sign": "+",
      "num2": 48,
      "ans": 301,
+     "response": 72,
      "swa1": 12144,
      "swa2": 2911,
      "swa3": 291,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1505,11 +1612,12 @@
      "sign": "+",
      "num2": 53,
      "ans": 542,
+     "response": 72,
      "swa1": 25917,
      "swa2": 5312,
      "swa3": 432,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1519,11 +1627,12 @@
      "sign": "+",
      "num2": 54,
      "ans": 312,
+     "response": 72,
      "swa1": 13932,
      "swa2": 3012,
      "swa3": 202,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1533,11 +1642,12 @@
      "sign": "+",
      "num2": 26,
      "ans": 362,
+     "response": 72,
      "swa1": 8736,
      "swa2": 3512,
      "swa3": 352,
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1547,11 +1657,12 @@
      "sign": "+",
      "num2": 62,
      "ans": 318,
+     "response": 73,
      "swa1": 15872,
      "swa2": 2118,
      "swa3": 218,
      "swa4": 21,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1561,6 +1672,7 @@
      "sign": "+",
      "num2": 30,
      "ans": 619,
+     "response": 73,
      "swa1": 17670,
      "swa2": 5119,
      "swa3": 519,
@@ -1575,11 +1687,12 @@
      "sign": "+",
      "num2": 63,
      "ans": 808,
+     "response": 73,
      "swa1": 46935,
      "swa2": 7108,
      "swa3": 708,
      "swa4": 25,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1589,11 +1702,12 @@
      "sign": "+",
      "num2": 51,
      "ans": 1037,
+     "response": 73,
      "swa1": 50286,
      "swa2": 9137,
      "swa3": 937,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1603,11 +1717,12 @@
      "sign": "+",
      "num2": 61,
      "ans": 219,
+     "response": 73,
      "swa1": 9638,
      "swa2": 1119,
      "swa3": 119,
      "swa4": 21,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1617,11 +1732,12 @@
      "sign": "+",
      "num2": 48,
      "ans": 519,
+     "response": 73,
      "swa1": 22608,
      "swa2": 4119,
      "swa3": 419,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1631,11 +1747,12 @@
      "sign": "+",
      "num2": 54,
      "ans": 307,
+     "response": 73,
      "swa1": 13662,
      "swa2": 2107,
      "swa3": 207,
      "swa4": 19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1645,6 +1762,7 @@
      "sign": "+",
      "num2": 30,
      "ans": 519,
+     "response": 73,
      "swa1": 14670,
      "swa2": 4119,
      "swa3": 419,
@@ -1659,11 +1777,12 @@
      "sign": "+",
      "num2": 61,
      "ans": 319,
+     "response": 73,
      "swa1": 15738,
      "swa2": 2119,
      "swa3": 219,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1673,6 +1792,7 @@
      "sign": "+",
      "num2": 90,
      "ans": 426,
+     "response": 73,
      "swa1": 30240,
      "swa2": 3126,
      "swa3": 326,
@@ -1687,11 +1807,12 @@
      "sign": "+",
      "num2": 67,
      "ans": 321,
+     "response": 75,
      "swa1": 17018,
      "swa2": 21111,
      "swa3": 211,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1701,11 +1822,12 @@
      "sign": "+",
      "num2": 57,
      "ans": 640,
+     "response": 75,
      "swa1": 33231,
      "swa2": 51310,
      "swa3": 530,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1715,11 +1837,12 @@
      "sign": "+",
      "num2": 78,
      "ans": 923,
+     "response": 75,
      "swa1": 65910,
      "swa2": 81113,
      "swa3": 813,
      "swa4": 32,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1729,11 +1852,12 @@
      "sign": "+",
      "num2": 55,
      "ans": 800,
+     "response": 75,
      "swa1": 40975,
      "swa2": 7910,
      "swa3": 790,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1743,11 +1867,12 @@
      "sign": "+",
      "num2": 75,
      "ans": 1040,
+     "response": 75,
      "swa1": 72375,
      "swa2": 91310,
      "swa3": 930,
      "swa4": 32,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1757,11 +1882,12 @@
      "sign": "+",
      "num2": 58,
      "ans": 622,
+     "response": 75,
      "swa1": 32712,
      "swa2": 51112,
      "swa3": 512,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1771,11 +1897,12 @@
      "sign": "+",
      "num2": 69,
      "ans": 322,
+     "response": 75,
      "swa1": 17457,
      "swa2": 21112,
      "swa3": 212,
      "swa4": 25,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1785,11 +1912,12 @@
      "sign": "+",
      "num2": 88,
      "ans": 740,
+     "response": 75,
      "swa1": 57376,
      "swa2": 61310,
      "swa3": 630,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1799,11 +1927,12 @@
      "sign": "+",
      "num2": 57,
      "ans": 422,
+     "response": 75,
      "swa1": 20805,
      "swa2": 31112,
      "swa3": 312,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1813,11 +1942,12 @@
      "sign": "+",
      "num2": 88,
      "ans": 833,
+     "response": 75,
      "swa1": 65560,
      "swa2": 71213,
      "swa3": 723,
      "swa4": 32,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1827,11 +1957,12 @@
      "sign": "+",
      "num2": 58,
      "ans": 710,
+     "response": 75,
      "swa1": 37816,
      "swa2": 61010,
      "swa3": 600,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1841,11 +1972,12 @@
      "sign": "+",
      "num2": 123,
      "ans": 488,
+     "response": 75,
      "swa1": 44895,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1855,11 +1987,12 @@
      "sign": "+",
      "num2": 254,
      "ans": 999,
+     "response": 75,
      "swa1": 189230,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1869,11 +2002,12 @@
      "sign": "+",
      "num2": 162,
      "ans": 998,
+     "response": 75,
      "swa1": 135432,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1883,9 +2017,10 @@
      "sign": "+",
      "num2": 104,
      "ans": 698,
+     "response": 75,
      "swa1": 61776,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 23,
      "swa5": 608
     },
@@ -1897,11 +2032,12 @@
      "sign": "+",
      "num2": 445,
      "ans": 776,
+     "response": 75,
      "swa1": 147295,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1911,11 +2047,12 @@
      "sign": "+",
      "num2": 226,
      "ans": 558,
+     "response": 75,
      "swa1": 75032,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 18,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1925,9 +2062,10 @@
      "sign": "+",
      "num2": 401,
      "ans": 897,
+     "response": 75,
      "swa1": 198896,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 24,
      "swa5": 807
     },
@@ -1939,9 +2077,10 @@
      "sign": "+",
      "num2": 131,
      "ans": 984,
+     "response": 75,
      "swa1": 111743,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 21,
      "swa5": 904
     },
@@ -1953,9 +2092,10 @@
      "sign": "+",
      "num2": 101,
      "ans": 992,
+     "response": 75,
      "swa1": 89991,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 20,
      "swa5": 902
     },
@@ -1967,11 +2107,12 @@
      "sign": "+",
      "num2": 132,
      "ans": 773,
+     "response": 75,
      "swa1": 84612,
-     "swa2": null,
-     "swa3": null,
+     "swa2": "null",
+     "swa3": "null",
      "swa4": 17,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1981,11 +2122,12 @@
      "sign": "+",
      "num2": 326,
      "ans": 582,
+     "response": 75,
      "swa1": 83456,
      "swa2": 5712,
      "swa3": 572,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -1995,6 +2137,7 @@
      "sign": "+",
      "num2": 105,
      "ans": 961,
+     "response": 75,
      "swa1": 89880,
      "swa2": 9511,
      "swa3": 951,
@@ -2009,11 +2152,12 @@
      "sign": "+",
      "num2": 656,
      "ans": 769,
+     "response": 75,
      "swa1": 74128,
      "swa2": 7519,
      "swa3": 769,
      "swa4": 22,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2023,11 +2167,12 @@
      "sign": "+",
      "num2": 617,
      "ans": 782,
+     "response": 75,
      "swa1": 101805,
      "swa2": 7712,
      "swa3": 772,
      "swa4": 26,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2037,11 +2182,12 @@
      "sign": "+",
      "num2": 329,
      "ans": 970,
+     "response": 75,
      "swa1": 210889,
      "swa2": 9610,
      "swa3": 960,
      "swa4": 25,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2051,11 +2197,12 @@
      "sign": "+",
      "num2": 348,
      "ans": 604,
+     "response": 75,
      "swa1": 89088,
      "swa2": 5914,
      "swa3": 594,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2065,6 +2212,7 @@
      "sign": "+",
      "num2": 106,
      "ans": 962,
+     "response": 75,
      "swa1": 90736,
      "swa2": 9512,
      "swa3": 952,
@@ -2079,11 +2227,12 @@
      "sign": "+",
      "num2": 257,
      "ans": 1002,
+     "response": 75,
      "swa1": 191465,
      "swa2": 9912,
      "swa3": 992,
      "swa4": 30,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2093,11 +2242,12 @@
      "sign": "+",
      "num2": 239,
      "ans": 604,
+     "response": 75,
      "swa1": 87235,
      "swa2": 5914,
      "swa3": 594,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2107,11 +2257,12 @@
      "sign": "+",
      "num2": 237,
      "ans": 1093,
+     "response": 75,
      "swa1": 202872,
      "swa2": 10813,
      "swa3": 83,
      "swa4": 31,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2121,6 +2272,7 @@
      "sign": "+",
      "num2": 160,
      "ans": 905,
+     "response": 75,
      "swa1": 119200,
      "swa2": 8105,
      "swa3": 805,
@@ -2135,11 +2287,12 @@
      "sign": "+",
      "num2": 152,
      "ans": 1117,
+     "response": 75,
      "swa1": 146680,
      "swa2": 10117,
      "swa3": 17,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2149,11 +2302,12 @@
      "sign": "+",
      "num2": 392,
      "ans": 648,
+     "response": 75,
      "swa1": 100352,
      "swa2": 5148,
      "swa3": 548,
      "swa4": 27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2163,6 +2317,7 @@
      "sign": "+",
      "num2": 270,
      "ans": 859,
+     "response": 75,
      "swa1": 159030,
      "swa2": 7149,
      "swa3": 759,
@@ -2177,11 +2332,12 @@
      "sign": "+",
      "num2": 162,
      "ans": 907,
+     "response": 75,
      "swa1": 120690,
      "swa2": 8107,
      "swa3": 807,
      "swa4": 25,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2191,11 +2347,12 @@
      "sign": "+",
      "num2": 182,
      "ans": 1168,
+     "response": 75,
      "swa1": 179452,
      "swa2": 10168,
      "swa3": 68,
      "swa4": 34,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2205,11 +2362,12 @@
      "sign": "+",
      "num2": 481,
      "ans": 639,
+     "response": 75,
      "swa1": 75998,
      "swa2": 5139,
      "swa3": 539,
      "swa4": 27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2219,6 +2377,7 @@
      "sign": "+",
      "num2": 350,
      "ans": 821,
+     "response": 75,
      "swa1": 164850,
      "swa2": 7121,
      "swa3": 721,
@@ -2233,11 +2392,12 @@
      "sign": "+",
      "num2": 464,
      "ans": 717,
+     "response": 75,
      "swa1": 117392,
      "swa2": 6117,
      "swa3": 617,
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2247,11 +2407,12 @@
      "sign": "+",
      "num2": 473,
      "ans": 1019,
+     "response": 80,
      "swa1": 258258,
      "swa2": 9119,
      "swa3": 919,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2261,11 +2422,12 @@
      "sign": "+",
      "num2": 258,
      "ans": 820,
+     "response": 80,
      "swa1": 144996,
      "swa2": 71110,
      "swa3": 710,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2275,11 +2437,12 @@
      "sign": "+",
      "num2": 367,
      "ans": 731,
+     "response": 80,
      "swa1": 133588,
      "swa2": 61211,
      "swa3": 621,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2289,11 +2452,12 @@
      "sign": "+",
      "num2": 599,
      "ans": 712,
+     "response": 80,
      "swa1": 67687,
      "swa2": 61012,
      "swa3": 602,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2303,11 +2467,12 @@
      "sign": "+",
      "num2": 458,
      "ans": 711,
+     "response": 80,
      "swa1": 115874,
      "swa2": 61011,
      "swa3": 601,
      "swa4": 27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2317,11 +2482,12 @@
      "sign": "+",
      "num2": 279,
      "ans": 920,
+     "response": 80,
      "swa1": 178839,
      "swa2": 81110,
      "swa3": 810,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2331,11 +2497,12 @@
      "sign": "+",
      "num2": 554,
      "ans": 810,
+     "response": 80,
      "swa1": 141824,
      "swa2": 71010,
      "swa3": 700,
      "swa4": 27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2345,11 +2512,12 @@
      "sign": "+",
      "num2": 144,
      "ans": 1000,
+     "response": 80,
      "swa1": 123264,
      "swa2": 9910,
      "swa3": 990,
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2359,11 +2527,12 @@
      "sign": "+",
      "num2": 667,
      "ans": 1010,
+     "response": 80,
      "swa1": 228781,
      "swa2": 91010,
      "swa3": 900,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 1,
@@ -2373,11 +2542,12 @@
      "sign": "+",
      "num2": 295,
      "ans": 821,
+     "response": 80,
      "swa1": 155170,
      "swa2": 71111,
      "swa3": 711,
      "swa4": 29,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2387,11 +2557,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 1,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2401,11 +2572,12 @@
      "sign": "-",
      "num2": 2,
      "ans": 4,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2415,11 +2587,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 1,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2429,11 +2602,12 @@
      "sign": "-",
      "num2": 2,
      "ans": 2,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2443,11 +2617,12 @@
      "sign": "-",
      "num2": 4,
      "ans": 1,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2457,11 +2632,12 @@
      "sign": "-",
      "num2": 1,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2471,11 +2647,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 3,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2485,11 +2662,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 4,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2499,11 +2677,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 3,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2513,11 +2692,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 4,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 25,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2527,11 +2707,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 11,
+     "response": 30,
      "swa1": 11,
      "swa2": 9,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2541,11 +2722,12 @@
      "sign": "-",
      "num2": 1,
      "ans": 14,
+     "response": 30,
      "swa1": 41,
      "swa2": 6,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2555,11 +2737,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 22,
+     "response": 30,
      "swa1": 22,
      "swa2": 18,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2569,11 +2752,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 53,
+     "response": 30,
      "swa1": 35,
      "swa2": 47,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2583,11 +2767,12 @@
      "sign": "-",
      "num2": 4,
      "ans": 15,
+     "response": 30,
      "swa1": 51,
      "swa2": 5,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2597,11 +2782,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 30,
+     "response": 30,
      "swa1": 3,
      "swa2": 30,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2611,11 +2797,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 25,
+     "response": 30,
      "swa1": 52,
      "swa2": 15,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2625,11 +2812,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 50,
+     "response": 30,
      "swa1": 5,
      "swa2": 50,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2639,11 +2827,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 83,
+     "response": 30,
      "swa1": 38,
      "swa2": 77,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2653,11 +2842,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 50,
+     "response": 30,
      "swa1": 5,
      "swa2": 50,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2667,11 +2857,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 7,
+     "response": 60,
      "swa1": 7,
      "swa2": 13,
      "swa3": 14,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2681,11 +2872,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 16,
+     "response": 60,
      "swa1": 61,
      "swa2": 24,
      "swa3": 21,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2695,11 +2887,12 @@
      "sign": "-",
      "num2": 9,
      "ans": 19,
+     "response": 60,
      "swa1": 91,
      "swa2": 21,
      "swa3": 28,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2709,11 +2902,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 29,
+     "response": 60,
      "swa1": 92,
      "swa2": 31,
      "swa3": 35,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2723,11 +2917,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 35,
+     "response": 60,
      "swa1": 53,
      "swa2": 45,
      "swa3": 42,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2737,11 +2932,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 44,
+     "response": 60,
      "swa1": 44,
      "swa2": 56,
      "swa3": 51,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2751,11 +2947,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 77,
+     "response": 60,
      "swa1": 77,
      "swa2": 83,
      "swa3": 82,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2765,11 +2962,12 @@
      "sign": "-",
      "num2": 9,
      "ans": 64,
+     "response": 60,
      "swa1": 46,
      "swa2": 76,
      "swa3": 73,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2779,11 +2977,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 86,
+     "response": 60,
      "swa1": 68,
      "swa2": 94,
      "swa3": 92,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2793,11 +2992,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 66,
+     "response": 60,
      "swa1": 66,
      "swa2": 74,
      "swa3": 73,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2807,11 +3007,12 @@
      "sign": "-",
      "num2": 20,
      "ans": 10,
+     "response": 60,
      "swa1": 1,
      "swa2": -10,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 28,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2821,11 +3022,12 @@
      "sign": "-",
      "num2": 15,
      "ans": 82,
+     "response": 60,
      "swa1": 28,
      "swa2": -82,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 46,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2835,11 +3037,12 @@
      "sign": "-",
      "num2": 51,
      "ans": 41,
+     "response": 60,
      "swa1": 14,
      "swa2": -41,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 77,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2849,11 +3052,12 @@
      "sign": "-",
      "num2": 23,
      "ans": 3,
+     "response": 60,
      "swa1": 3,
      "swa2": -3,
-     "swa3": null,
+     "swa3": "null",
      "swa4": -6,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2863,11 +3067,12 @@
      "sign": "-",
      "num2": 42,
      "ans": 30,
+     "response": 60,
      "swa1": 3,
      "swa2": -30,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 48,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2877,11 +3082,12 @@
      "sign": "-",
      "num2": 32,
      "ans": 11,
+     "response": 60,
      "swa1": 11,
      "swa2": -11,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 20,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2891,11 +3097,12 @@
      "sign": "-",
      "num2": 21,
      "ans": 15,
+     "response": 60,
      "swa1": 51,
      "swa2": -15,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2905,11 +3112,12 @@
      "sign": "-",
      "num2": 50,
      "ans": 40,
+     "response": 60,
      "swa1": 4,
      "swa2": -40,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 85,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2919,11 +3127,12 @@
      "sign": "-",
      "num2": 32,
      "ans": 15,
+     "response": 60,
      "swa1": 51,
      "swa2": -15,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 24,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2933,11 +3142,12 @@
      "sign": "-",
      "num2": 54,
      "ans": 14,
+     "response": 60,
      "swa1": 41,
      "swa2": -14,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 23,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2947,11 +3157,12 @@
      "sign": "-",
      "num2": 36,
      "ans": 29,
+     "response": 60,
      "swa1": 92,
      "swa2": -29,
      "swa3": 39,
      "swa4": -9,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2961,11 +3172,12 @@
      "sign": "-",
      "num2": 58,
      "ans": 18,
+     "response": 60,
      "swa1": 81,
      "swa2": -18,
      "swa3": 28,
      "swa4": 35,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2975,11 +3187,12 @@
      "sign": "-",
      "num2": 74,
      "ans": 8,
+     "response": 60,
      "swa1": 8,
      "swa2": -8,
      "swa3": 18,
      "swa4": 12,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -2989,11 +3202,12 @@
      "sign": "-",
      "num2": 25,
      "ans": 39,
+     "response": 60,
      "swa1": 93,
      "swa2": -39,
      "swa3": 49,
      "swa4": -11,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3003,11 +3217,12 @@
      "sign": "-",
      "num2": 46,
      "ans": 7,
+     "response": 60,
      "swa1": 7,
      "swa2": -7,
      "swa3": 17,
      "swa4": -38,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3017,11 +3232,12 @@
      "sign": "-",
      "num2": 16,
      "ans": 7,
+     "response": 60,
      "swa1": 7,
      "swa2": -7,
      "swa3": 17,
      "swa4": -18,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3031,11 +3247,12 @@
      "sign": "-",
      "num2": 59,
      "ans": 18,
+     "response": 60,
      "swa1": 81,
      "swa2": -18,
      "swa3": 28,
      "swa4": 9,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3045,11 +3262,12 @@
      "sign": "-",
      "num2": 28,
      "ans": 63,
+     "response": 60,
      "swa1": 36,
      "swa2": -63,
      "swa3": 73,
      "swa4": -19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3059,11 +3277,12 @@
      "sign": "-",
      "num2": 47,
      "ans": 8,
+     "response": 60,
      "swa1": 8,
      "swa2": -8,
      "swa3": 18,
      "swa4": -5,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3073,11 +3292,12 @@
      "sign": "-",
      "num2": 39,
      "ans": 49,
+     "response": 60,
      "swa1": 94,
      "swa2": -49,
      "swa3": 59,
      "swa4": -6,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3087,11 +3307,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 504,
+     "response": 72,
      "swa1": 405,
      "swa2": -504,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3101,11 +3322,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 784,
+     "response": 72,
      "swa1": 487,
      "swa2": -784,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3115,11 +3337,12 @@
      "sign": "-",
      "num2": 1,
      "ans": 743,
+     "response": 72,
      "swa1": 347,
      "swa2": -743,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3129,11 +3352,12 @@
      "sign": "-",
      "num2": 4,
      "ans": 231,
+     "response": 72,
      "swa1": 132,
      "swa2": -231,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3143,11 +3367,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 181,
+     "response": 72,
      "swa1": 181,
      "swa2": -181,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3157,11 +3382,12 @@
      "sign": "-",
      "num2": 3,
      "ans": 145,
+     "response": 72,
      "swa1": 541,
      "swa2": -145,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3171,11 +3397,12 @@
      "sign": "-",
      "num2": 1,
      "ans": 700,
+     "response": 72,
      "swa1": 7,
      "swa2": -700,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3185,11 +3412,12 @@
      "sign": "-",
      "num2": 4,
      "ans": 323,
+     "response": 72,
      "swa1": 323,
      "swa2": -323,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3199,11 +3427,12 @@
      "sign": "-",
      "num2": 2,
      "ans": 914,
+     "response": 72,
      "swa1": 419,
      "swa2": -914,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3213,11 +3442,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 170,
+     "response": 72,
      "swa1": 71,
      "swa2": -170,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3227,11 +3457,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 718,
+     "response": 72,
      "swa1": 817,
      "swa2": -718,
      "swa3": 728,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3241,11 +3472,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 938,
+     "response": 72,
      "swa1": 839,
      "swa2": -938,
      "swa3": 948,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3255,11 +3487,12 @@
      "sign": "-",
      "num2": 5,
      "ans": 538,
+     "response": 72,
      "swa1": 835,
      "swa2": -538,
      "swa3": 548,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3269,11 +3502,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 883,
+     "response": 72,
      "swa1": 388,
      "swa2": -883,
      "swa3": 893,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3283,11 +3517,12 @@
      "sign": "-",
      "num2": 9,
      "ans": 988,
+     "response": 72,
      "swa1": 889,
      "swa2": -988,
      "swa3": 998,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3297,11 +3532,12 @@
      "sign": "-",
      "num2": 9,
      "ans": 417,
+     "response": 72,
      "swa1": 714,
      "swa2": -417,
      "swa3": 427,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3311,11 +3547,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 498,
+     "response": 72,
      "swa1": 894,
      "swa2": -498,
      "swa3": 508,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3325,11 +3562,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 686,
+     "response": 72,
      "swa1": 686,
      "swa2": -686,
      "swa3": 696,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3339,11 +3577,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 546,
+     "response": 72,
      "swa1": 645,
      "swa2": -546,
      "swa3": 556,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3353,11 +3592,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 188,
+     "response": 72,
      "swa1": 881,
      "swa2": -188,
      "swa3": 198,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3367,11 +3607,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 97,
+     "response": 74,
      "swa1": 79,
      "swa2": -97,
      "swa3": 107,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3381,11 +3622,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 794,
+     "response": 74,
      "swa1": 487,
      "swa2": -794,
      "swa3": 804,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3395,11 +3637,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 397,
+     "response": 74,
      "swa1": 793,
      "swa2": -397,
      "swa3": 407,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3409,11 +3652,12 @@
      "sign": "-",
      "num2": 9,
      "ans": 399,
+     "response": 74,
      "swa1": 993,
      "swa2": -399,
      "swa3": 409,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3423,11 +3667,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 798,
+     "response": 74,
      "swa1": 897,
      "swa2": -798,
      "swa3": 808,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3437,11 +3682,12 @@
      "sign": "-",
      "num2": 7,
      "ans": 594,
+     "response": 74,
      "swa1": 495,
      "swa2": -594,
      "swa3": 604,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3451,11 +3697,12 @@
      "sign": "-",
      "num2": 9,
      "ans": 798,
+     "response": 74,
      "swa1": 897,
      "swa2": -798,
      "swa3": 808,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3465,11 +3712,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 99,
+     "response": 74,
      "swa1": 99,
      "swa2": -99,
      "swa3": 109,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3479,11 +3727,12 @@
      "sign": "-",
      "num2": 6,
      "ans": 597,
+     "response": 74,
      "swa1": 795,
      "swa2": -597,
      "swa3": 607,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3493,11 +3742,12 @@
      "sign": "-",
      "num2": 8,
      "ans": 699,
+     "response": 74,
      "swa1": 996,
      "swa2": -699,
      "swa3": 709,
-     "swa4": null,
-     "swa5": null
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3507,11 +3757,12 @@
      "sign": "-",
      "num2": 23,
      "ans": 703,
+     "response": 74,
      "swa1": 307,
      "swa2": -703,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 694,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3521,11 +3772,12 @@
      "sign": "-",
      "num2": 11,
      "ans": 510,
+     "response": 74,
      "swa1": 15,
      "swa2": -510,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 510,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3535,11 +3787,12 @@
      "sign": "-",
      "num2": 25,
      "ans": 144,
+     "response": 74,
      "swa1": 441,
      "swa2": -144,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 117,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3549,11 +3802,12 @@
      "sign": "-",
      "num2": 51,
      "ans": 822,
+     "response": 74,
      "swa1": 228,
      "swa2": -822,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 858,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3563,11 +3817,12 @@
      "sign": "-",
      "num2": 61,
      "ans": 600,
+     "response": 74,
      "swa1": 6,
      "swa2": -600,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 645,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3577,11 +3832,12 @@
      "sign": "-",
      "num2": 54,
      "ans": 534,
+     "response": 74,
      "swa1": 435,
      "swa2": -534,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 543,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3591,11 +3847,12 @@
      "sign": "-",
      "num2": 31,
      "ans": 510,
+     "response": 74,
      "swa1": 15,
      "swa2": -510,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 528,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3605,11 +3862,12 @@
      "sign": "-",
      "num2": 25,
      "ans": 614,
+     "response": 74,
      "swa1": 416,
      "swa2": -614,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 587,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3619,11 +3877,12 @@
      "sign": "-",
      "num2": 11,
      "ans": 310,
+     "response": 74,
      "swa1": 13,
      "swa2": -310,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 310,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3633,11 +3892,12 @@
      "sign": "-",
      "num2": 30,
      "ans": 718,
+     "response": 74,
      "swa1": 817,
      "swa2": -718,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 745,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3647,11 +3907,12 @@
      "sign": "-",
      "num2": 49,
      "ans": 619,
+     "response": 74,
      "swa1": 916,
      "swa2": -619,
      "swa3": 629,
      "swa4": 574,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3661,11 +3922,12 @@
      "sign": "-",
      "num2": 29,
      "ans": 646,
+     "response": 74,
      "swa1": 646,
      "swa2": -646,
      "swa3": 656,
      "swa4": 583,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3675,11 +3937,12 @@
      "sign": "-",
      "num2": 45,
      "ans": 948,
+     "response": 74,
      "swa1": 849,
      "swa2": -948,
      "swa3": 958,
      "swa4": 939,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3689,11 +3952,12 @@
      "sign": "-",
      "num2": 27,
      "ans": 98,
+     "response": 74,
      "swa1": 89,
      "swa2": -98,
      "swa3": 108,
      "swa4": 53,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3703,11 +3967,12 @@
      "sign": "-",
      "num2": 65,
      "ans": 428,
+     "response": 74,
      "swa1": 824,
      "swa2": -428,
      "swa3": 438,
      "swa4": 437,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3717,11 +3982,12 @@
      "sign": "-",
      "num2": 15,
      "ans": 506,
+     "response": 74,
      "swa1": 605,
      "swa2": -506,
      "swa3": 516,
      "swa4": 470,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3731,11 +3997,12 @@
      "sign": "-",
      "num2": 75,
      "ans": 907,
+     "response": 74,
      "swa1": 709,
      "swa2": -907,
      "swa3": 917,
      "swa4": 925,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3745,11 +4012,12 @@
      "sign": "-",
      "num2": 24,
      "ans": 906,
+     "response": 74,
      "swa1": 609,
      "swa2": -906,
      "swa3": 916,
      "swa4": 888,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3759,11 +4027,12 @@
      "sign": "-",
      "num2": 19,
      "ans": 119,
+     "response": 74,
      "swa1": 911,
      "swa2": -119,
      "swa3": 129,
      "swa4": 47,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3773,11 +4042,12 @@
      "sign": "-",
      "num2": 68,
      "ans": 409,
+     "response": 74,
      "swa1": 904,
      "swa2": -409,
      "swa3": 419,
      "swa4": 391,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3787,11 +4057,12 @@
      "sign": "-",
      "num2": 50,
      "ans": 490,
+     "response": 74,
      "swa1": 94,
      "swa2": -490,
      "swa3": 590,
      "swa4": 535,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3801,11 +4072,12 @@
      "sign": "-",
      "num2": 57,
      "ans": 891,
+     "response": 74,
      "swa1": 198,
      "swa2": -891,
      "swa3": 991,
      "swa4": 873,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3815,11 +4087,12 @@
      "sign": "-",
      "num2": 62,
      "ans": 291,
+     "response": 74,
      "swa1": 192,
      "swa2": -291,
      "swa3": 391,
      "swa4": 327,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3829,11 +4102,12 @@
      "sign": "-",
      "num2": 72,
      "ans": 471,
+     "response": 74,
      "swa1": 174,
      "swa2": -471,
      "swa3": 571,
      "swa4": 516,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3843,11 +4117,12 @@
      "sign": "-",
      "num2": 91,
      "ans": 491,
+     "response": 74,
      "swa1": 194,
      "swa2": -491,
      "swa3": 591,
      "swa4": 563,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3857,11 +4132,12 @@
      "sign": "-",
      "num2": 12,
      "ans": 290,
+     "response": 74,
      "swa1": 92,
      "swa2": -290,
      "swa3": 390,
      "swa4": 281,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3871,11 +4147,12 @@
      "sign": "-",
      "num2": 91,
      "ans": 392,
+     "response": 74,
      "swa1": 293,
      "swa2": -392,
      "swa3": 492,
      "swa4": 464,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3885,11 +4162,12 @@
      "sign": "-",
      "num2": 82,
      "ans": 896,
+     "response": 74,
      "swa1": 698,
      "swa2": -896,
      "swa3": 996,
      "swa4": 950,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3899,11 +4177,12 @@
      "sign": "-",
      "num2": 51,
      "ans": 790,
+     "response": 74,
      "swa1": 97,
      "swa2": -790,
      "swa3": 890,
      "swa4": 826,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3913,11 +4192,12 @@
      "sign": "-",
      "num2": 15,
      "ans": 194,
+     "response": 74,
      "swa1": 491,
      "swa2": -194,
      "swa3": 294,
      "swa4": 158,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3927,11 +4207,12 @@
      "sign": "-",
      "num2": 95,
      "ans": 687,
+     "response": 75,
      "swa1": 786,
      "swa2": -687,
      "swa3": 797,
      "swa4": 723,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3941,11 +4222,12 @@
      "sign": "-",
      "num2": 54,
      "ans": 248,
+     "response": 75,
      "swa1": 842,
      "swa2": -248,
      "swa3": 358,
      "swa4": 257,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3955,11 +4237,12 @@
      "sign": "-",
      "num2": 94,
      "ans": 789,
+     "response": 75,
      "swa1": 987,
      "swa2": -789,
      "swa3": 899,
      "swa4": 834,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3969,11 +4252,12 @@
      "sign": "-",
      "num2": 87,
      "ans": 319,
+     "response": 75,
      "swa1": 913,
      "swa2": -319,
      "swa3": 429,
      "swa4": 328,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3983,11 +4267,12 @@
      "sign": "-",
      "num2": 88,
      "ans": 268,
+     "response": 75,
      "swa1": 862,
      "swa2": -268,
      "swa3": 378,
      "swa4": 268,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -3997,11 +4282,12 @@
      "sign": "-",
      "num2": 68,
      "ans": 182,
+     "response": 75,
      "swa1": 281,
      "swa2": -182,
      "swa3": 292,
      "swa4": 164,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4011,11 +4297,12 @@
      "sign": "-",
      "num2": 95,
      "ans": 589,
+     "response": 75,
      "swa1": 985,
      "swa2": -589,
      "swa3": 699,
      "swa4": 625,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4025,11 +4312,12 @@
      "sign": "-",
      "num2": 53,
      "ans": 567,
+     "response": 75,
      "swa1": 765,
      "swa2": -567,
      "swa3": 677,
      "swa4": 585,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4039,11 +4327,12 @@
      "sign": "-",
      "num2": 89,
      "ans": 376,
+     "response": 75,
      "swa1": 673,
      "swa2": -376,
      "swa3": 486,
      "swa4": 367,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4053,11 +4342,12 @@
      "sign": "-",
      "num2": 75,
      "ans": 776,
+     "response": 75,
      "swa1": 677,
      "swa2": -776,
      "swa3": 886,
      "swa4": 794,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4067,11 +4357,12 @@
      "sign": "-",
      "num2": 531,
      "ans": 220,
+     "response": 75,
      "swa1": 22,
      "swa2": -220,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 616,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4081,11 +4372,12 @@
      "sign": "-",
      "num2": 112,
      "ans": 202,
+     "response": 75,
      "swa1": 202,
      "swa2": -202,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 103,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4095,11 +4387,12 @@
      "sign": "-",
      "num2": 230,
      "ans": 220,
+     "response": 75,
      "swa1": 22,
      "swa2": -220,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 418,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4109,11 +4402,12 @@
      "sign": "-",
      "num2": 283,
      "ans": 215,
+     "response": 75,
      "swa1": 512,
      "swa2": -215,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 116,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4123,11 +4417,12 @@
      "sign": "-",
      "num2": 305,
      "ans": 171,
+     "response": 75,
      "swa1": 171,
      "swa2": -171,
-     "swa3": null,
+     "swa3": "null",
      "swa4": -27,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4137,11 +4432,12 @@
      "sign": "-",
      "num2": 402,
      "ans": 111,
+     "response": 75,
      "swa1": 111,
      "swa2": -111,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 309,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4151,11 +4447,12 @@
      "sign": "-",
      "num2": 253,
      "ans": 133,
+     "response": 75,
      "swa1": 331,
      "swa2": -133,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 34,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4165,11 +4462,12 @@
      "sign": "-",
      "num2": 520,
      "ans": 210,
+     "response": 75,
      "swa1": 12,
      "swa2": -210,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 705,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4179,11 +4477,12 @@
      "sign": "-",
      "num2": 346,
      "ans": 212,
+     "response": 75,
      "swa1": 212,
      "swa2": -212,
-     "swa3": null,
+     "swa3": "null",
      "swa4": -85,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4193,11 +4492,12 @@
      "sign": "-",
      "num2": 451,
      "ans": 512,
+     "response": 75,
      "swa1": 215,
      "swa2": -512,
-     "swa3": null,
+     "swa3": "null",
      "swa4": 809,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4207,11 +4507,12 @@
      "sign": "-",
      "num2": 206,
      "ans": 109,
+     "response": 77,
      "swa1": 901,
      "swa2": -109,
      "swa3": 119,
      "swa4": -287,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4221,11 +4522,12 @@
      "sign": "-",
      "num2": 545,
      "ans": 346,
+     "response": 77,
      "swa1": 643,
      "swa2": -346,
      "swa3": 356,
      "swa4": 346,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4235,11 +4537,12 @@
      "sign": "-",
      "num2": 109,
      "ans": 9,
+     "response": 77,
      "swa1": 9,
      "swa2": -9,
      "swa3": 19,
      "swa4": -783,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4249,11 +4552,12 @@
      "sign": "-",
      "num2": 549,
      "ans": 429,
+     "response": 77,
      "swa1": 924,
      "swa2": -429,
      "swa3": 439,
      "swa4": 33,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4263,11 +4567,12 @@
      "sign": "-",
      "num2": 439,
      "ans": 309,
+     "response": 77,
      "swa1": 903,
      "swa2": -309,
      "swa3": 319,
      "swa4": -186,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4277,11 +4582,12 @@
      "sign": "-",
      "num2": 307,
      "ans": 509,
+     "response": 77,
      "swa1": 905,
      "swa2": -509,
      "swa3": 519,
      "swa4": 113,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4291,11 +4597,12 @@
      "sign": "-",
      "num2": 809,
      "ans": 108,
+     "response": 77,
      "swa1": 801,
      "swa2": -108,
      "swa3": 118,
      "swa4": 9,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4305,11 +4612,12 @@
      "sign": "-",
      "num2": 508,
      "ans": 108,
+     "response": 77,
      "swa1": 801,
      "swa2": -108,
      "swa3": 118,
      "swa4": -189,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4319,11 +4627,12 @@
      "sign": "-",
      "num2": 119,
      "ans": 38,
+     "response": 77,
      "swa1": 83,
      "swa2": -38,
      "swa3": 48,
      "swa4": -754,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4333,11 +4642,12 @@
      "sign": "-",
      "num2": 218,
      "ans": 128,
+     "response": 77,
      "swa1": 821,
      "swa2": -128,
      "swa3": 138,
      "swa4": -466,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4347,11 +4657,12 @@
      "sign": "-",
      "num2": 790,
      "ans": 90,
+     "response": 78,
      "swa1": 9,
      "swa2": -90,
      "swa3": 190,
      "swa4": 783,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4361,11 +4672,12 @@
      "sign": "-",
      "num2": 156,
      "ans": 591,
+     "response": 78,
      "swa1": 195,
      "swa2": -591,
      "swa3": 691,
      "swa4": 96,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4375,11 +4687,12 @@
      "sign": "-",
      "num2": 151,
      "ans": 460,
+     "response": 78,
      "swa1": 64,
      "swa2": -460,
      "swa3": 560,
      "swa4": 460,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4389,11 +4702,12 @@
      "sign": "-",
      "num2": 383,
      "ans": 183,
+     "response": 78,
      "swa1": 381,
      "swa2": -183,
      "swa3": 283,
      "swa4": 183,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4403,11 +4717,12 @@
      "sign": "-",
      "num2": 782,
      "ans": 192,
+     "response": 78,
      "swa1": 291,
      "swa2": -192,
      "swa3": 292,
      "swa4": 687,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4417,11 +4732,12 @@
      "sign": "-",
      "num2": 195,
      "ans": 92,
+     "response": 78,
      "swa1": 29,
      "swa2": -92,
      "swa3": 192,
      "swa4": -304,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4431,11 +4747,12 @@
      "sign": "-",
      "num2": 252,
      "ans": 171,
+     "response": 78,
      "swa1": 171,
      "swa2": -171,
      "swa3": 271,
      "swa4": 171,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4445,11 +4762,12 @@
      "sign": "-",
      "num2": 194,
      "ans": 741,
+     "response": 78,
      "swa1": 147,
      "swa2": -741,
      "swa3": 841,
      "swa4": 444,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4459,11 +4777,12 @@
      "sign": "-",
      "num2": 264,
      "ans": 154,
+     "response": 78,
      "swa1": 451,
      "swa2": -154,
      "swa3": 254,
      "swa4": -44,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4473,11 +4792,12 @@
      "sign": "-",
      "num2": 583,
      "ans": 204,
+     "response": 78,
      "swa1": 402,
      "swa2": -204,
      "swa3": 304,
      "swa4": 402,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4487,11 +4807,12 @@
      "sign": "-",
      "num2": 199,
      "ans": 379,
+     "response": 79,
      "swa1": 973,
      "swa2": -379,
      "swa3": 489,
      "swa4": -413,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4501,11 +4822,12 @@
      "sign": "-",
      "num2": 154,
      "ans": 648,
+     "response": 79,
      "swa1": 846,
      "swa2": -648,
      "swa3": 758,
      "swa4": 351,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4515,11 +4837,12 @@
      "sign": "-",
      "num2": 148,
      "ans": 82,
+     "response": 79,
      "swa1": 28,
      "swa2": -82,
      "swa3": 192,
      "swa4": -611,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4529,11 +4852,12 @@
      "sign": "-",
      "num2": 157,
      "ans": 148,
+     "response": 79,
      "swa1": 841,
      "swa2": -148,
      "swa3": 258,
      "swa4": -446,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4543,11 +4867,12 @@
      "sign": "-",
      "num2": 255,
      "ans": 58,
+     "response": 79,
      "swa1": 85,
      "swa2": -58,
      "swa3": 168,
      "swa4": -239,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4557,11 +4882,12 @@
      "sign": "-",
      "num2": 379,
      "ans": 79,
+     "response": 79,
      "swa1": 97,
      "swa2": -79,
      "swa3": 189,
      "swa4": -515,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4571,11 +4897,12 @@
      "sign": "-",
      "num2": 499,
      "ans": 476,
+     "response": 79,
      "swa1": 674,
      "swa2": -476,
      "swa3": 586,
      "swa4": -19,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4585,11 +4912,12 @@
      "sign": "-",
      "num2": 168,
      "ans": 79,
+     "response": 79,
      "swa1": 97,
      "swa2": -79,
      "swa3": 189,
      "swa4": -614,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4599,11 +4927,12 @@
      "sign": "-",
      "num2": 599,
      "ans": 87,
+     "response": 79,
      "swa1": 78,
      "swa2": -87,
      "swa3": 197,
      "swa4": -309,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 2,
@@ -4613,11 +4942,12 @@
      "sign": "-",
      "num2": 265,
      "ans": 178,
+     "response": 79,
      "swa1": 871,
      "swa2": -178,
      "swa3": 288,
      "swa4": -119,
-     "swa5": null
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4627,11 +4957,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4641,11 +4972,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4655,11 +4987,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4669,11 +5002,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4683,11 +5017,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4697,11 +5032,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4711,11 +5047,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4725,11 +5062,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4739,11 +5077,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4753,11 +5092,12 @@
      "sign": "*",
      "num2": 0,
      "ans": 0,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4767,11 +5107,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 1,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4781,11 +5122,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 2,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4795,11 +5137,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 3,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4809,11 +5152,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 4,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4823,11 +5167,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 5,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4837,11 +5182,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 6,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4851,11 +5197,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 7,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4865,11 +5212,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 8,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4879,11 +5227,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 9,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4893,11 +5242,12 @@
      "sign": "*",
      "num2": 1,
      "ans": 10,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 10,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4907,11 +5257,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 10,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4921,11 +5272,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 20,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4935,11 +5287,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 30,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4949,11 +5302,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 40,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4963,11 +5317,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 50,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4977,11 +5332,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 60,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -4991,11 +5347,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 70,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5005,11 +5362,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 80,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5019,11 +5377,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 90,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5033,11 +5392,12 @@
      "sign": "*",
      "num2": 10,
      "ans": 100,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 12,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5047,11 +5407,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 2,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5061,11 +5422,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 4,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5075,11 +5437,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 6,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5089,11 +5452,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 8,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5103,11 +5467,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 10,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5117,11 +5482,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 12,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5131,11 +5497,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 14,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5145,11 +5512,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 16,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5159,11 +5527,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 18,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5173,11 +5542,12 @@
      "sign": "*",
      "num2": 2,
      "ans": 20,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 15,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5187,11 +5557,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 5,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5201,11 +5572,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 10,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5215,11 +5587,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 15,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5229,11 +5602,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 20,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5243,11 +5617,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 25,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5257,11 +5632,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 30,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5271,11 +5647,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 35,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5285,11 +5662,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 40,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5299,11 +5677,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 45,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5313,11 +5692,12 @@
      "sign": "*",
      "num2": 5,
      "ans": 50,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5327,11 +5707,12 @@
      "sign": "*",
      "num2": 4,
      "ans": 28,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5341,11 +5722,12 @@
      "sign": "*",
      "num2": 6,
      "ans": 18,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5355,11 +5737,12 @@
      "sign": "*",
      "num2": 9,
      "ans": 18,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5369,11 +5752,12 @@
      "sign": "*",
      "num2": 7,
      "ans": 56,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5383,11 +5767,12 @@
      "sign": "*",
      "num2": 9,
      "ans": 45,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5397,11 +5782,12 @@
      "sign": "*",
      "num2": 8,
      "ans": 32,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5411,11 +5797,12 @@
      "sign": "*",
      "num2": 3,
      "ans": 24,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5425,11 +5812,12 @@
      "sign": "*",
      "num2": 3,
      "ans": 12,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5439,11 +5827,12 @@
      "sign": "*",
      "num2": 7,
      "ans": 35,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     },
     {
      "stage": 3,
@@ -5453,10 +5842,11 @@
      "sign": "*",
      "num2": 9,
      "ans": 63,
-     "swa1": null,
-     "swa2": null,
-     "swa3": null,
-     "swa4": null,
-     "swa5": null
+     "response": 40,
+     "swa1": "null",
+     "swa2": "null",
+     "swa3": "null",
+     "swa4": "null",
+     "swa5": "null"
     }
    ]
