@@ -47,6 +47,11 @@ let score = 0;
 let levelScore = 0;
 let stageScore = 0;
 
+let level = 1;
+let stage = 1;
+
+// let back = 0;
+// let backMax = 2;
 //* Variables for New Algorithm End
 
 // ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
@@ -56,13 +61,14 @@ console.log(payload);
 const Test = () => {
   const [exhaust, setExhaust] = useState(false);
   const [gameover, setGameover] = useState(false);
-  const [stage, setStage] = useState(1);
+  // const [stage, setStage] = useState(1);
   const [dec, setDec] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [answer, setAnswer] = useState("");
   // const [result, setResult] = useState("");
   const [error, setError] = useState("");
-  const [level, setLevel] = useState(1);
+  // const [level, setLevel] = useState(1);
+  
   // const [pointer, setPointer] = useState(1);
   const [started, setStarted] = useState(false); // Added state for tracking quiz start
   //   const arr = [
@@ -101,6 +107,7 @@ const Test = () => {
 
   let str2 = "";
   const generateQuestion = () => {
+    console.log("Generate question excuted for level - ",level)
     if (array.length > 0 && levelScore < 3.3 && stage < 4) {
       const randomIndex = Math.floor(Math.random() * array.length);
       console.log(randomIndex);
@@ -372,7 +379,7 @@ const arr =  [0,17,16,6];
   //   }
   // }, [levelScore]);
 
-  useEffect(() => {
+  function setState(){
     
     if(levelScore >= 3.3 && level+1 === arr[stage] ){
       // handleStageChange();
@@ -381,8 +388,9 @@ const arr =  [0,17,16,6];
       stageScore = stageScore + levelScore;
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       arrayStage.push(stageScore);
-      levelScore = 0;
-      stageScore = 0;
+      console.log("Stage Array - " + arrayStage);
+      // levelScore = 0;
+      // stageScore = 0;
       if(stage < 3){
         handleStageChange();
       }
@@ -397,7 +405,7 @@ const arr =  [0,17,16,6];
       arrayLevel.push(3);
       stageScore = stageScore + levelScore + 3;
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
-      levelScore = 0;
+      // levelScore = 0;
 
       handleLevelChange(2);
 
@@ -416,8 +424,8 @@ const arr =  [0,17,16,6];
       stageScore = stageScore + levelScore;
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       arrayStage.push(stageScore);
-      levelScore = 0;
-      stageScore = 0;
+      console.log("Stage Array - " + arrayStage);
+      
       handleStageChange();
     }
 
@@ -427,16 +435,21 @@ const arr =  [0,17,16,6];
       stageScore = stageScore + levelScore;
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       arrayStage.push(stageScore);
+      console.log("Stage Array - " + arrayStage);
       levelScore = 0;
       stageScore = 0;
       handleTestComplete();
     }
-  }, [levelScore]);
+  };
 
   const handleLevelChange = (val) => {
+    console.log("handle level change executed");
     // setPointer(0);
-    setDec(1);
-    setLevel(level + val);
+    // setDec(1);
+    // setLevel(level + val);
+    level = level + val;
+    levelScore = 0;
+    console.log("level updated to - ",level)
 
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
@@ -452,15 +465,21 @@ const arr =  [0,17,16,6];
     if (array.length === 0 && levelScore < 2.5 && stage < 3) {
       handleStageChange();
     }
+    
+    
   }, [array.length]);
 // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition END
 
   // * Handle Stage Change function 
   const handleStageChange = () => {
     // setPointer(0);
-    setDec(1);
-    setStage(stage + 1);
-    setLevel(1);
+    console.log("handle stage change executed");
+    levelScore = 0;
+    stageScore = 0;
+    // setStage(stage + 1);
+    stage ++;
+    // setLevel(1);
+    level = 1;
 
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
@@ -608,6 +627,7 @@ const arr =  [0,17,16,6];
       restart();
       // Reponse time function end -----------------------------------------------------------------------------------------------
       checkAnswer();
+      setState();
       generateQuestion();
       setError("");
     } else {
