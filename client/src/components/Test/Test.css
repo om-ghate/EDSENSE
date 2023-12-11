@@ -285,20 +285,28 @@
     position: absolute;
     top: 100px;
     right: 20px;
+    border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
     padding: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 25px;
-    color: #179ff9;
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
     /* border: 1px solid black; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .hintButton:hover {
   background-color: #42b2fc;
   color: white; /* Change the background color on hover */
   transform: scale(1.05); /* Scale the button slightly on hover */
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px; /* Adjust box-shadow on hover */
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 10px;
+  transition-duration: .1s;
 }
 
 .closeButton{
@@ -319,4 +327,3 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
 }
-  
