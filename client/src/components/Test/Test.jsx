@@ -699,7 +699,7 @@ const arr =  [0,17,16,6];
                   <div>
 
                   
-                  <ModalTest/>
+                  <ModalTest stage = {stage}/>
                   </div>
                   {/* Container to display the embedded video */}
                   <div id="hintContainer"></div>

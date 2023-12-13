@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-function ModalTest() {
+function ModalTest({ stage }) {
   const [show, setShow] = useState(false);
   const [hintCounter, setHintCounter] = useState(0);
 
@@ -13,7 +12,53 @@ function ModalTest() {
 
   const handleClose = () => setShow(false);
 
-  const videoId = 'iLVdomgYucQ';
+  let videoIframe;
+
+  // Set the video iframe based on the stage prop
+  switch (stage) {
+    case 1:
+      videoIframe = (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/igcoDFokKzU?si=a1hH5pVHll6UerMD"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      );
+      break;
+    case 2:
+      videoIframe = (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/qM7B2nwpV1M?si=D_RVJ7nrbdPCeYJM"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      );
+      break;
+    case 3:
+      videoIframe = (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/pEbjmAsrOic?si=jyuAQbAbdhWs_9zk"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      );
+      break;
+    default:
+      // Handle other cases or provide a default video iframe
+      videoIframe = <p>No video available for this stage</p>;
+  }
 
   return (
     <>
@@ -28,17 +73,13 @@ function ModalTest() {
         </Modal.Header>
         <Modal.Body style={{ padding: '20px' }}>
           <p>Hint Counter: {hintCounter}</p>
-          {/* Embed the YouTube video inside the modal */}
-          <iframe
-            style={{ width: '100%', height: '400px' }}
-            src={`https://www.youtube.com/embed/${videoId}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {/* Display the selected video iframe */}
+          {videoIframe}
         </Modal.Body>
         {/* You can add additional elements or styling here */}
-        <Modal.Footer />
+        <Modal.Footer>
+          {/* Add your buttons or other elements here */}
+        </Modal.Footer>
       </Modal>
     </>
   );
