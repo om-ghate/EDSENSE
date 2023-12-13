@@ -52,8 +52,8 @@ let stageScore = 0;
 let level = 1;
 let stage = 1;
 
-// let back = 0;
-// let backMax = 2;
+let support = 0;
+
 //* Variables for New Algorithm End
 
 // ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
@@ -397,6 +397,7 @@ const arr =  [0,17,16,6];
       console.log("Exception Case 1")
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
+      stageScore = parseFloat(stageScore.toFixed(2));
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
@@ -415,6 +416,7 @@ const arr =  [0,17,16,6];
       arrayLevel.push(levelScore);
       arrayLevel.push(3);
       stageScore = stageScore + levelScore + 3;
+      stageScore = parseFloat(stageScore.toFixed(2));
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       // levelScore = 0;
 
@@ -425,6 +427,7 @@ const arr =  [0,17,16,6];
       console.log("Average Case - Level change x1")
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
+      stageScore = parseFloat(stageScore.toFixed(2));
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       handleLevelChange(1);
     }
@@ -433,6 +436,7 @@ const arr =  [0,17,16,6];
       console.log("Average Case - Stage change ")
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
+      stageScore = parseFloat(stageScore.toFixed(2));
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
@@ -444,6 +448,7 @@ const arr =  [0,17,16,6];
       console.log("Average Case - Test Complete")
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
+      stageScore = parseFloat(stageScore.toFixed(2));
       console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
@@ -474,7 +479,33 @@ const arr =  [0,17,16,6];
 // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition
   useEffect(() => {
     if (array.length === 0 && levelScore < 2.5 && stage < 3) {
-      handleStageChange();
+      support++;
+
+      if(level === 1 && support === 1){
+        console.log("Support = 1 & level = 1")
+        support = 0;
+        arrayStage.push(stageScore);
+        console.log("Stage Array - " + arrayStage);
+        console.log("Level Array - " + arrayLevel + "\nStage Score - ", stageScore);
+        handleStageChange();
+      }
+      else if (support === 3){
+        support = 0;
+        console.log("Support = 3")
+        arrayStage.push(stageScore);
+        console.log("Stage Array - " + arrayStage);
+        console.log("Level Array - " + arrayLevel + "\nStage Score - ", stageScore);
+        handleStageChange();
+      }
+      else if(support < 3){
+        let lastadded = arrayLevel.pop();
+        stageScore = stageScore - lastadded;
+        stageScore = parseFloat(stageScore.toFixed(2));
+        levelScore = 0;
+        console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+        handleLevelChange(-1);
+      }
+      
     }
     
     
