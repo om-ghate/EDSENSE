@@ -12,52 +12,22 @@ function ModalTest({ stage }) {
 
   const handleClose = () => setShow(false);
 
-  let videoIframe;
+  let videoSrc;
 
-  // Set the video iframe based on the stage prop
+  // Set the video source based on the stage prop
   switch (stage) {
     case 1:
-      videoIframe = (
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/igcoDFokKzU?si=a1hH5pVHll6UerMD"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      );
+      videoSrc = 'https://www.youtube.com/embed/igcoDFokKzU?si=a1hH5pVHll6UerMD';
       break;
     case 2:
-      videoIframe = (
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/qM7B2nwpV1M?si=D_RVJ7nrbdPCeYJM"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      );
+      videoSrc = 'https://www.youtube.com/embed/qM7B2nwpV1M?si=D_RVJ7nrbdPCeYJM';
       break;
     case 3:
-      videoIframe = (
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/pEbjmAsrOic?si=jyuAQbAbdhWs_9zk"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      );
+      videoSrc = 'https://www.youtube.com/embed/pEbjmAsrOic?si=jyuAQbAbdhWs_9zk';
       break;
     default:
-      // Handle other cases or provide a default video iframe
-      videoIframe = <p>No video available for this stage</p>;
+      // Handle other cases or provide a default video source
+      videoSrc = '';
   }
 
   return (
@@ -73,8 +43,15 @@ function ModalTest({ stage }) {
         </Modal.Header>
         <Modal.Body style={{ padding: '20px' }}>
           <p>Hint Counter: {hintCounter}</p>
-          {/* Display the selected video iframe */}
-          {videoIframe}
+          {/* Embed the YouTube video inside the modal */}
+          <iframe
+            title="YouTube Video Tutorial"
+            style={{ width: '100%', height: '400px' }}
+            src={videoSrc}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </Modal.Body>
         {/* You can add additional elements or styling here */}
         <Modal.Footer>
