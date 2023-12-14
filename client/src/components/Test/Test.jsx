@@ -11,12 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 import ModalTest from "./ModalTest";
 
 // const ansQues = [];
-const arr_c = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-]; //This is the array which will have numbers from 1 to 20
-const array = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-];
+const arr_c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //This is the array which will have numbers from 1 to 20
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // ---------- Array Creation to store the answer ------------------------------------------------------------------------------
 
@@ -44,7 +40,6 @@ const ans_r = 1;
 const ans_w = -0.7;
 const ans_spw = -1;
 
-
 let score = 0;
 let levelScore = 0;
 let stageScore = 0;
@@ -70,7 +65,7 @@ const Test = () => {
   // const [result, setResult] = useState("");
   const [error, setError] = useState("");
   // const [level, setLevel] = useState(1);
-  
+
   // const [pointer, setPointer] = useState(1);
   const [started, setStarted] = useState(false); // Added state for tracking quiz start
   //   const arr = [
@@ -86,7 +81,7 @@ const Test = () => {
   // Use States End ----------------------------------------------------------------------------------------------------------------------
 
   //! useState for Level Score Start
-  
+
   // let [levelScore, setLevelScore] = useState(0);
 
   //* useState for Level Score End
@@ -94,18 +89,16 @@ const Test = () => {
   // Result Stored
   // const [Result,setResult] = useState("");
   //
-  // Global variable to display stage + level  
+  // Global variable to display stage + level
   const [strDisplay, setStrDisplay] = useState("");
   const [hintCounter, setHintCounter] = useState(1);
-  // 
-
+  //
 
   //! Modal Component for Hint Start
 
   const [modalOpen, setModalOpen] = useState(false);
 
   //* Modal Component for Hint End
-
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -115,10 +108,9 @@ const Test = () => {
   //   );
   // Function to generate a random question
 
-
   let str2 = "";
   const generateQuestion = () => {
-    console.log("Generate question excuted for level - ",level)
+    console.log("Generate question excuted for level - ", level);
     if (array.length > 0 && levelScore < 3.3 && stage < 4) {
       const randomIndex = Math.floor(Math.random() * array.length);
       console.log(randomIndex);
@@ -130,9 +122,9 @@ const Test = () => {
           level.toString().concat(".", array[randomIndex].toString())
         );
 
-      setStrDisplay(stage.toString().concat(".",level.toString()));
+      setStrDisplay(stage.toString().concat(".", level.toString()));
 
-      console.log(strDisplay)
+      console.log(strDisplay);
 
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
@@ -151,28 +143,27 @@ const Test = () => {
       setCurrentQuestion(filteredData[0]);
 
       //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
-      if(filteredData[0].sign === "-")
-      {
-        str2 = filteredData[0].num1.toString().concat(" minus ", filteredData[0].num2.toString().concat(" = to "))
-        
-      }
-      else if(filteredData[0].sign === "*")
-      {
-        str2 = filteredData[0].num1.toString().concat(" multiply by ", filteredData[0].num2.toString().concat(" = to "))
-        
-      }
-      else
-      {
+      if (filteredData[0].sign === "-") {
         str2 = filteredData[0].num1
-        .toString()
-        .concat(
-          " ",
-          filteredData[0].sign
-            .toString()
-            .concat(" ", filteredData[0].num2.toString().concat(" = to "))
-        );
+          .toString()
+          .concat(" minus ", filteredData[0].num2.toString().concat(" = to "));
+      } else if (filteredData[0].sign === "*") {
+        str2 = filteredData[0].num1
+          .toString()
+          .concat(
+            " multiply by ",
+            filteredData[0].num2.toString().concat(" = to ")
+          );
+      } else {
+        str2 = filteredData[0].num1
+          .toString()
+          .concat(
+            " ",
+            filteredData[0].sign
+              .toString()
+              .concat(" ", filteredData[0].num2.toString().concat(" = to "))
+          );
       }
-      
 
       // Convert str2 into speech
       let speech = new SpeechSynthesisUtterance(str2);
@@ -192,7 +183,7 @@ const Test = () => {
       // setResult("");
       // ansQues.push(filteredData[randomIndex].Q_no);
       console.log(array);
-    } 
+    }
     // else if (array.length === 0 && pointer < 3 && stage < 3){
     //   console.log("Exhausted Array for Stage 1 or 2");
     //   handleStageChange();
@@ -210,28 +201,25 @@ const Test = () => {
 
     //! Correct Answer
     if (currentQuestion && parseInt(answer) === currentQuestion.ans) {
-      if(currentQuestion.response >= seconds){
+      if (currentQuestion.response >= seconds) {
         console.log("fast");
         score = fast * ans_r;
-        console.log("score - ", score)
-      }
-      else{
-        console.log("slow")
+        console.log("score - ", score);
+      } else {
+        console.log("slow");
         score = slow * ans_r;
-        console.log("score - ", score)
+        console.log("score - ", score);
       }
       levelScore = levelScore + score;
       levelScore = parseFloat(levelScore.toFixed(2));
-      console.log("Level Score - ", levelScore)
+      console.log("Level Score - ", levelScore);
 
       R_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("R_ans: ", R_ans);
-      
+
       // setPointer(pointer + 1);
       // console.log("Pointer - " + pointer);
-    } 
-    
-    else if (
+    } else if (
       currentQuestion &&
       (parseInt(answer) === currentQuestion.swa1 ||
         parseInt(answer) === currentQuestion.swa2 ||
@@ -239,25 +227,41 @@ const Test = () => {
         parseInt(answer) === currentQuestion.swa4 ||
         parseInt(answer) === currentQuestion.swa5)
     ) {
-      if(parseInt(answer) === currentQuestion.swa1){
+      if (parseInt(answer) === currentQuestion.swa1) {
         console.log("Special Case 1");
-        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 1"));
-      }
-      else if(parseInt(answer) === currentQuestion.swa2){
+        SpW_ans.push(
+          Q_arr[Q_arr.length - 1]
+            .concat(" : '", answer.toString())
+            .concat("' : Case 1")
+        );
+      } else if (parseInt(answer) === currentQuestion.swa2) {
         console.log("Special Case 2");
-        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 2"));
-      }
-      else if(parseInt(answer) === currentQuestion.swa3){
+        SpW_ans.push(
+          Q_arr[Q_arr.length - 1]
+            .concat(" : '", answer.toString())
+            .concat("' : Case 2")
+        );
+      } else if (parseInt(answer) === currentQuestion.swa3) {
         console.log("Special Case 3");
-        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 3"));
-      }
-      else if(parseInt(answer) === currentQuestion.swa4){
+        SpW_ans.push(
+          Q_arr[Q_arr.length - 1]
+            .concat(" : '", answer.toString())
+            .concat("' : Case 3")
+        );
+      } else if (parseInt(answer) === currentQuestion.swa4) {
         console.log("Special Case 4");
-        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 4"));
-      }
-      else if(parseInt(answer) === currentQuestion.swa5){
+        SpW_ans.push(
+          Q_arr[Q_arr.length - 1]
+            .concat(" : '", answer.toString())
+            .concat("' : Case 4")
+        );
+      } else if (parseInt(answer) === currentQuestion.swa5) {
         console.log("Special Case 5");
-        SpW_ans.push(Q_arr[Q_arr.length - 1].concat(" : '",answer.toString()).concat("' : Case 5"));
+        SpW_ans.push(
+          Q_arr[Q_arr.length - 1]
+            .concat(" : '", answer.toString())
+            .concat("' : Case 5")
+        );
       }
       // setPointer(pointer - dec);
       setDec(dec + 2);
@@ -267,27 +271,22 @@ const Test = () => {
       score = ans_spw;
       console.log("score - ", score);
 
-
-
       levelScore = levelScore + score;
       levelScore = parseFloat(levelScore.toFixed(2));
-      console.log("Level Score - ", levelScore)
-    } 
-    
-    else {
-      if(currentQuestion.response >= seconds){
+      console.log("Level Score - ", levelScore);
+    } else {
+      if (currentQuestion.response >= seconds) {
         console.log("fast");
         score = fast * ans_w;
-        console.log("score - ", score)
-      }
-      else{
+        console.log("score - ", score);
+      } else {
         console.log("slow");
         score = slow * ans_w;
-        console.log("score - ", score)
+        console.log("score - ", score);
       }
       levelScore = levelScore + score;
       levelScore = parseFloat(levelScore.toFixed(2));
-      console.log("Level Score - ", levelScore)
+      console.log("Level Score - ", levelScore);
 
       W_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("W_ans: ", W_ans);
@@ -297,7 +296,7 @@ const Test = () => {
   // * ---------- Function to check the answer End -------------------------------------------------------------------
 
   // List of this required for the code to work
-// ! Test Condition Start
+  // ! Test Condition Start
   /*
 1. Handle Level Change which will handle the level change after solving 3 questions of each level
 2. Handle Stage Change which will handle the stage change after giving 3 level of each stage
@@ -321,10 +320,10 @@ Unsuccessful case
 Pointer < 3
 Array - 0
 */
-// ! Test Condition End
+  // ! Test Condition End
 
-// ! Real Condition 
-/*
+  // ! Real Condition
+  /*
 Pointer - 0
 Level - 0
 Stage - 0
@@ -352,15 +351,15 @@ Unsuccessful case
 Pointer < 3
 Array - 0
 */
-// ! Real Condition END
+  // ! Real Condition END
 
   // ! Handle Level Change function and useEffect
 
-// Array for storing the level counts of stages
+  // Array for storing the level counts of stages
 
-const arr =  [0,17,16,6];
+  const arr = [0, 17, 16, 6];
 
-// 
+  //
 
   // useEffect(() => {
   //   if (levelScore >= 3.3 && level < arr[stage]) {
@@ -390,73 +389,78 @@ const arr =  [0,17,16,6];
   //   }
   // }, [levelScore]);
 
-  function setState(){
-    
-    if(levelScore >= 3.3 && level+1 === arr[stage] ){
+  function setState() {
+    if (levelScore >= 3.3 && level + 1 === arr[stage]) {
       // handleStageChange();
-      console.log("Exception Case 1")
+      console.log("Exception Case 1");
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
       stageScore = parseFloat(stageScore.toFixed(2));
-      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      console.log(
+        "Level Array - " + arrayLevel + "\n Stage Score - ",
+        stageScore
+      );
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
       // levelScore = 0;
       // stageScore = 0;
-      if(stage < 3){
+      if (stage < 3) {
         handleStageChange();
-      }
-      else{
+      } else {
         handleTestComplete();
       }
-    }
-
-    else if (levelScore >= 3.3 && level < arr[stage]) {
-      console.log("Best Case - Level change x2")
+    } else if (levelScore >= 3.3 && level < arr[stage]) {
+      console.log("Best Case - Level change x2");
       arrayLevel.push(levelScore);
       arrayLevel.push(3);
       stageScore = stageScore + levelScore + 3;
       stageScore = parseFloat(stageScore.toFixed(2));
-      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      console.log(
+        "Level Array - " + arrayLevel + "\n Stage Score - ",
+        stageScore
+      );
       // levelScore = 0;
 
       handleLevelChange(2);
-
-    }
-    else if(levelScore >=2.5 && level < arr[stage]){
-      console.log("Average Case - Level change x1")
+    } else if (levelScore >= 2.5 && level < arr[stage]) {
+      console.log("Average Case - Level change x1");
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
       stageScore = parseFloat(stageScore.toFixed(2));
-      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      console.log(
+        "Level Array - " + arrayLevel + "\n Stage Score - ",
+        stageScore
+      );
       handleLevelChange(1);
-    }
-
-    else if(levelScore >= 2.5 && level === arr[stage] && stage < 3) {
-      console.log("Average Case - Stage change ")
+    } else if (levelScore >= 2.5 && level === arr[stage] && stage < 3) {
+      console.log("Average Case - Stage change ");
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
       stageScore = parseFloat(stageScore.toFixed(2));
-      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      console.log(
+        "Level Array - " + arrayLevel + "\n Stage Score - ",
+        stageScore
+      );
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
-      
-      handleStageChange();
-    }
 
-    else if (levelScore >= 2.5 && level === arr[stage] && stage === 3) {
-      console.log("Average Case - Test Complete")
+      handleStageChange();
+    } else if (levelScore >= 2.5 && level === arr[stage] && stage === 3) {
+      console.log("Average Case - Test Complete");
       arrayLevel.push(levelScore);
       stageScore = stageScore + levelScore;
       stageScore = parseFloat(stageScore.toFixed(2));
-      console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+      console.log(
+        "Level Array - " + arrayLevel + "\n Stage Score - ",
+        stageScore
+      );
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
       levelScore = 0;
       stageScore = 0;
       handleTestComplete();
     }
-  };
+  }
 
   const handleLevelChange = (val) => {
     console.log("handle level change executed");
@@ -465,7 +469,7 @@ const arr =  [0,17,16,6];
     // setLevel(level + val);
     level = level + val;
     levelScore = 0;
-    console.log("level updated to - ",level)
+    console.log("level updated to - ", level);
 
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
@@ -474,52 +478,54 @@ const arr =  [0,17,16,6];
 
   // ! Handle Level Change function and useEffect END
 
-
-
-// ! 1.2 Handle Stage Change useEffect for Unsuccessful condition
+  // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition
   useEffect(() => {
     if (array.length === 0 && levelScore < 2.5 && stage < 3) {
       support++;
 
-      if(level === 1 && support === 1){
-        console.log("Support = 1 & level = 1")
+      if (level === 1 && support === 1) {
+        console.log("Support = 1 & level = 1");
         support = 0;
         arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
-        console.log("Level Array - " + arrayLevel + "\nStage Score - ", stageScore);
+        console.log(
+          "Level Array - " + arrayLevel + "\nStage Score - ",
+          stageScore
+        );
         handleStageChange();
-      }
-      else if (support === 3){
+      } else if (support === 3) {
         support = 0;
-        console.log("Support = 3")
+        console.log("Support = 3");
         arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
-        console.log("Level Array - " + arrayLevel + "\nStage Score - ", stageScore);
+        console.log(
+          "Level Array - " + arrayLevel + "\nStage Score - ",
+          stageScore
+        );
         handleStageChange();
-      }
-      else if(support < 3){
+      } else if (support < 3) {
         let lastadded = arrayLevel.pop();
         stageScore = stageScore - lastadded;
         stageScore = parseFloat(stageScore.toFixed(2));
         levelScore = 0;
-        console.log("Level Array - " + arrayLevel + "\n Stage Score - ", stageScore);
+        console.log(
+          "Level Array - " + arrayLevel + "\n Stage Score - ",
+          stageScore
+        );
         handleLevelChange(-1);
       }
-      
     }
-    
-    
   }, [array.length]);
-// ! 1.2 Handle Stage Change useEffect for Unsuccessful condition END
+  // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition END
 
-  // * Handle Stage Change function 
+  // * Handle Stage Change function
   const handleStageChange = () => {
     // setPointer(0);
     console.log("handle stage change executed");
     levelScore = 0;
     stageScore = 0;
     // setStage(stage + 1);
-    stage ++;
+    stage++;
     // setLevel(1);
     level = 1;
 
@@ -553,7 +559,6 @@ const arr =  [0,17,16,6];
   }, [levelScore]);
   // Code by Om - 11th July END
 
-
   //! useEffect to handle Array Exhausted
   useEffect(() => {
     if (array.length === 0 && levelScore < 2.5 && stage === 3) {
@@ -582,25 +587,25 @@ const arr =  [0,17,16,6];
     return () => clearInterval(timer);
   });
 
-// ! Use Effect to handle minimum time utilization while a student gives the test
-  useEffect(()=>{
+  // ! Use Effect to handle minimum time utilization while a student gives the test
+  useEffect(() => {
     // Function to skip to next stage when student takes more than 5mins to solve a question
 
-    if(seconds === 300 && stage <=2 && started && !exhaust){
-      console.log('Time is up!');
+    if (seconds === 300 && stage <= 2 && started && !exhaust) {
+      console.log("Time is up!");
       handleStageChange();
     }
     // Function to end test when student takes more than 5mins on stage 3 to solve a question
-    else if(seconds === 300 && stage === 3 && started && !exhaust){
-      console.log('Time is up!');
+    else if (seconds === 300 && stage === 3 && started && !exhaust) {
+      console.log("Time is up!");
       restart();
       W_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("W_ans: ", W_ans);
       setExhaust(true);
       sendUserResult();
     }
-  },[started, seconds]);
-// ! Use Effect to handle minimum time utilization while a student gives the test END
+  }, [started, seconds]);
+  // ! Use Effect to handle minimum time utilization while a student gives the test END
 
   // ! Stores the time required per question and then restarts the timer for next question
   const restart = () => {
@@ -650,7 +655,7 @@ const arr =  [0,17,16,6];
         R_ans: R_ans,
         SpW_ans: SpW_ans,
         W_ans: W_ans,
-        
+
         // hint Counter
         hintCounter: hintCounter,
         // Result: Result,
@@ -666,7 +671,6 @@ const arr =  [0,17,16,6];
     }
   };
 
-
   const handleCombinedClick = () => {
     if (answer) {
       // Restart fuction added for response time module -------------------------------------------------------------------------
@@ -681,7 +685,6 @@ const arr =  [0,17,16,6];
       return;
     }
   };
-
 
   // Code by Om - 11th July
 
@@ -723,18 +726,13 @@ const arr =  [0,17,16,6];
                   </div>
                   <button className="button1" onClick={handleCombinedClick}>
                     Next Question
-                  </button>                                   
-                  <div className="levelDisplay">
-                    {strDisplay}
-                  </div>
+                  </button>
+                  <div className="levelDisplay">{strDisplay}</div>
                   <div>
-
-                  
-                  <ModalTest stage = {stage}/>
+                    <ModalTest stage={stage} />
                   </div>
                   {/* Container to display the embedded video */}
                   <div id="hintContainer"></div>
-                
                 </div>
               ) : (
                 <div>
