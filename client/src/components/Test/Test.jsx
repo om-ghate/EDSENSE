@@ -227,6 +227,11 @@ const Test = () => {
         parseInt(answer) === currentQuestion.swa4 ||
         parseInt(answer) === currentQuestion.swa5)
     ) {
+      toast.warning("Special Wrong Answer", {
+        style: {
+          backgroundColor: "red",
+        },
+      });
       if (parseInt(answer) === currentQuestion.swa1) {
         console.log("Special Case 1");
         SpW_ans.push(
@@ -275,6 +280,11 @@ const Test = () => {
       levelScore = parseFloat(levelScore.toFixed(2));
       console.log("Level Score - ", levelScore);
     } else {
+      toast.warning("Wrong Answer", {
+        style: {
+          backgroundColor: "red",
+        },
+      });
       if (currentQuestion.response >= seconds) {
         console.log("fast");
         score = fast * ans_w;
