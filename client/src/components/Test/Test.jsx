@@ -227,12 +227,12 @@ const Test = () => {
         parseInt(answer) === currentQuestion.swa4 ||
         parseInt(answer) === currentQuestion.swa5)
     ) {
-      toast.warning("Special Wrong Answer", {
-        style: {
-          backgroundColor: "red",
-        },
-      });
       if (parseInt(answer) === currentQuestion.swa1) {
+        toast.warning("Special Wrong Answer - Case 1", {
+          style: {
+            backgroundColor: "red",
+          },
+        });
         console.log("Special Case 1");
         SpW_ans.push(
           Q_arr[Q_arr.length - 1]
@@ -240,6 +240,11 @@ const Test = () => {
             .concat("' : Case 1")
         );
       } else if (parseInt(answer) === currentQuestion.swa2) {
+        toast.warning("Special Wrong Answer - Case 2", {
+          style: {
+            backgroundColor: "red",
+          },
+        });
         console.log("Special Case 2");
         SpW_ans.push(
           Q_arr[Q_arr.length - 1]
@@ -247,6 +252,11 @@ const Test = () => {
             .concat("' : Case 2")
         );
       } else if (parseInt(answer) === currentQuestion.swa3) {
+        toast.warning("Special Wrong Answer - Case 3", {
+          style: {
+            backgroundColor: "red",
+          },
+        });
         console.log("Special Case 3");
         SpW_ans.push(
           Q_arr[Q_arr.length - 1]
@@ -254,6 +264,11 @@ const Test = () => {
             .concat("' : Case 3")
         );
       } else if (parseInt(answer) === currentQuestion.swa4) {
+        toast.warning("Special Wrong Answer - Case 4", {
+          style: {
+            backgroundColor: "red",
+          },
+        });
         console.log("Special Case 4");
         SpW_ans.push(
           Q_arr[Q_arr.length - 1]
@@ -261,6 +276,11 @@ const Test = () => {
             .concat("' : Case 4")
         );
       } else if (parseInt(answer) === currentQuestion.swa5) {
+        toast.warning("Special Wrong Answer - Case 5", {
+          style: {
+            backgroundColor: "red",
+          },
+        });
         console.log("Special Case 5");
         SpW_ans.push(
           Q_arr[Q_arr.length - 1]
