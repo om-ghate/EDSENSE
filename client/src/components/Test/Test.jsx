@@ -9,6 +9,7 @@ import ThankYouPage from "./ThankYouPage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ModalTest from "./ModalTest";
+import StageOverlay from "./Overlays/stageOverlay";
 
 // const ansQues = [];
 const arr_c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //This is the array which will have numbers from 1 to 20
@@ -56,6 +57,7 @@ let support = 0;
 const payload = JSON.parse(localStorage.getItem("payload"));
 console.log(payload);
 const Test = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
   const [exhaust, setExhaust] = useState(false);
   const [gameover, setGameover] = useState(false);
   // const [stage, setStage] = useState(1);
@@ -143,11 +145,11 @@ const Test = () => {
       setCurrentQuestion(filteredData[0]);
 
       //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
-      if (filteredData[0].sign === "-") {
+      if (filteredData[0].sign == "-") {
         str2 = filteredData[0].num1
           .toString()
           .concat(" minus ", filteredData[0].num2.toString().concat(" = to "));
-      } else if (filteredData[0].sign === "*") {
+      } else if (filteredData[0].sign == "*") {
         str2 = filteredData[0].num1
           .toString()
           .concat(
@@ -509,7 +511,7 @@ Array - 0
   // ! Handle Level Change function and useEffect END
 
   // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition
-  useEffect(() => {
+  function unsuccess() {
     if (array.length === 0 && levelScore < 2.5 && stage < 3) {
       support++;
 
@@ -533,7 +535,7 @@ Array - 0
           stageScore
         );
         handleStageChange();
-      } else if (support < 3) {
+      } else if (support < 3 && level > 1) {
         let lastadded = arrayLevel.pop();
         stageScore = stageScore - lastadded;
         stageScore = parseFloat(stageScore.toFixed(2));
@@ -545,7 +547,7 @@ Array - 0
         handleLevelChange(-1);
       }
     }
-  }, [array.length]);
+  }
   // ! 1.2 Handle Stage Change useEffect for Unsuccessful condition END
 
   // * Handle Stage Change function
@@ -562,6 +564,16 @@ Array - 0
     for (let i = 0; i < arr_c.length; i++) {
       array[i] = arr_c[i];
     }
+
+    //! Display Overlay for Stage 2 & Stage 3 START
+
+    setShowOverlay(true); // Set the state to true to display the overlay
+
+    setTimeout(() => {
+      setShowOverlay(false); // Hide the overlay after 5 seconds
+    }, 5000);
+
+    //* Display Overlay for Stage 2 & Stage 3 END
   };
   // * Handle Stage Change function END
 
@@ -656,6 +668,14 @@ Array - 0
     setMinutes(0);
     setStarted(true);
     generateQuestion();
+
+    //! Display Overlay for Stage 1 : Addition START
+    setShowOverlay(true); // Set the state to true to display the overlay
+
+    setTimeout(() => {
+      setShowOverlay(false); // Hide the overlay after 5 seconds
+    }, 5000);
+    //* Display Overlay for Stage 1 : Addition END
   };
 
   // Render start screen if quiz has not started
@@ -708,6 +728,7 @@ Array - 0
       // Reponse time function end -----------------------------------------------------------------------------------------------
       checkAnswer();
       setState();
+      unsuccess();
       generateQuestion();
       setError("");
     } else {
@@ -783,6 +804,19 @@ Array - 0
           {/* setResult("Fail") */}
           <ExhaustPage />
         </div>
+      )}
+      {/* Conditionally render the StageOverlay component */}
+      {showOverlay && (
+        <StageOverlay
+          stageText={`Stage ${stage} : ${
+            stage === 1
+              ? "Addition"
+              : stage === 2
+              ? "Subtraction"
+              : "Multiplication"
+          }`}
+          duration={5000} // Adjust the duration as needed (in milliseconds)
+        />
       )}
 
       {/* Toast Container */}
