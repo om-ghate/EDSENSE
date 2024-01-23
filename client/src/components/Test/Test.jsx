@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import "./Test.css"; // chal rha hai part 1
+import "./TestMediaQuery.css"
+
 import data from "./data10.json"; // Assuming that the data.json file is in the same directory as this component
 // import Header from "./Header";
 import axios from "axios";
@@ -768,7 +770,7 @@ Array - 0
                   <div className="obox">
                     <div className="Mbox"> {currentQuestion.num1}</div>
                     <div className="Sign">{currentQuestion.sign}</div>
-                    <div className="Mbox1"> {currentQuestion.num2}</div>
+                    <div className="Mbox"> {currentQuestion.num2}</div>
                     <div className="equals"> = </div>
                     <input
                       className="mbox2"
