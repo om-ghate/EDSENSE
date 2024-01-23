@@ -246,6 +246,7 @@ const Test = () => {
           style: {
             backgroundColor: "red",
           },
+          autoClose: 200,
         });
         console.log("Special Case 2");
         SpW_ans.push(
@@ -258,6 +259,7 @@ const Test = () => {
           style: {
             backgroundColor: "red",
           },
+          autoClose: 200,
         });
         console.log("Special Case 3");
         SpW_ans.push(
@@ -270,6 +272,7 @@ const Test = () => {
           style: {
             backgroundColor: "red",
           },
+          autoClose: 200,
         });
         console.log("Special Case 4");
         SpW_ans.push(
@@ -282,6 +285,7 @@ const Test = () => {
           style: {
             backgroundColor: "red",
           },
+          autoClose: 200,
         });
         console.log("Special Case 5");
         SpW_ans.push(
@@ -306,6 +310,7 @@ const Test = () => {
         style: {
           backgroundColor: "red",
         },
+        autoClose: 200,
       });
       if (currentQuestion.response >= seconds) {
         console.log("fast");
