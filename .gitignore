@@ -1,3 +1,4 @@
 **/node_modules
 Essential_Documents/
 build/
+*.zip
