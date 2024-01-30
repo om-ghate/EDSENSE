@@ -132,7 +132,7 @@ const Test = () => {
 
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
-      
+
       const filteredData = data.filter(
         (question) =>
           question.stage === stage &&
@@ -193,9 +193,49 @@ const Test = () => {
     //   handleStageChange();
     // }
     else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
-      console.log("Exhausted Array for Stage 3");
-      setExhaust(true);
-      sendUserResult();
+      support ++;
+      console.log("Array length == 0 && Stage = 3 && score < 2.5 from question display");
+      if (level === 1 && support === 1) {
+        console.log("Support = 1 & level = 1");
+        support = 0;
+        arrayLevel.push(`${strDisplay} : ` + levelScore);
+        stageScore = levelScore;
+        arrayStage.push(`${strDisplay} : ` + stageScore);
+        console.log("Stage Array - " + arrayStage);
+        console.log(
+          "Level Array - " + arrayLevel + "\nStage Score - ",
+          stageScore
+        );
+        console.log("Exhausted Array for Stage 3");
+        setExhaust(true);
+        sendUserResult();
+        handleTestComplete();
+      } else if (support === 3) {
+        support = 0;
+        console.log("Support = 3");
+        arrayLevel.push(`${strDisplay} : ` + levelScore);
+        stageScore = stageScore + levelScore;
+        arrayStage.push(`${strDisplay} :` + stageScore);
+        console.log("Stage Array - " + arrayStage);
+        console.log(
+          "Level Array - " + arrayLevel + "\nStage Score - ",
+          stageScore
+        );
+        console.log("Exhausted Array for Stage 3");
+        setExhaust(true);
+        sendUserResult();
+        handleTestComplete();
+      } else if (support < 3 && level > 1) {
+        let lastadded = arrayLevel.pop();
+        stageScore = stageScore - lastadded;
+        stageScore = parseFloat(stageScore.toFixed(2));
+        levelScore = 0;
+        console.log(
+          "Level Array - " + arrayLevel + "\n Stage Score - ",
+          stageScore
+        );
+        handleLevelChange(-1);
+      }
     }
   };
 
@@ -525,9 +565,9 @@ Array - 0
       if (level === 1 && support === 1) {
         console.log("Support = 1 & level = 1");
         support = 0;
-        arrayLevel.push(levelScore)
-        stageScore = levelScore
-        arrayStage.push(stageScore);
+        arrayLevel.push(`${strDisplay} : ` + levelScore);
+        stageScore = levelScore;
+        arrayStage.push(`${strDisplay} : ` + stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
           "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -537,9 +577,9 @@ Array - 0
       } else if (support === 3) {
         support = 0;
         console.log("Support = 3");
-        arrayLevel.push(levelScore)
-        stageScore = stageScore + levelScore
-        arrayStage.push(stageScore);
+        arrayLevel.push(`${strDisplay} : ` + levelScore);
+        stageScore = stageScore + levelScore;
+        arrayStage.push(`${strDisplay} :` + stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
           "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -556,6 +596,50 @@ Array - 0
           stageScore
         );
         handleLevelChange(-1);
+      } else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
+        support++;
+        console.log("Stage = 3 && Level = 1 && score < 2.5 from primary function");
+        if (level === 1 && support === 1) {
+          console.log("Support = 1 & level = 1");
+          support = 0;
+          arrayLevel.push(`${strDisplay} : ` + levelScore);
+          stageScore = levelScore;
+          arrayStage.push(`${strDisplay} : ` + stageScore);
+          console.log("Stage Array - " + arrayStage);
+          console.log(
+            "Level Array - " + arrayLevel + "\nStage Score - ",
+            stageScore
+          );
+          console.log("Exhausted Array for Stage 3");
+          setExhaust(true);
+          sendUserResult();
+          handleTestComplete();
+        } else if (support === 3) {
+          support = 0;
+          console.log("Support = 3");
+          arrayLevel.push(`${strDisplay} : ` + levelScore);
+          stageScore = stageScore + levelScore;
+          arrayStage.push(`${strDisplay} :` + stageScore);
+          console.log("Stage Array - " + arrayStage);
+          console.log(
+            "Level Array - " + arrayLevel + "\nStage Score - ",
+            stageScore
+          );
+          console.log("Exhausted Array for Stage 3");
+          setExhaust(true);
+          sendUserResult();
+          handleTestComplete();
+        } else if (support < 3 && level > 1) {
+          let lastadded = arrayLevel.pop();
+          stageScore = stageScore - lastadded;
+          stageScore = parseFloat(stageScore.toFixed(2));
+          levelScore = 0;
+          console.log(
+            "Level Array - " + arrayLevel + "\n Stage Score - ",
+            stageScore
+          );
+          handleLevelChange(-1);
+        }
       }
     }
   }
@@ -612,14 +696,6 @@ Array - 0
   }, [levelScore]);
   // Code by Om - 11th July END
 
-  //! useEffect to handle Array Exhausted
-  useEffect(() => {
-    if (array.length === 0 && levelScore < 2.5 && stage === 3) {
-      setExhaust(true);
-      sendUserResult();
-    }
-  }, [levelScore]);
-  // ! useEffect to handle Array Exhausted End
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
   /*
@@ -733,7 +809,6 @@ Array - 0
   };
 
   const handleCombinedClick = () => {
-
     if (answer) {
       array.splice(randomIndex, 1);
       // Restart fuction added for response time module -------------------------------------------------------------------------
