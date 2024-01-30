@@ -50,6 +50,8 @@ let stage = 1;
 
 let support = 0;
 
+var randomIndex;
+
 //* Variables for New Algorithm End
 
 // ---------- Array Creation to store the answer End ----------------------------------------------------------------------------
@@ -114,7 +116,7 @@ const Test = () => {
   const generateQuestion = () => {
     console.log("Generate question excuted for level - ", level);
     if (array.length > 0 && levelScore < 3.3 && stage < 4) {
-      const randomIndex = Math.floor(Math.random() * array.length);
+      randomIndex = Math.floor(Math.random() * array.length);
       console.log(randomIndex);
       const Q_no = array[randomIndex];
       const str = stage
@@ -130,7 +132,7 @@ const Test = () => {
 
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
-      array.splice(randomIndex, 1);
+      
       const filteredData = data.filter(
         (question) =>
           question.stage === stage &&
@@ -523,6 +525,8 @@ Array - 0
       if (level === 1 && support === 1) {
         console.log("Support = 1 & level = 1");
         support = 0;
+        arrayLevel.push(levelScore)
+        stageScore = levelScore
         arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
@@ -533,6 +537,8 @@ Array - 0
       } else if (support === 3) {
         support = 0;
         console.log("Support = 3");
+        arrayLevel.push(levelScore)
+        stageScore = stageScore + levelScore
         arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
@@ -727,7 +733,9 @@ Array - 0
   };
 
   const handleCombinedClick = () => {
+
     if (answer) {
+      array.splice(randomIndex, 1);
       // Restart fuction added for response time module -------------------------------------------------------------------------
       restart();
       // Reponse time function end -----------------------------------------------------------------------------------------------
