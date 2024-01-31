@@ -108,6 +108,8 @@ const Test = () => {
 
   // ! Test Code to Convert the array into object - Use State and Function
 
+  var storeArray = []
+
   const [testData, setTestData] = useState({});
 
   const addValue = (stage, level, value) => {
@@ -293,6 +295,15 @@ const Test = () => {
 
       R_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("R_ans: ", R_ans);
+
+      console.log("Breaking the R_ans string to different arrays - ")
+      const result = R_ans.map(element => {
+        const [stage, level, qno] = element.split('.');
+        return { stage, level, qno };
+      });
+
+      console.log(result);
+
 
       // setPointer(pointer + 1);
       // console.log("Pointer - " + pointer);
