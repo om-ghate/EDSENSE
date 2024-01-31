@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import "./Test.css"; // chal rha hai part 1
-import "./TestMediaQuery.css"
+import "./TestMediaQuery.css";
 
 import data from "./data10.json"; // Assuming that the data.json file is in the same directory as this component
 // import Header from "./Header";
@@ -106,6 +106,30 @@ const Test = () => {
 
   //* Modal Component for Hint End
 
+  // ! Test Code to Convert the array into object - Use State and Function
+
+  const [testData, setTestData] = useState({});
+
+  const addValue = (stage, level, value) => {
+    setTestData((prevData) => {
+      const newData = { ...prevData };
+
+      if (!newData[stage]) {
+        newData[stage] = {};
+      }
+
+      if (!newData[stage][level]) {
+        newData[stage][level] = [];
+      }
+
+      newData[stage][level].push(value);
+
+      return newData;
+    });
+  };
+
+  // * Test Code to Convert the array into object END
+
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
   };
@@ -132,8 +156,17 @@ const Test = () => {
 
       console.log(strDisplay);
 
+      // ! Test Code to Convert the array into object
+
+      addValue(stage, level, array[randomIndex]);
+
+      // * Test Code to Convert the array into object END
+
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
+
+      console.log("Testing Object - ");
+      console.log(testData);
 
       const filteredData = data.filter(
         (question) =>
@@ -195,8 +228,10 @@ const Test = () => {
     //   handleStageChange();
     // }
     else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
-      support ++;
-      console.log("Array length == 0 && Stage = 3 && score < 2.5 from question display");
+      support++;
+      console.log(
+        "Array length == 0 && Stage = 3 && score < 2.5 from question display"
+      );
       if (level === 1 && support === 1) {
         console.log("Support = 1 & level = 1");
         support = 0;
@@ -600,7 +635,9 @@ Array - 0
         handleLevelChange(-1);
       } else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
         support++;
-        console.log("Stage = 3 && Level = 1 && score < 2.5 from primary function");
+        console.log(
+          "Stage = 3 && Level = 1 && score < 2.5 from primary function"
+        );
         if (level === 1 && support === 1) {
           console.log("Support = 1 & level = 1");
           support = 0;
@@ -697,7 +734,6 @@ Array - 0
     }
   }, [levelScore]);
   // Code by Om - 11th July END
-
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
   /*
