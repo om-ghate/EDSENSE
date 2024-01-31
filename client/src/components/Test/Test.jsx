@@ -115,14 +115,10 @@ const Test = () => {
       const newData = { ...prevData };
 
       if (!newData[stage]) {
-        newData[stage] = {};
+        newData[stage] = [];
       }
 
-      if (!newData[stage][level]) {
-        newData[stage][level] = [];
-      }
-
-      newData[stage][level].push(value);
+      newData[stage].push({ level, value });
 
       return newData;
     });
