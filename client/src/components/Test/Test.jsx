@@ -681,13 +681,12 @@ const Test = () => {
   // Code by Om - 5th July
 
   // ! Handle Test Complete function
+
   const handleTestComplete = () => {
-    const countRef = countersRef.current;
 
-    const stageRef = stageObjectRef.current;
 
-    console.log(countRef);
-    console.log(stageRef);
+ 
+
 
     R_ans.push(Q_arr[Q_arr.length - 1]);
     let str = minutes.toString().concat(":", seconds.toString());
@@ -889,21 +888,21 @@ const Test = () => {
               ) : (
                 <div>
                   {/* setResult("Pass") */}
-                  <ThankYouPage />
+                  <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current}/>
                 </div>
               )}
             </div>
           ) : (
             <div>
               {/* setResult("Pass") */}
-              <ThankYouPage />
+              <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current}/>
             </div>
           )}
         </div>
       ) : (
         <div>
           {/* setResult("Fail") */}
-          <ExhaustPage />
+          <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current}/>
         </div>
       )}
       {/* Conditionally render the StageOverlay component */}
