@@ -683,6 +683,12 @@ const Test = () => {
   // ! Handle Test Complete function
   const handleTestComplete = () => {
 
+    const countRef = countersRef.current;
+
+    const stageRef = stageObjectRef.current;
+
+    console.log(countRef)
+    console.log(stageRef)
 
 
 
