@@ -227,23 +227,12 @@ const Test = () => {
 
       // -------------------------------------------------------------------------------------------------------------------
 
-      // if(randomIndex == arr.includes(randomIndex))
-      // if (array.includes(randomNumber)) {
-      //   console.log(randomNumber);
-      //   setCurrentQuestion(filteredData[randomNumber]);
-      //   array.splice(randomNumber, 1);
-      // } else {
-      //   generateQuestion();
-      // }
+
       setAnswer("");
-      // setResult("");
-      // ansQues.push(filteredData[randomIndex].Q_no);
+
       console.log(array);
     }
-    // else if (array.length === 0 && pointer < 3 && stage < 3){
-    //   console.log("Exhausted Array for Stage 1 or 2");
-    //   handleStageChange();
-    // }
+ 
     else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
       support++;
       console.log(
@@ -328,7 +317,7 @@ const Test = () => {
       updateCounters(stage, "correct");
 
       console.log("Counters - ");
-      console.log(countersRef);
+      console.log(countersRef.current);
     } else if (
       currentQuestion &&
       (parseInt(answer) === currentQuestion.swa1 ||
@@ -417,7 +406,7 @@ const Test = () => {
       updateCounters(stage, "specialWrong");
 
       console.log("Counters - ");
-      console.log(countersRef);
+      console.log(countersRef.current);
     } else {
       toast.warning("Wrong Answer", {
         style: {
@@ -444,105 +433,13 @@ const Test = () => {
       updateCounters(stage, "incorrect");
 
       console.log("Counters - ");
-      console.log(countersRef);
+      console.log(countersRef.current);
     }
   };
 
-  // * ---------- Function to check the answer End -------------------------------------------------------------------
 
-  // List of this required for the code to work
-  // ! Test Condition Start
-  /*
-1. Handle Level Change which will handle the level change after solving 3 questions of each level
-2. Handle Stage Change which will handle the stage change after giving 3 level of each stage
-3. Handle Test Complete which will set setGameover(true) after 3 stages
-*/
-
-  /*
-Starting Point -
-
-Pointer - 0
-Level - 0
-Stage - 0
-array - 5
-
-Successful Case
-Pointer - 3 
-Level - 3
-Stage - 3
-
-Unsuccessful case
-Pointer < 3
-Array - 0
-*/
-  // ! Test Condition End
-
-  // ! Real Condition
-  /*
-Pointer - 0
-Level - 0
-Stage - 0
-array - 20
-
-Successful Case -
-
-Stage - 1
-level - 17
-
-Stage - 2
-level - 17
-
-Stage - 3
-level - 6
-
-Pointer - 3
-
-level change - 3 / >17
-stage change
-test complete
-
-
-Unsuccessful case
-Pointer < 3
-Array - 0
-*/
-  // ! Real Condition END
-
-  // ! Handle Level Change function and useEffect
-
-  // Array for storing the level counts of stages
 
   const arr = [0, 17, 16, 6];
-
-  //
-
-  // useEffect(() => {
-  //   if (levelScore >= 3.3 && level < arr[stage]) {
-  //     stageScore = stageScore + levelScore + 3;
-  //     console.log("Stage Score - ", stageScore)
-  //     arrayLevel.push(levelScore);
-  //     arrayLevel.push(3);
-  //     console.log("ArrayLevel - ",arrayLevel)
-  //     setLevelScore(0);
-  //     handleLevelChange(2);
-  //   }
-  //   else if(levelScore >= 2.5 && level < arr[stage]){
-  //     stageScore = stageScore + levelScore;
-  //     console.log("Stage Score - ", stageScore);
-  //     arrayLevel.push(levelScore);
-  //     console.log("ArrayLevel - ",arrayLevel)
-  //     setLevelScore(0)
-  //     handleLevelChange(1);
-  //   }
-
-  //   else if(pointer === 3 && level >= arr[stage] && stage < 3) {
-  //     handleStageChange();
-  //   }
-
-  //   else if (pointer === 3 && level === arr[stage] && stage === 3) {
-  //     handleTestComplete();
-  //   }
-  // }, [levelScore]);
 
   function setState() {
     if (levelScore >= 3.3 && level + 1 === arr[stage]) {
@@ -560,8 +457,6 @@ Array - 0
       );
       arrayStage.push(stageScore);
       console.log("Stage Array - " + arrayStage);
-      // levelScore = 0;
-      // stageScore = 0;
       if (stage < 3) {
         handleStageChange();
       } else {
@@ -582,7 +477,6 @@ Array - 0
         "Level Array - " + arrayLevel + "\n Stage Score - ",
         stageScore
       );
-      // levelScore = 0;
 
       handleLevelChange(2);
     } else if (levelScore >= 2.5 && level < arr[stage]) {
@@ -636,9 +530,7 @@ Array - 0
 
   const handleLevelChange = (val) => {
     console.log("handle level change executed");
-    // setPointer(0);
-    // setDec(1);
-    // setLevel(level + val);
+
 
     console.log(
       "Level Array - " + arrayLevel + "\n Stage Score - ",
@@ -761,13 +653,13 @@ Array - 0
 
   // * Handle Stage Change function
   const handleStageChange = () => {
-    // setPointer(0);
+
     console.log("handle stage change executed");
     levelScore = 0;
     stageScore = 0;
-    // setStage(stage + 1);
+
     stage++;
-    // setLevel(1);
+
     level = 1;
 
     for (let i = 0; i < arr_c.length; i++) {
@@ -791,7 +683,7 @@ Array - 0
   // ! Handle Test Complete function
   const handleTestComplete = () => {
 
-    
+
 
 
     R_ans.push(Q_arr[Q_arr.length - 1]);
