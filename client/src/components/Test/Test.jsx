@@ -181,9 +181,8 @@ const Test = () => {
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
 
-      console.log("Displaying LevelWise Score - ")
+      console.log("Displaying LevelWise Score - ");
       console.log(stageObjectRef.current);
-
 
       const filteredData = data.filter(
         (question) =>
@@ -227,13 +226,10 @@ const Test = () => {
 
       // -------------------------------------------------------------------------------------------------------------------
 
-
       setAnswer("");
 
       console.log(array);
-    }
- 
-    else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
+    } else if (array.length === 0 && levelScore < 2.5 && stage === 3) {
       support++;
       console.log(
         "Array length == 0 && Stage = 3 && score < 2.5 from question display"
@@ -242,6 +238,9 @@ const Test = () => {
         console.log("Support = 1 & level = 1");
         support = 0;
         arrayLevel.push(`${strDisplay} : ` + levelScore);
+
+        stageObjectRefFunction(stage, level, levelScore);
+
         stageScore = levelScore;
         arrayStage.push(`${strDisplay} : ` + stageScore);
         console.log("Stage Array - " + arrayStage);
@@ -257,6 +256,9 @@ const Test = () => {
         support = 0;
         console.log("Support = 3");
         arrayLevel.push(`${strDisplay} : ` + levelScore);
+
+        stageObjectRefFunction(stage, level, levelScore);
+
         stageScore = stageScore + levelScore;
         arrayStage.push(`${strDisplay} :` + stageScore);
         console.log("Stage Array - " + arrayStage);
@@ -437,17 +439,17 @@ const Test = () => {
     }
   };
 
-
-
-  const arr = [0, 17, 16, 6];
+  const arr = [0, 16, 16, 6];
 
   function setState() {
     if (levelScore >= 3.3 && level + 1 === arr[stage]) {
       // handleStageChange();
       console.log("Exception Case 1");
       arrayLevel.push(levelScore);
+      arrayLevel.push(3);
 
       stageObjectRefFunction(stage, level, levelScore);
+      stageObjectRefFunction(stage, level + 1, 3);
 
       stageScore = stageScore + levelScore;
       stageScore = parseFloat(stageScore.toFixed(2));
@@ -530,7 +532,6 @@ const Test = () => {
 
   const handleLevelChange = (val) => {
     console.log("handle level change executed");
-
 
     console.log(
       "Level Array - " + arrayLevel + "\n Stage Score - ",
@@ -653,7 +654,6 @@ const Test = () => {
 
   // * Handle Stage Change function
   const handleStageChange = () => {
-
     console.log("handle stage change executed");
     levelScore = 0;
     stageScore = 0;
@@ -682,19 +682,17 @@ const Test = () => {
 
   // ! Handle Test Complete function
   const handleTestComplete = () => {
-
     const countRef = countersRef.current;
 
     const stageRef = stageObjectRef.current;
 
-    console.log(countRef)
-    console.log(stageRef)
-
-
+    console.log(countRef);
+    console.log(stageRef);
 
     R_ans.push(Q_arr[Q_arr.length - 1]);
     let str = minutes.toString().concat(":", seconds.toString());
     Timer.push(str);
+
     setGameover(true);
     sendUserResult();
   };
