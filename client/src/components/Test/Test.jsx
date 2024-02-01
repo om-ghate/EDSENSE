@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import YouTube from "react-youtube";
 import "./Test.css"; // chal rha hai part 1
 import "./TestMediaQuery.css";
@@ -106,27 +106,28 @@ const Test = () => {
 
   //* Modal Component for Hint End
 
-  // ! Test Code to Convert the array into object - Use State and Function
+  // ! Store Answer's Count
 
-  var storeArray = []
+  
+  const countersRef = useRef({
+    1: [0, 0, 0],
+    2: [0, 0, 0],
+    3: [0, 0, 0],
+  });
 
-  const [testData, setTestData] = useState({});
-
-  const addValue = (stage, level, value) => {
-    setTestData((prevData) => {
-      const newData = { ...prevData };
-
-      if (!newData[stage]) {
-        newData[stage] = [];
-      }
-
-      newData[stage].push({ level, value });
-
-      return newData;
-    });
+  const updateCounters = (stage, condition) => {
+    const counters = countersRef.current;
+    
+    if (condition === 'correct') {
+      counters[stage][0]++; // Increment correct count
+    } else if (condition === 'specialWrong') {
+      counters[stage][2]++; // Increment special wrong count
+    } else {
+      counters[stage][1]++; // Increment incorrect count
+    }
   };
 
-  // * Test Code to Convert the array into object END
+  // * Store Answer's Count
 
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
@@ -154,17 +155,8 @@ const Test = () => {
 
       console.log(strDisplay);
 
-      // ! Test Code to Convert the array into object
-
-      addValue(stage, level, array[randomIndex]);
-
-      // * Test Code to Convert the array into object END
-
       Q_arr.push(str);
       console.log("Q_arr", Q_arr);
-
-      console.log("Testing Object - ");
-      console.log(testData);
 
       const filteredData = data.filter(
         (question) =>
@@ -273,11 +265,12 @@ const Test = () => {
       }
     }
   };
-
+  
   // * ---------- Function to check the answer ----------------------------------------------------------------------
   const checkAnswer = () => {
     // console.log(pointer);
-
+    const [correctCount, incorrectCount, specialWrongCount] = countersRef.current[stage];
+    
     //! Correct Answer
     if (currentQuestion && parseInt(answer) === currentQuestion.ans) {
       if (currentQuestion.response >= seconds) {
@@ -296,17 +289,18 @@ const Test = () => {
       R_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("R_ans: ", R_ans);
 
-      console.log("Breaking the R_ans string to different arrays - ")
-      const result = R_ans.map(element => {
-        const [stage, level, qno] = element.split('.');
+      console.log("Breaking the R_ans string to different arrays - ");
+      const result = R_ans.map((element) => {
+        const [stage, level, qno] = element.split(".");
         return { stage, level, qno };
       });
 
       console.log(result);
 
+      updateCounters(stage, 'correct');
 
-      // setPointer(pointer + 1);
-      // console.log("Pointer - " + pointer);
+      console.log("Counters - ");
+      console.log(countersRef);
     } else if (
       currentQuestion &&
       (parseInt(answer) === currentQuestion.swa1 ||
@@ -391,6 +385,11 @@ const Test = () => {
       levelScore = levelScore + score;
       levelScore = parseFloat(levelScore.toFixed(2));
       console.log("Level Score - ", levelScore);
+
+      updateCounters(stage, 'specialWrong');
+
+      console.log("Counters - ");
+      console.log(countersRef);
     } else {
       toast.warning("Wrong Answer", {
         style: {
@@ -413,6 +412,11 @@ const Test = () => {
 
       W_ans.push(Q_arr[Q_arr.length - 1]);
       console.log("W_ans: ", W_ans);
+
+      updateCounters(stage, 'incorrect');
+
+      console.log("Counters - ");
+      console.log(countersRef);
     }
   };
 
@@ -590,6 +594,12 @@ Array - 0
     // setPointer(0);
     // setDec(1);
     // setLevel(level + val);
+
+    console.log(
+      "Level Array - " + arrayLevel + "\n Stage Score - ",
+      stageScore
+    );
+
     level = level + val;
     levelScore = 0;
     console.log("level updated to - ", level);
