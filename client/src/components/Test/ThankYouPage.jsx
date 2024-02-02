@@ -4,8 +4,8 @@ import AreaGraph from "./AreaGraph";
 const ThankYouPage = (props) => {
   const countRef = props.countRef;
   const stageRef = props.stageRef;
-  
-  console.log("Thank you Page displayed -")
+
+  console.log("Thank you Page displayed -");
   console.log(countRef);
   console.log(stageRef);
 
@@ -14,20 +14,42 @@ const ThankYouPage = (props) => {
     localStorage.removeItem("payload");
     window.location.reload();
   };
+
   return (
-    <div className="thankyou-container">
-      {/* <h1 className="thankyou-title">Thank You!</h1>
-      <p className="thankyou-text">
-        Your test has been completed successfully.
-      </p> */}
-      {/* <p className="thankyou-text">Thank you for participating!</p> */}
-      {/* Add any additional content or styling as needed */}
+    <div className="graph-display">
+      <div
+        className="thankyou-container"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+        }}
+      >
+        <div style={{ marginTop: "100px", marginBottom: "20px" }}>
+          <AreaGraph
+            stage="Addition"
+            countRef={countRef}
+            stageRef={stageRef[1]}
+          />
+        </div>
 
-      <AreaGraph countRef = {countRef} stageRef = {stageRef}/>
+        <div style={{ marginBottom: "20px" }}>
+          <AreaGraph
+            stage="Subtraction"
+            countRef={countRef}
+            stageRef={stageRef[2]}
+          />
+        </div>
 
-      <button onClick={handleLogout}>
-					Exit Test
-				</button>
+        <div style={{ marginBottom: "20px" }}>
+          <AreaGraph
+            stage="Multiplication"
+            countRef={countRef}
+            stageRef={stageRef[3]}
+          />
+        </div>
+      </div>
+      <button className="logOutButton" onClick={handleLogout}>Exit Test</button>
     </div>
   );
 };
