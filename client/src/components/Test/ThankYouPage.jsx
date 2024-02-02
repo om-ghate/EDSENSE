@@ -24,43 +24,12 @@ const ThankYouPage = (props) => {
 
   return (
     <div className="graph-display">
-      <div
-        className="thankyou-container"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-        }}
-      >
-        <div style={{ marginTop: "100px", marginBottom: "20px" }}>
-          <AreaGraph
-            stage="Addition"
-            countRef={countRef}
-            stageRef={stageRef[1]}
-          />
-        </div>
 
-        <div style={{ marginBottom: "20px" }}>
-          <AreaGraph
-            stage="Subtraction"
-            countRef={countRef}
-            stageRef={stageRef[2]}
-          />
-        </div>
-
-        <div style={{ marginBottom: "20px" }}>
-          <AreaGraph
-            stage="Multiplication"
-            countRef={countRef}
-            stageRef={stageRef[3]}
-          />
-        </div>
-      </div>
       <button className="logOutButton" onClick={handleLogout}>
         Exit Test
       </button>
       {showPdf ? (
-        <PdfGenerator />
+        <PdfGenerator countRef = {countRef} stageRef= {stageRef[1]}/>
       ) : (
         <button onClick={handleGeneratePdf}>
           Generate PDF
