@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import AreaGraph from "./AreaGraph";
+import PdfGenerator from "./PDF Download/PdfGenerator";
 
 const ThankYouPage = (props) => {
+  const [showPdf, setShowPdf] = useState(false);
+
+  const handleGeneratePdf = () => {
+    setShowPdf(true);
+  };
+
   const countRef = props.countRef;
   const stageRef = props.stageRef;
 
@@ -49,7 +56,17 @@ const ThankYouPage = (props) => {
           />
         </div>
       </div>
-      <button className="logOutButton" onClick={handleLogout}>Exit Test</button>
+      <button className="logOutButton" onClick={handleLogout}>
+        Exit Test
+      </button>
+      {showPdf ? (
+        <PdfGenerator />
+      ) : (
+        <button onClick={handleGeneratePdf}>
+          Generate PDF
+        </button>
+      )}
+
     </div>
   );
 };
