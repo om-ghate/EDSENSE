@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PdfGenerator from "./PDF Download/PdfGenerator";
 
 const ThankYouPage = (props) => {
-
   const countRef = props.countRef;
   const stageRef = props.stageRef;
 
@@ -10,19 +9,22 @@ const ThankYouPage = (props) => {
   console.log(countRef);
   console.log(stageRef);
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("payload");
-    window.location.reload();
-  };
+  
 
   return (
-    <div className="graph-display">
-      <button className="logOutButton" onClick={handleLogout}>
-        Exit Test
-      </button>
+    <div
+      className="graph-display"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "white",
+      }}
+    >
+      <div style={{ marginTop: "80px" }}></div>
 
-      <PdfGenerator countRef={countRef} stageRef={stageRef} />
+      <div>
+        <PdfGenerator countRef={countRef} stageRef={stageRef} />
+      </div>
     </div>
   );
 };

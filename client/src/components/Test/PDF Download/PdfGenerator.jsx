@@ -4,37 +4,48 @@ import jsPDF from "jspdf";
 import AreaGraph from "../AreaGraph";
 import PieChart from "../PieChart";
 
+const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("payload");
+  window.location.reload();
+};
+
 const PdfGenerator = ({ countRef, stageRef }) => {
   const data = localStorage.getItem("payload");
   const { age, email, firstName, lastName, school, std } = JSON.parse(data);
 
   const pdfRef = useRef();
 
-  const generatePdf = async () => {
+  const generatePdf = () => {
     const input = pdfRef.current;
 
-    try {
-      const canvas = await html2canvas(input);
+    html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4", true);
 
-      const pdf = new jsPDF("p", "mm", "a4");
-      const imgWidth = 200;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
 
-      pdf.setFillColor(255, 255, 255);
-      pdf.rect(
-        0,
-        0,
-        pdf.internal.pageSize.getWidth(),
-        pdf.internal.pageSize.getHeight(),
-        "F"
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+
+      // This variable is used to give margin in the pdf's top section
+      const marginTop = 5;
+
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+      const imgY = marginTop;
+      pdf.addImage(
+        imgData,
+        "PNG",
+        imgX,
+        imgY,
+        imgWidth * ratio,
+        imgHeight * ratio
       );
-
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save(`${firstName + lastName}_report.pdf`);
-    } catch (error) {
-      console.error("Error generating PDF:", error);
-    }
+      pdf.save(`${firstName + " " + lastName}_report.pdf`);
+    });
   };
 
   return (
@@ -82,6 +93,38 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           <h4>School - {school}</h4>
           <h4>Standard - {std}</h4>
         </div>
+        {/* <table
+          style={{
+            borderCollapse: "collapse",
+            width: "100%",
+            fontSize: "x-large",
+          }}
+        >
+          <tbody>
+            <tr>
+              <td style={{ textAlign: "left", padding: "8px" }}>Name</td>
+              <td style={{ textAlign: "left", padding: "8px" }}>
+                {firstName} {lastName}
+              </td>
+            </tr>
+            <tr>
+              <td style={{ textAlign: "left", padding: "8px" }}>Age</td>
+              <td style={{ textAlign: "left", padding: "8px" }}>{age}</td>
+            </tr>
+            <tr>
+              <td style={{ textAlign: "left", padding: "8px" }}>Email</td>
+              <td style={{ textAlign: "left", padding: "8px" }}>{email}</td>
+            </tr>
+            <tr>
+              <td style={{ textAlign: "left", padding: "8px" }}>School</td>
+              <td style={{ textAlign: "left", padding: "8px" }}>{school}</td>
+            </tr>
+            <tr>
+              <td style={{ textAlign: "left", padding: "8px" }}>Standard</td>
+              <td style={{ textAlign: "left", padding: "8px" }}>{std}</td>
+            </tr>
+          </tbody>
+        </table> */}
 
         <hr />
         <div
@@ -104,24 +147,57 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           <PieChart countRef={countRef[3]} />
         </div>
       </div>
-
-      <button
-        onClick={async () => {
-          await generatePdf();
-        }}
+      <div
         style={{
-          padding: "30px 45px",
-          fontSize: "x-large",
-          backgroundColor: "#4CAF50",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-          margin: "100px",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "Center",
         }}
       >
-        Generate PDF
-      </button>
+        <button
+          style={{
+            height: "100px",
+            width: "245px",
+            backgroundColor: "white",
+            color: "#42b2fc",
+            border: "3px solid",
+            fontSize: "xx-large",
+            borderRadius: "10px",
+
+            margin: "100px",
+            padding: "20px 35px",
+          }}
+          onClick={handleLogout}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "#42b2fc";
+            e.currentTarget.style.color = "white";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "white";
+            e.currentTarget.style.color = "#42b2fc";
+          }}
+        >
+          Exit Test
+        </button>
+        <button
+          onClick={generatePdf}
+          style={{
+            height: "100px",
+            width: "245px",
+
+            padding: "30px 40px",
+            fontSize: "x-large",
+            backgroundColor: "#42b2fc",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            margin: "100px",
+          }}
+        >
+          Generate PDF
+        </button>
+      </div>
     </div>
   );
 };
