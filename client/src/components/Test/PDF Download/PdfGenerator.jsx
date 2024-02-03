@@ -17,19 +17,24 @@ const PdfGenerator = ({ countRef, stageRef }) => {
 
   const generatePdf = () => {
     const input = pdfRef.current;
+    if (input && input.offsetWidth && input.offsetHeight) {
+      const scale = window.devicePixelRatio || 1;
 
-    html2canvas(input, { backgroundColor: "white" }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
-      const imgWidth = 210;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      html2canvas(input, { backgroundColor: "white", scale: scale }).then(
+        (canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const pdf = new jsPDF("p", "mm", "a4");
+          const imgWidth = 200;
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-      pdf.setFillColor(255, 255, 255);
-      pdf.rect(0, 0, imgWidth, imgHeight, "F");
+          pdf.setFillColor(255, 255, 255);
+          pdf.rect(0, 0, imgWidth, imgHeight, "F");
 
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save(`${firstName + lastName}_report.pdf`);
-    });
+          pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+          pdf.save(`${firstName + lastName}_report.pdf`);
+        }
+      );
+    }
   };
 
   return (

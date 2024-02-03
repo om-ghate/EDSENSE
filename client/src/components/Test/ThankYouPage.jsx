@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import PdfGenerator from "./PDF Download/PdfGenerator";
 
 const ThankYouPage = (props) => {
-  const [showPdf, setShowPdf] = useState(false);
-
-  const handleGeneratePdf = () => {
-    setShowPdf(true);
-  };
 
   const countRef = props.countRef;
   const stageRef = props.stageRef;
