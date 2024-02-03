@@ -7,33 +7,33 @@ import PieChart from "../PieChart";
 const PdfGenerator = ({ countRef, stageRef }) => {
   const data = localStorage.getItem("payload");
   const { age, email, firstName, lastName, school, std } = JSON.parse(data);
-  console.log("Age - " + age);
-  console.log("Email - " + email);
-  console.log("Name - " + (firstName + "" + lastName));
-  console.log("School Name - " + school);
-  console.log("Standard - " + std);
 
   const pdfRef = useRef();
 
-  const generatePdf = () => {
+  const generatePdf = async () => {
     const input = pdfRef.current;
-    if (input && input.offsetWidth && input.offsetHeight) {
-      const scale = window.devicePixelRatio || 1;
 
-      html2canvas(input, { backgroundColor: "white", scale: scale }).then(
-        (canvas) => {
-          const imgData = canvas.toDataURL("image/png");
-          const pdf = new jsPDF("p", "mm", "a4");
-          const imgWidth = 200;
-          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    try {
+      const canvas = await html2canvas(input);
+      const imgData = canvas.toDataURL("image/png");
 
-          pdf.setFillColor(255, 255, 255);
-          pdf.rect(0, 0, imgWidth, imgHeight, "F");
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgWidth = 200;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-          pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-          pdf.save(`${firstName + lastName}_report.pdf`);
-        }
+      pdf.setFillColor(255, 255, 255);
+      pdf.rect(
+        0,
+        0,
+        pdf.internal.pageSize.getWidth(),
+        pdf.internal.pageSize.getHeight(),
+        "F"
       );
+
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save(`${firstName + lastName}_report.pdf`);
+    } catch (error) {
+      console.error("Error generating PDF:", error);
     }
   };
 
@@ -106,7 +106,9 @@ const PdfGenerator = ({ countRef, stageRef }) => {
       </div>
 
       <button
-        onClick={generatePdf}
+        onClick={async () => {
+          await generatePdf();
+        }}
         style={{
           padding: "30px 45px",
           fontSize: "x-large",
