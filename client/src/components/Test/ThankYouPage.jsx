@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AreaGraph from "./AreaGraph";
 import PdfGenerator from "./PDF Download/PdfGenerator";
 
 const ThankYouPage = (props) => {
@@ -24,18 +23,11 @@ const ThankYouPage = (props) => {
 
   return (
     <div className="graph-display">
-
       <button className="logOutButton" onClick={handleLogout}>
         Exit Test
       </button>
-      {showPdf ? (
-        <PdfGenerator countRef = {countRef} stageRef= {stageRef[1]}/>
-      ) : (
-        <button onClick={handleGeneratePdf}>
-          Generate PDF
-        </button>
-      )}
 
+      <PdfGenerator countRef={countRef} stageRef={stageRef} />
     </div>
   );
 };

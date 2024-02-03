@@ -10,7 +10,7 @@ import {
   Label,
 } from "recharts";
 
-const AreaGraph = ({ stage, countRef, stageRef }) => {
+const AreaGraph = ({ stage, stageRef }) => {
   const levels = Array.from(
     { length: stageRef.length },
     (_, index) => index + 1

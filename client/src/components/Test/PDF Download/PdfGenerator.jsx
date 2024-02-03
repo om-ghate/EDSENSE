@@ -1,87 +1,116 @@
 import React, { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import AreaGraph from "../AreaGraph";
+import PieChart from "../PieChart";
 
-const PdfGenerator = () => {
+const PdfGenerator = ({ countRef, stageRef }) => {
+  const data = localStorage.getItem("payload");
+  const { age, email, firstName, lastName, school, std } = JSON.parse(data);
+  console.log("Age - " + age);
+  console.log("Email - " + email);
+  console.log("Name - " + (firstName + "" + lastName));
+  console.log("School Name - " + school);
+  console.log("Standard - " + std);
+
   const pdfRef = useRef();
 
   const generatePdf = () => {
     const input = pdfRef.current;
 
-    html2canvas(input).then((canvas) => {
+    html2canvas(input, { backgroundColor: "white" }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF("p", "mm", "a4");
       const imgWidth = 210;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      pdf.setFillColor(255, 255, 255);
+      pdf.rect(0, 0, imgWidth, imgHeight, "F");
+
       pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save("test_report.pdf");
+      pdf.save(`${firstName + lastName}_report.pdf`);
     });
   };
 
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", textAlign: "center" }}>
-      <h2
-        style={{
-          color: "#333",
-          borderBottom: "2px solid #333",
-          paddingBottom: "10px",
-        }}
-      >
-        Test Report
-      </h2>
+    <div
+      style={{
+        fontFamily: "Arial, sans-serif",
+        backgroundColor: "white",
+        textAlign: "center",
+      }}
+    >
       <div
         ref={pdfRef}
         style={{
-          padding: "20px",
-          border: "1px solid #ddd",
+          padding: 0,
+          margin: 0,
           borderRadius: "5px",
-          backgroundColor: "#f9f9f9",
-          margin: "20px",
+          backgroundColor: "white",
+          width: "100%",
+          height: "auto",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <h3 style={{ color: "#555", marginBottom: "15px" }}>Summary</h3>
-        <p style={{ margin: "5px" }}>Test Date: January 1, 2024</p>
-        <p style={{ margin: "5px" }}>Tester: John Doe</p>
-
-        <h3 style={{ color: "#555", marginTop: "20px", marginBottom: "15px" }}>
-          Test Results
-        </h3>
-        <table
+        <h2
           style={{
-            width: "100%",
-            borderCollapse: "collapse",
-            marginBottom: "20px",
+            color: " #3498db",
+            padding: "20px",
+            borderBottom: "2px solid #3498db",
+            paddingBottom: "10px",
           }}
         >
-          <thead>
-            <tr style={{ background: "#333", color: "#fff" }}>
-              <th style={{ padding: "10px" }}>Test Case</th>
-              <th style={{ padding: "10px" }}>Result</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={{ padding: "10px" }}>Test Case 1</td>
-              <td style={{ padding: "10px", color: "green" }}>Pass</td>
-            </tr>
-            <tr>
-              <td style={{ padding: "10px" }}>Test Case 2</td>
-              <td style={{ padding: "10px", color: "red" }}>Fail</td>
-            </tr>
-            {/* Add more test cases as needed */}
-          </tbody>
-        </table>
+          Test Report
+        </h2>
+        {/* <h3>Student Information</h3> */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "start",
+            padding: "20px",
+          }}
+        >
+          <h4>Name - {firstName + " " + lastName}</h4>
+          <h4>Age - {age}</h4>
+          <h4>Email - {email}</h4>
+          <h4>School - {school}</h4>
+          <h4>Standard - {std}</h4>
+        </div>
+
+        <hr />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            margin: "100px",
+          }}
+        >
+          <AreaGraph stage="Addition" stageRef={stageRef[1]} />
+          <PieChart countRef={countRef[1]} />
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "row", margin: "100px" }}>
+          <AreaGraph stage="Subtraction" stageRef={stageRef[2]} />
+          <PieChart countRef={countRef[2]} />
+        </div>
+        <div style={{ display: "flex", flexDirection: "row", margin: "100px" }}>
+          <AreaGraph stage="Multiplication" stageRef={stageRef[3]} />
+          <PieChart countRef={countRef[3]} />
+        </div>
       </div>
+
       <button
         onClick={generatePdf}
         style={{
-          padding: "10px",
+          padding: "30px 45px",
+          fontSize: "x-large",
           backgroundColor: "#4CAF50",
           color: "white",
           border: "none",
           borderRadius: "5px",
           cursor: "pointer",
+          margin: "100px",
         }}
       >
         Generate PDF
