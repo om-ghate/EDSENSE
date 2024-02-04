@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import AreaGraph from "../AreaGraph";
 import PieChart from "../PieChart";
 import { useReactToPrint } from "react-to-print";
+import GraphDisplay from "./GraphDisplay";
 
 const handleLogout = () => {
   localStorage.removeItem("token");
@@ -74,100 +75,22 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             borderBottom: "2px solid #3498db",
           }}
         ></div>
-        <h2
-          style={{
-            textAlign: "center",
-            margin: "50px auto",
-          }}
-        >
-          Level-wise Scores Area Chart for Addition
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "70px",
-            margin: " 100px 0px",
-            padding: "20px",
-          }}
-        >
-          <div>
-            <AreaGraph
-              stage="Addition"
-              stageRef={stageRef[1]}
-              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
-            />
-          </div>
-          <div>
-            <PieChart
-              countRef={countRef[1]}
-              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
-            />
-          </div>
-        </div>
-        <h2
-          style={{
-            textAlign: "center",
-            margin: "50px auto",
-          }}
-        >
-          Level-wise Scores Area Chart for Subtraction
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "70px",
-            margin: " 100px 0px",
-            padding: "20px",
-          }}
-        >
-          <div>
-            <AreaGraph
-              stage="Subtraction"
-              stageRef={stageRef[2]}
-              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
-            />
-          </div>
-          <div>
-            <PieChart
-              countRef={countRef[2]}
-              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
-            />
-          </div>
-        </div>
-        <h2
-          style={{
-            textAlign: "center",
-            margin: "50px auto",
-            paddingTop: "30px",
-          }}
-        >
-          Level-wise Scores Area Chart for Multiplication
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "70px",
-            margin: " 100px 0px",
-            padding: "20px",
-          }}
-        >
-          <div>
-            <AreaGraph
-              stage="Multiplication"
-              stageRef={stageRef[3]}
-              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
-            />
-          </div>
-          <div>
-            <PieChart
-              countRef={countRef[3]}
-              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
-            />
-          </div>
-        </div>
+
+        <GraphDisplay
+          stage="Addition"
+          stageRef={stageRef[1]}
+          countRef={countRef[1]}
+        />
+        <GraphDisplay
+          stage="Subtraction"
+          stageRef={stageRef[2]}
+          countRef={countRef[2]}
+        />
+        <GraphDisplay
+          stage="Multiplication"
+          stageRef={stageRef[3]}
+          countRef={countRef[3]}
+        />
       </div>
 
       <div
@@ -175,7 +98,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          margin:"100px"
+          margin: "100px",
         }}
       >
         <button
