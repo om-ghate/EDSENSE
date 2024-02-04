@@ -237,12 +237,12 @@ const Test = () => {
       if (level === 1 && support === 1) {
         console.log("Support = 1 & level = 1");
         support = 0;
-        arrayLevel.push(`${strDisplay} : ` + levelScore);
+        arrayLevel.push(levelScore);
 
         stageObjectRefFunction(stage, level, levelScore);
 
         stageScore = levelScore;
-        arrayStage.push(`${strDisplay} : ` + stageScore);
+        arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
           "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -260,7 +260,7 @@ const Test = () => {
         stageObjectRefFunction(stage, level, levelScore);
 
         stageScore = stageScore + levelScore;
-        arrayStage.push(`${strDisplay} :` + stageScore);
+        arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
           "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -562,7 +562,7 @@ const Test = () => {
         stageObjectRefFunction(stage, level, levelScore);
 
         stageScore = levelScore;
-        arrayStage.push(`${strDisplay} : ` + stageScore);
+        arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
           "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -577,7 +577,7 @@ const Test = () => {
         stageObjectRefFunction(stage, level, levelScore);
 
         stageScore = stageScore + levelScore;
-        arrayStage.push(`${strDisplay} :` + stageScore);
+        arrayStage.push(stageScore);
         console.log("Stage Array - " + arrayStage);
         console.log(
           "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -608,7 +608,7 @@ const Test = () => {
           stageObjectRefFunction(stage, level, levelScore);
 
           stageScore = levelScore;
-          arrayStage.push(`${strDisplay} : ` + stageScore);
+          arrayStage.push(stageScore);
           console.log("Stage Array - " + arrayStage);
           console.log(
             "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -626,7 +626,7 @@ const Test = () => {
           stageObjectRefFunction(stage, level, levelScore);
 
           stageScore = stageScore + levelScore;
-          arrayStage.push(`${strDisplay} :` + stageScore);
+          arrayStage.push(stageScore);
           console.log("Stage Array - " + arrayStage);
           console.log(
             "Level Array - " + arrayLevel + "\nStage Score - ",
@@ -888,21 +888,21 @@ const Test = () => {
               ) : (
                 <div>
                   {/* setResult("Pass") */}
-                  <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current}/>
+                  <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current} arrayStage={arrayStage}/>
                 </div>
               )}
             </div>
           ) : (
             <div>
               {/* setResult("Pass") */}
-              <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current}/>
+              <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current} arrayStage={arrayStage}/>
             </div>
           )}
         </div>
       ) : (
         <div>
           {/* setResult("Fail") */}
-          <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current}/>
+          <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current} arrayStage={arrayStage}/>
         </div>
       )}
       {/* Conditionally render the StageOverlay component */}

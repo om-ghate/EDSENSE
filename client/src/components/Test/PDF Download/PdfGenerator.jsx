@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import AreaGraph from "../AreaGraph";
 import PieChart from "../PieChart";
+import BarGraph from "../BarGraph";
 import { useReactToPrint } from "react-to-print";
 import GraphDisplay from "./GraphDisplay";
 
@@ -10,10 +11,12 @@ const handleLogout = () => {
   window.location.reload();
 };
 
-const PdfGenerator = ({ countRef, stageRef }) => {
+const PdfGenerator = ({ countRef, stageRef, arrayStage }) => {
   const data = localStorage.getItem("payload");
   const { firstName, lastName, school, std } = JSON.parse(data);
-
+  var finalScore =
+    ((arrayStage[0] + arrayStage[1] + arrayStage[2]) / (52.8 + 52.8 + 19.8)) *
+    100;
   const componentRef = useRef();
 
   const handlePrint = useReactToPrint({
@@ -91,6 +94,42 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           stageRef={stageRef[3]}
           countRef={countRef[3]}
         />
+        <BarGraph arrayStage={arrayStage} />
+        <div
+          style={{
+            marginTop: "30px",
+
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ display: "flex", gap: "150px" }}>
+            <h3>Total Percentage</h3>
+            <h3>{finalScore.toFixed(2)}</h3>
+          </div>
+        </div>
+
+        <div
+          style={{
+            marginTop: "30px",
+
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <h2
+            style={{
+              padding: "50px 125px",
+              fontSize: "50px",
+              color: finalScore.toFixed(2) > 60 ? "green" : "red",
+              boxShadow: `0 0 5px ${
+                finalScore.toFixed(2) > 60 ? "green" : "red"
+              }`,
+            }}
+          >
+            {finalScore.toFixed(2) > 60 ? "Safe" : "At Risk"}
+          </h2>
+        </div>
       </div>
 
       <div

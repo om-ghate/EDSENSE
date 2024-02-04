@@ -10,6 +10,7 @@ const GraphDisplay = ({ stage, stageRef, countRef }) => {
         style={{
           textAlign: "center",
           margin: "50px auto",
+          textDecoration: "underline",
         }}
       >
         Level-wise Scores Graph for {stage}

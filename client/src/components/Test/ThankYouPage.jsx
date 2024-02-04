@@ -4,6 +4,7 @@ import PdfGenerator from "./PDF Download/PdfGenerator";
 const ThankYouPage = (props) => {
   const countRef = props.countRef;
   const stageRef = props.stageRef;
+  const arrayStage = props.arrayStage;
 
   console.log("Thank you Page displayed -");
   console.log(countRef);
@@ -23,7 +24,7 @@ const ThankYouPage = (props) => {
       <div style={{ marginTop: "80px" }}></div>
 
       <div>
-        <PdfGenerator countRef={countRef} stageRef={stageRef} />
+        <PdfGenerator countRef={countRef} stageRef={stageRef} arrayStage={arrayStage}/>
       </div>
     </div>
   );
