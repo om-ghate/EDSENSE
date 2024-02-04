@@ -77,6 +77,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           }}
         >
           Test Report
+          
         </h2>
         {/* <h3>Student Information</h3> */}
         <div
