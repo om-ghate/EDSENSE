@@ -15,40 +15,6 @@ const PdfGenerator = ({ countRef, stageRef }) => {
   const data = localStorage.getItem("payload");
   const { age, email, firstName, lastName, school, std } = JSON.parse(data);
 
-  // const pdfRef = useRef();
-
-  // const generatePdf = () => {
-  //   const input = pdfRef.current;
-
-  //   html2canvas(input).then((canvas) => {
-  //     const imgData = canvas.toDataURL("image/png");
-  //     const pdf = new jsPDF("p", "mm", "a4", true);
-
-  //     const pdfWidth = pdf.internal.pageSize.getWidth();
-  //     const pdfHeight = pdf.internal.pageSize.getHeight();
-
-  //     const imgWidth = canvas.width;
-  //     const imgHeight = canvas.height;
-
-  //     const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-
-  //     // This variable is used to give margin in the pdf's top section
-  //     const marginTop = 5;
-
-  //     const imgX = (pdfWidth - imgWidth * ratio) / 2;
-  //     const imgY = marginTop;
-  //     pdf.addImage(
-  //       imgData,
-  //       "PNG",
-  //       imgX,
-  //       imgY,
-  //       imgWidth * ratio,
-  //       imgHeight * ratio
-  //     );
-  //     pdf.save(`${firstName + " " + lastName}_report.pdf`);
-  //   });
-  // };
-
   const componentRef = useRef();
 
   const handlePrint = useReactToPrint({
@@ -59,34 +25,37 @@ const PdfGenerator = ({ countRef, stageRef }) => {
     <div
       style={{
         fontFamily: "Arial, sans-serif",
-        backgroundColor: "white",
+        backgroundColor: "#f5f5f5",
         textAlign: "center",
+        maxWidth: "1150px",
+        margin: "0 auto",
+        padding: "20px",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+        borderRadius: "10px",
       }}
     >
       <div
         ref={componentRef}
         style={{
-          padding: 0,
-          margin: 0,
           borderRadius: "5px",
           backgroundColor: "white",
           width: "100%",
           height: "auto",
-          boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+          padding: "20px",
         }}
       >
         <h2
           style={{
-            color: " #3498db",
+            color: "#3498db",
             padding: "20px",
             borderBottom: "2px solid #3498db",
             paddingBottom: "10px",
+            fontSize: "24px",
           }}
         >
           Test Report
-          
         </h2>
-        {/* <h3>Student Information</h3> */}
+
         <div
           style={{
             display: "flex",
@@ -95,112 +64,136 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             padding: "20px",
           }}
         >
-          <h4>Name - {firstName + " " + lastName}</h4>
-          <h4>Age - {age}</h4>
-          <h4>Email - {email}</h4>
-          <h4>School - {school}</h4>
-          <h4>Standard - {std}</h4>
+          <h4>Name: {firstName + " " + lastName}</h4>
+          <h4>School: {school}</h4>
+          <h4>Standard: {std}</h4>
         </div>
-        {/* <table
-          style={{
-            borderCollapse: "collapse",
-            width: "100%",
-            fontSize: "x-large",
-          }}
-        >
-          <tbody>
-            <tr>
-              <td style={{ textAlign: "left", padding: "8px" }}>Name</td>
-              <td style={{ textAlign: "left", padding: "8px" }}>
-                {firstName} {lastName}
-              </td>
-            </tr>
-            <tr>
-              <td style={{ textAlign: "left", padding: "8px" }}>Age</td>
-              <td style={{ textAlign: "left", padding: "8px" }}>{age}</td>
-            </tr>
-            <tr>
-              <td style={{ textAlign: "left", padding: "8px" }}>Email</td>
-              <td style={{ textAlign: "left", padding: "8px" }}>{email}</td>
-            </tr>
-            <tr>
-              <td style={{ textAlign: "left", padding: "8px" }}>School</td>
-              <td style={{ textAlign: "left", padding: "8px" }}>{school}</td>
-            </tr>
-            <tr>
-              <td style={{ textAlign: "left", padding: "8px" }}>Standard</td>
-              <td style={{ textAlign: "left", padding: "8px" }}>{std}</td>
-            </tr>
-          </tbody>
-        </table> */}
 
         <hr />
-        <div
+        <h2
           style={{
-            display: "flex",
-            flexDirection: "row",
-            margin: "10px",
+            margin: "50px 0px",
           }}
         >
-          <AreaGraph stage="Addition" stageRef={stageRef[1]} />
-          <PieChart countRef={countRef[1]} />
+          Level-wise Scores Area Chart for Addition
+        </h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "70px",
+          }}
+        >
+          <div>
+            <AreaGraph
+              stage="Addition"
+              stageRef={stageRef[1]}
+              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
+            />
+          </div>
+          <div>
+            <PieChart
+              countRef={countRef[1]}
+              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
+            />
+          </div>
         </div>
-
-        <div style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-          <AreaGraph stage="Subtraction" stageRef={stageRef[2]} />
-          <PieChart countRef={countRef[2]} />
+        <h2
+          style={{
+            margin: "50px 0px",
+          }}
+        >
+          Level-wise Scores Area Chart for Subtraction
+        </h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "70px",
+            marginTop: "20px",
+          }}
+        >
+          <div>
+            <AreaGraph
+              stage="Subtraction"
+              stageRef={stageRef[2]}
+              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
+            />
+          </div>
+          <div>
+            <PieChart
+              countRef={countRef[2]}
+              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
+            />
+          </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-          <AreaGraph stage="Multiplication" stageRef={stageRef[3]} />
-          <PieChart countRef={countRef[3]} />
+        <h2
+          style={{
+            margin: "50px 0px",
+          }}
+        >
+          Level-wise Scores Area Chart for Multiplication
+        </h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "70px",
+            margin: " 0px 10px",
+          }}
+        >
+          <div>
+            <AreaGraph
+              stage="Multiplication"
+              stageRef={stageRef[3]}
+              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
+            />
+          </div>
+          <div>
+            <PieChart
+              countRef={countRef[3]}
+              style={{ width: "100%", height: "300px" }} // Adjust the width and height as needed
+            />
+          </div>
         </div>
       </div>
+
       <div
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "Center",
+          justifyContent: "center",
+          marginTop: "20px",
         }}
       >
         <button
           style={{
-            height: "100px",
-            width: "245px",
-            backgroundColor: "white",
-            color: "#42b2fc",
-            border: "3px solid",
-            fontSize: "xx-large",
-            borderRadius: "10px",
-
-            margin: "100px",
-            padding: "20px 35px",
+            height: "50px",
+            width: "150px",
+            backgroundColor: "#3498db",
+            color: "white",
+            border: "none",
+            fontSize: "16px",
+            borderRadius: "5px",
+            margin: "0 10px",
+            cursor: "pointer",
           }}
           onClick={handleLogout}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = "#42b2fc";
-            e.currentTarget.style.color = "white";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = "white";
-            e.currentTarget.style.color = "#42b2fc";
-          }}
         >
           Exit Test
         </button>
+
         <button
           onClick={handlePrint}
           style={{
-            height: "100px",
-            width: "245px",
-
-            padding: "30px 40px",
-            fontSize: "x-large",
-            backgroundColor: "#42b2fc",
+            height: "50px",
+            width: "150px",
+            backgroundColor: "#2ecc71",
             color: "white",
             border: "none",
+            fontSize: "16px",
             borderRadius: "5px",
             cursor: "pointer",
-            margin: "100px",
           }}
         >
           Generate PDF

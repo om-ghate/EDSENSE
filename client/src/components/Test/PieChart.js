@@ -18,7 +18,7 @@ const CustomPieChart = ({ countRef }) => {
         data={data}
         dataKey="value"
         cx={200}
-        cy={200}
+        cy={155}
         innerRadius={100}
         outerRadius={150}
         fill="#8884d8"
@@ -29,7 +29,7 @@ const CustomPieChart = ({ countRef }) => {
         ))}
       </Pie>
       <Tooltip />
-      <Legend align="center" verticalAlign="bottom" height={5} />
+      <Legend align="center" verticalAlign="bottom" height={35} />
     </PieChart>
   );
 };

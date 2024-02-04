@@ -10,7 +10,7 @@ import {
   Label,
 } from "recharts";
 
-const AreaGraph = ({ stage, stageRef }) => {
+const AreaGraph = ({ stageRef }) => {
   const levels = Array.from(
     { length: stageRef.length },
     (_, index) => index + 1
@@ -26,8 +26,7 @@ const AreaGraph = ({ stage, stageRef }) => {
   }));
 
   return (
-    <div style={{ width: "80%", margin: "auto" }}>
-      <h2>Level-wise Scores Area Chart for {stage}</h2>
+    <div style={{ width: "80%", margin: "0px" }}>
       <AreaChart
         width={600}
         height={400}
