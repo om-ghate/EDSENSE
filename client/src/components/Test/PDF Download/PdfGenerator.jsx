@@ -1,6 +1,4 @@
 import React, { useRef } from "react";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 import AreaGraph from "../AreaGraph";
 import PieChart from "../PieChart";
 import { useReactToPrint } from "react-to-print";
@@ -13,7 +11,7 @@ const handleLogout = () => {
 
 const PdfGenerator = ({ countRef, stageRef }) => {
   const data = localStorage.getItem("payload");
-  const { age, email, firstName, lastName, school, std } = JSON.parse(data);
+  const { firstName, lastName, school, std } = JSON.parse(data);
 
   const componentRef = useRef();
 
@@ -49,8 +47,10 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             color: "#3498db",
             padding: "20px",
             borderBottom: "2px solid #3498db",
-            paddingBottom: "10px",
+            paddingBottom: "40px",
             fontSize: "24px",
+            margin: "0 auto",
+            textAlign: "center",
           }}
         >
           Test Report
@@ -69,10 +69,15 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           <h4>Standard: {std}</h4>
         </div>
 
-        <hr />
+        <div
+          style={{
+            borderBottom: "2px solid #3498db",
+          }}
+        ></div>
         <h2
           style={{
-            margin: "50px 0px",
+            textAlign: "center",
+            margin: "50px auto",
           }}
         >
           Level-wise Scores Area Chart for Addition
@@ -82,6 +87,8 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "70px",
+            margin: " 100px 10px",
+            padding: "20px",
           }}
         >
           <div>
@@ -100,7 +107,8 @@ const PdfGenerator = ({ countRef, stageRef }) => {
         </div>
         <h2
           style={{
-            margin: "50px 0px",
+            textAlign: "center",
+            margin: "50px auto",
           }}
         >
           Level-wise Scores Area Chart for Subtraction
@@ -110,7 +118,8 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "70px",
-            marginTop: "20px",
+            margin: " 100px 10px",
+            padding: "20px",
           }}
         >
           <div>
@@ -129,7 +138,9 @@ const PdfGenerator = ({ countRef, stageRef }) => {
         </div>
         <h2
           style={{
-            margin: "50px 0px",
+            textAlign: "center",
+            margin: "50px auto",
+            paddingTop: "30px",
           }}
         >
           Level-wise Scores Area Chart for Multiplication
@@ -139,7 +150,9 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "70px",
-            margin: " 0px 10px",
+            margin: " 100px 10px",
+            padding: "20px",
+            
           }}
         >
           <div>
