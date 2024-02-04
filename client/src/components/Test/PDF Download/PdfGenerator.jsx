@@ -3,6 +3,7 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import AreaGraph from "../AreaGraph";
 import PieChart from "../PieChart";
+import { useReactToPrint } from "react-to-print";
 
 const handleLogout = () => {
   localStorage.removeItem("token");
@@ -14,39 +15,45 @@ const PdfGenerator = ({ countRef, stageRef }) => {
   const data = localStorage.getItem("payload");
   const { age, email, firstName, lastName, school, std } = JSON.parse(data);
 
-  const pdfRef = useRef();
+  // const pdfRef = useRef();
 
-  const generatePdf = () => {
-    const input = pdfRef.current;
+  // const generatePdf = () => {
+  //   const input = pdfRef.current;
 
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4", true);
+  //   html2canvas(input).then((canvas) => {
+  //     const imgData = canvas.toDataURL("image/png");
+  //     const pdf = new jsPDF("p", "mm", "a4", true);
 
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
+  //     const pdfWidth = pdf.internal.pageSize.getWidth();
+  //     const pdfHeight = pdf.internal.pageSize.getHeight();
 
-      const imgWidth = canvas.width;
-      const imgHeight = canvas.height;
+  //     const imgWidth = canvas.width;
+  //     const imgHeight = canvas.height;
 
-      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+  //     const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
 
-      // This variable is used to give margin in the pdf's top section
-      const marginTop = 5;
+  //     // This variable is used to give margin in the pdf's top section
+  //     const marginTop = 5;
 
-      const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = marginTop;
-      pdf.addImage(
-        imgData,
-        "PNG",
-        imgX,
-        imgY,
-        imgWidth * ratio,
-        imgHeight * ratio
-      );
-      pdf.save(`${firstName + " " + lastName}_report.pdf`);
-    });
-  };
+  //     const imgX = (pdfWidth - imgWidth * ratio) / 2;
+  //     const imgY = marginTop;
+  //     pdf.addImage(
+  //       imgData,
+  //       "PNG",
+  //       imgX,
+  //       imgY,
+  //       imgWidth * ratio,
+  //       imgHeight * ratio
+  //     );
+  //     pdf.save(`${firstName + " " + lastName}_report.pdf`);
+  //   });
+  // };
+
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
   return (
     <div
@@ -57,7 +64,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
       }}
     >
       <div
-        ref={pdfRef}
+        ref={componentRef}
         style={{
           padding: 0,
           margin: 0,
@@ -132,18 +139,18 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           style={{
             display: "flex",
             flexDirection: "row",
-            margin: "100px",
+            margin: "10px",
           }}
         >
           <AreaGraph stage="Addition" stageRef={stageRef[1]} />
           <PieChart countRef={countRef[1]} />
         </div>
 
-        <div style={{ display: "flex", flexDirection: "row", margin: "100px" }}>
+        <div style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
           <AreaGraph stage="Subtraction" stageRef={stageRef[2]} />
           <PieChart countRef={countRef[2]} />
         </div>
-        <div style={{ display: "flex", flexDirection: "row", margin: "100px" }}>
+        <div style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
           <AreaGraph stage="Multiplication" stageRef={stageRef[3]} />
           <PieChart countRef={countRef[3]} />
         </div>
@@ -181,7 +188,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           Exit Test
         </button>
         <button
-          onClick={generatePdf}
+          onClick={handlePrint}
           style={{
             height: "100px",
             width: "245px",
