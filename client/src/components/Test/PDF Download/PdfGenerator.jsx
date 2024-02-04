@@ -152,7 +152,6 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             gap: "70px",
             margin: " 100px 0px",
             padding: "20px",
-            
           }}
         >
           <div>
@@ -176,22 +175,30 @@ const PdfGenerator = ({ countRef, stageRef }) => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          marginTop: "20px",
+          margin:"100px"
         }}
       >
         <button
           style={{
-            height: "50px",
-            width: "150px",
-            backgroundColor: "#3498db",
-            color: "white",
-            border: "none",
-            fontSize: "16px",
+            height: "100px",
+            width: "250px",
+            backgroundColor: "white",
+            color: "#3498db",
+            border: "3px solid #3498db",
+            fontSize: "30px",
             borderRadius: "5px",
-            margin: "0 10px",
+            margin: "0 40px",
             cursor: "pointer",
           }}
           onClick={handleLogout}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "#3498db";
+            e.currentTarget.style.color = "white";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "white";
+            e.currentTarget.style.color = "#3498db";
+          }}
         >
           Exit Test
         </button>
@@ -199,14 +206,21 @@ const PdfGenerator = ({ countRef, stageRef }) => {
         <button
           onClick={handlePrint}
           style={{
-            height: "50px",
-            width: "150px",
-            backgroundColor: "#2ecc71",
+            height: "100px",
+            width: "250px",
+            backgroundColor: "#3498db",
             color: "white",
             border: "none",
-            fontSize: "16px",
+            fontSize: "30px",
             borderRadius: "5px",
+            margin: "0 40px",
             cursor: "pointer",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.transform = "scale(1.2)";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
           }}
         >
           Generate PDF
