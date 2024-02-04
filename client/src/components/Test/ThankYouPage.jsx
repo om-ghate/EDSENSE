@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import PdfGenerator from "./PDF Download/PdfGenerator";
 
 const ThankYouPage = (props) => {
