@@ -87,7 +87,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "70px",
-            margin: " 100px 10px",
+            margin: " 100px 0px",
             padding: "20px",
           }}
         >
@@ -118,7 +118,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "70px",
-            margin: " 100px 10px",
+            margin: " 100px 0px",
             padding: "20px",
           }}
         >
@@ -150,7 +150,7 @@ const PdfGenerator = ({ countRef, stageRef }) => {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "70px",
-            margin: " 100px 10px",
+            margin: " 100px 0px",
             padding: "20px",
             
           }}
