@@ -1,7 +1,7 @@
 import React from "react";
 
-import AreaGraph from "../AreaGraph";
-import PieChart from "../PieChart";
+import AreaGraph from "../Graphs/AreaGraph";
+import PieChart from "../Graphs/PieChart";
 
 const GraphDisplay = ({ stage, stageRef, countRef }) => {
   return (
