@@ -1,19 +1,25 @@
+//! Importing Statements Start
 import React, { useEffect, useRef, useState } from "react";
-import YouTube from "react-youtube";
-import "./Test.css"; // chal rha hai part 1
-import "./TestMediaQuery.css";
-
-import data from "./data10.json"; // Assuming that the data.json file is in the same directory as this component
-// import Header from "./Header";
 import axios from "axios";
-import ExhaustPage from "./ExhaustPage";
-import ThankYouPage from "./ThankYouPage";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+//! Component Imports
+import TestCompletePage from "./ThankYouPage";
 import ModalTest from "./ModalTest";
 import StageOverlay from "./Overlays/stageOverlay";
 
-// const ansQues = [];
+//! JSON Imports - Data imported from data10.json
+import data from "./data10.json";
+
+//! CSS Imports
+import "./Test.css";
+import "./TestMediaQuery.css";
+
+//! Toast Imports
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+//* Importing Statements END
+
 const arr_c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //This is the array which will have numbers from 1 to 20
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -64,20 +70,11 @@ const Test = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [exhaust, setExhaust] = useState(false);
   const [gameover, setGameover] = useState(false);
-  // const [stage, setStage] = useState(1);
   const [dec, setDec] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [answer, setAnswer] = useState("");
-  // const [result, setResult] = useState("");
   const [error, setError] = useState("");
-  // const [level, setLevel] = useState(1);
-
-  // const [pointer, setPointer] = useState(1);
   const [started, setStarted] = useState(false); // Added state for tracking quiz start
-  //   const arr = [
-  //     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  //   ]; //The array on which almost all the basic operation will be done
-  // Function to handle input change
 
   // Use States for Response Time module -------------------------------------------------------------------------------------------------
 
@@ -86,14 +83,6 @@ const Test = () => {
 
   // Use States End ----------------------------------------------------------------------------------------------------------------------
 
-  //! useState for Level Score Start
-
-  // let [levelScore, setLevelScore] = useState(0);
-
-  //* useState for Level Score End
-
-  // Result Stored
-  // const [Result,setResult] = useState("");
   //
   // Global variable to display stage + level
   const [strDisplay, setStrDisplay] = useState("");
@@ -155,10 +144,6 @@ const Test = () => {
   const handleInputChange = (e) => {
     setAnswer(e.target.value);
   };
-  //   const filteredData = data.filter(
-  //     (question) => question.stage === stage && question.level === level
-  //   );
-  // Function to generate a random question
 
   let str2 = "";
   const generateQuestion = () => {
@@ -192,12 +177,9 @@ const Test = () => {
       );
       console.log(filteredData);
 
-      // Test for making questionaire as a string
-
-      // const randomNumber = array[randomIndex];
       setCurrentQuestion(filteredData[0]);
 
-      //! --------------- Line 75 - String Requirement for text to speech:  ------------------------------------------------
+      //! ---------------- String Requirement for text to speech:  ------------------------------------------------
       if (filteredData[0].sign == "-") {
         str2 = filteredData[0].num1
           .toString()
@@ -253,9 +235,9 @@ const Test = () => {
         sendUserResult();
         handleTestComplete();
       } else if (support === 3) {
-        support = 0;
         console.log("Support = 3");
-        arrayLevel.push(`${strDisplay} : ` + levelScore);
+        support = 0;
+        arrayLevel.push(levelScore);
 
         stageObjectRefFunction(stage, level, levelScore);
 
@@ -286,7 +268,6 @@ const Test = () => {
 
   // * ---------- Function to check the answer ----------------------------------------------------------------------
   const checkAnswer = () => {
-    // console.log(pointer);
     const [correctCount, incorrectCount, specialWrongCount] =
       countersRef.current[stage];
 
@@ -393,9 +374,7 @@ const Test = () => {
             .concat("' : Case 5")
         );
       }
-      // setPointer(pointer - dec);
       setDec(dec + 2);
-      // console.log("Points", pointer);
       console.log("SpW_ans: ", SpW_ans);
 
       score = ans_spw;
@@ -414,7 +393,7 @@ const Test = () => {
         style: {
           backgroundColor: "red",
         },
-        autoClose: 200,
+        autoClose: 100,
       });
       if (currentQuestion.response >= seconds) {
         console.log("fast");
@@ -678,16 +657,9 @@ const Test = () => {
   };
   // * Handle Stage Change function END
 
-  // Code by Om - 5th July
-
   // ! Handle Test Complete function
 
   const handleTestComplete = () => {
-
-
- 
-
-
     R_ans.push(Q_arr[Q_arr.length - 1]);
     let str = minutes.toString().concat(":", seconds.toString());
     Timer.push(str);
@@ -697,9 +669,6 @@ const Test = () => {
   };
   // ! Handle Test Complete function END
 
-  // Code by Om - 5th July END
-
-  // Code by Om - 11th July
   //! This function works on adding autoFocus everytime the page reloads and a new question is generated
   useEffect(() => {
     const inputElement = document.querySelector('input[type="number"]');
@@ -707,7 +676,6 @@ const Test = () => {
       inputElement.focus();
     }
   }, [levelScore]);
-  // Code by Om - 11th July END
 
   // UseEffect and Restart fuction for Response time ------------------------------------------------------------------------------------------
   /*
@@ -719,11 +687,6 @@ const Test = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     timer = setInterval(() => {
       setSeconds(seconds + 1);
-
-      // if (seconds === 59) {
-      //   setSeconds(0);
-      //   setMinutes(minutes + 1);
-      // }
     }, 1000);
     return () => clearInterval(timer);
   });
@@ -888,21 +851,33 @@ const Test = () => {
               ) : (
                 <div>
                   {/* setResult("Pass") */}
-                  <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current} arrayStage={arrayStage}/>
+                  <TestCompletePage
+                    countRef={countersRef.current}
+                    stageRef={stageObjectRef.current}
+                    arrayStage={arrayStage}
+                  />
                 </div>
               )}
             </div>
           ) : (
             <div>
               {/* setResult("Pass") */}
-              <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current} arrayStage={arrayStage}/>
+              <TestCompletePage
+                countRef={countersRef.current}
+                stageRef={stageObjectRef.current}
+                arrayStage={arrayStage}
+              />
             </div>
           )}
         </div>
       ) : (
         <div>
           {/* setResult("Fail") */}
-          <ThankYouPage countRef = {countersRef.current} stageRef = {stageObjectRef.current} arrayStage={arrayStage}/>
+          <TestCompletePage
+            countRef={countersRef.current}
+            stageRef={stageObjectRef.current}
+            arrayStage={arrayStage}
+          />
         </div>
       )}
       {/* Conditionally render the StageOverlay component */}
@@ -922,7 +897,7 @@ const Test = () => {
       {/* Toast Container */}
       <ToastContainer
         position="top-center"
-        autoClose={2000}
+        autoClose={100}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
