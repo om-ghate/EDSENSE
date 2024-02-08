@@ -1,29 +1,24 @@
 import PdfGenerator from "./PDF Download/PdfGenerator";
 
-const ThankYouPage = (props) => {
-  const countRef = props.countRef;
-  const stageRef = props.stageRef;
-  const arrayStage = props.arrayStage;
+const graph = {
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: "white",
+};
 
-  console.log("Thank you Page displayed -");
-  console.log(countRef);
-  console.log(stageRef);
-
-  
-
+const ThankYouPage = ({ countRef, stageRef, arrayStage }) => {
   return (
-    <div
-      className="graph-display"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "white",
-      }}
-    >
+    <div className="graph-display" style={graph}>
+
+      {/* Div added for Adding Margin */}
       <div style={{ marginTop: "80px" }}></div>
 
       <div>
-        <PdfGenerator countRef={countRef} stageRef={stageRef} arrayStage={arrayStage}/>
+        <PdfGenerator
+          countRef={countRef}
+          stageRef={stageRef}
+          arrayStage={arrayStage}
+        />
       </div>
     </div>
   );
