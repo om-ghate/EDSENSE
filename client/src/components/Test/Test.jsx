@@ -890,7 +890,7 @@ const Test = () => {
               ? "Subtraction"
               : "Multiplication"
           }`}
-          duration={5000} // Adjust the duration as needed (in milliseconds)
+          duration={3000} // Adjust the duration as needed (in milliseconds)
         />
       )}
 
